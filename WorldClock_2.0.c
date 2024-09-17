@@ -50,10 +50,10 @@ char* getDateTimeForWishedOlsonTZ(char* wishedOlsonTZ)
 int main()
 {
 	//
-	char* test = getDateTimeForWishedOlsonTZ("Pacific/Honolulu");
+	char* resultDTForWishedTZ = getDateTimeForWishedOlsonTZ("Pacific/Honolulu");
 
 	//
-	printf("%s", test);
+	printf("%s", resultDTForWishedTZ);
 
 	//
 	return 0;
