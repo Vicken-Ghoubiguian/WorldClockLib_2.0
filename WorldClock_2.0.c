@@ -16,7 +16,7 @@ int main()
 	strcat(completeCommand, " date");
 
 	//
-    FILE *cmd=popen("TZ=Pacific/Fakaofo date", "r");
+    FILE *cmd=popen(completeCommand, "r");
 
 	//
     while (fgets(result, sizeof(result), cmd) !=NULL)
