@@ -78,6 +78,9 @@ char* getDateTimeForWishedOlsonTZ(char* wishedOlsonTZ)
 int main()
 {
 	//
+	enum OS currentOS = getCurrentOS();
+
+	//
 	char* resultDTForWishedTZ = getDateTimeForWishedOlsonTZ("Pacific/Honolulu");
 
 	//
