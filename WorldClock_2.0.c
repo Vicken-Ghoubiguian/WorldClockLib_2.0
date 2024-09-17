@@ -4,12 +4,13 @@
 #include <string.h>
 
 //
-enum OS {unix, macOS, windows, linux, android, freeBSD};
+enum OS {undefined, unix, macOS, windows, linux, android, freeBSD};
 
 //
-int getCurrentOS()
+enum OS getCurrentOS()
 {
-	return 0;
+	//
+	return undefined;
 }
 
 //
