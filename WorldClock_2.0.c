@@ -18,11 +18,18 @@ char* getDateTimeForWishedOlsonTZ(char* wishedOlsonTZ)
 	strcat(completeCommand, " date");
 
 	//
+	char c;
+	int i = 0;
+
+	//
     FILE *cmd=popen(completeCommand, "r");
 
 	//
-    while (fgets(dtChoosenOlsonTZ, sizeof(dtChoosenOlsonTZ), cmd) !=NULL)
-           printf("%s", dtChoosenOlsonTZ);
+    while ((c = fgetc(cmd)) != EOF)
+	{
+        	dtChoosenOlsonTZ[i] = c;
+			i++;
+	}
 	
 	//
     pclose(cmd);
@@ -36,6 +43,9 @@ int main()
 {
 	//
 	char* test = getDateTimeForWishedOlsonTZ("Pacific/Fakaofo");
+
+	//
+	printf("%s", test);
 
 	//
 	return 0;
