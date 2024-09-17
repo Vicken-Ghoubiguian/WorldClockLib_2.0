@@ -1,11 +1,22 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
 int main()
 {
 	//
-    FILE *cmd=popen("TZ=Pacific/Fakaofo date", "r");
+	char* wishedTZ = "Pacific/Fakaofo";
+    char result[30]={0x0};
+	char fullSize = strlen("TZ=") + strlen(" date") + strlen(wishedTZ);
 
 	//
-    char result[30]={0x0};
+	char* completeCommand = (char*) malloc(fullSize);
+	strcat(completeCommand, "TZ=");
+	strcat(completeCommand, wishedTZ);
+	strcat(completeCommand, " date");
+
+	//
+    FILE *cmd=popen("TZ=Pacific/Fakaofo date", "r");
 
 	//
     while (fgets(result, sizeof(result), cmd) !=NULL)
