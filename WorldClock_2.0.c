@@ -4,11 +4,11 @@
 #include <string.h>
 
 //
-int main()
+char* getDateTimeForWishedOlsonTZ(char* wishedOlsonTZ)
 {
 	//
 	char* wishedTZ = "Pacific/Fakaofo";
-    char result[30]={0x0};
+    char* dtChoosenOlsonTZ = malloc(30);
 	char fullSize = strlen("TZ=") + strlen(" date") + strlen(wishedTZ);
 
 	//
@@ -21,12 +21,22 @@ int main()
     FILE *cmd=popen(completeCommand, "r");
 
 	//
-    while (fgets(result, sizeof(result), cmd) !=NULL)
-           printf("%s", result);
+    while (fgets(dtChoosenOlsonTZ, sizeof(dtChoosenOlsonTZ), cmd) !=NULL)
+           printf("%s", dtChoosenOlsonTZ);
 	
 	//
     pclose(cmd);
 
 	//
-    return 0;
+    return dtChoosenOlsonTZ;
+}
+
+//
+int main()
+{
+	//
+	char* test = getDateTimeForWishedOlsonTZ("Pacific/Fakaofo");
+
+	//
+	return 0;
 }
