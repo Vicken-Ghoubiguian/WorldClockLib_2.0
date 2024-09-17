@@ -4,6 +4,9 @@
 #include <string.h>
 
 //
+enum OS {unix, macOS, windows, linux, android, freeBSD};
+
+//
 int getCurrentOS()
 {
 	return 0;
