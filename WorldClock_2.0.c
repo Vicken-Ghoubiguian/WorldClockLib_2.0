@@ -4,6 +4,12 @@
 #include <string.h>
 
 //
+int getCurrentOS()
+{
+	return 0;
+}
+
+//
 char* getDateTimeForWishedOlsonTZ(char* wishedOlsonTZ)
 {
 	//
