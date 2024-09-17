@@ -38,16 +38,22 @@ enum OS getCurrentOS()
 }
 
 //
-char* getDateTimeForWishedOlsonTZ(char* wishedOlsonTZ)
+void getListOfAllKnownTZ()
+{
+	// awk '/^Z/ { print $2 }; /^L/ { print $3 }' /usr/share/zoneinfo/tzdata.zi
+}
+
+//
+char* getDateTimeForWishedTZ(char* wishedTZ)
 {
 	//
-    char* dtChoosenOlsonTZ = malloc(30);
-	char fullSize = strlen("TZ=") + strlen(" date") + strlen(wishedOlsonTZ);
+    char* dtChoosenTZ = malloc(30);
+	char fullSize = strlen("TZ=") + strlen(" date") + strlen(wishedTZ);
 
 	//
 	char* completeCommand = (char*) malloc(fullSize);
 	strcat(completeCommand, "TZ=");
-	strcat(completeCommand, wishedOlsonTZ);
+	strcat(completeCommand, wishedTZ);
 	strcat(completeCommand, " date");
 
 	//
@@ -61,7 +67,7 @@ char* getDateTimeForWishedOlsonTZ(char* wishedOlsonTZ)
     while ((c = fgetc(cmd)) != EOF)
 	{
 			//
-        	dtChoosenOlsonTZ[i] = c;
+        	dtChoosenTZ[i] = c;
 
 			//
 			i++;
@@ -71,7 +77,7 @@ char* getDateTimeForWishedOlsonTZ(char* wishedOlsonTZ)
     pclose(cmd);
 
 	//
-    return dtChoosenOlsonTZ;
+    return dtChoosenTZ;
 }
 
 //
@@ -81,7 +87,7 @@ int main()
 	enum OS currentOS = getCurrentOS();
 
 	//
-	char* resultDTForWishedTZ = getDateTimeForWishedOlsonTZ("Pacific/Honolulu");
+	char* resultDTForWishedTZ = getDateTimeForWishedTZ("Pacific/Honolulu");
 
 	//
 	printf("%s", resultDTForWishedTZ);
