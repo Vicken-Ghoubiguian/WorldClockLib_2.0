@@ -9,12 +9,12 @@ char* getDateTimeForWishedOlsonTZ(char* wishedOlsonTZ)
 	//
 	char* wishedTZ = "Pacific/Fakaofo";
     char* dtChoosenOlsonTZ = malloc(30);
-	char fullSize = strlen("TZ=") + strlen(" date") + strlen(wishedTZ);
+	char fullSize = strlen("TZ=") + strlen(" date") + strlen(wishedOlsonTZ);
 
 	//
 	char* completeCommand = (char*) malloc(fullSize);
 	strcat(completeCommand, "TZ=");
-	strcat(completeCommand, wishedTZ);
+	strcat(completeCommand, wishedOlsonTZ);
 	strcat(completeCommand, " date");
 
 	//
@@ -42,7 +42,7 @@ char* getDateTimeForWishedOlsonTZ(char* wishedOlsonTZ)
 int main()
 {
 	//
-	char* test = getDateTimeForWishedOlsonTZ("Pacific/Fakaofo");
+	char* test = getDateTimeForWishedOlsonTZ("Pacific/Honolulu");
 
 	//
 	printf("%s", test);
