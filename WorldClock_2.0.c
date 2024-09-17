@@ -9,7 +9,7 @@ int main()
 
 	//
     while (fgets(result, sizeof(result), cmd) !=NULL)
-           printf("%s\n", result);
+           printf("%s", result);
 	
 	//
     pclose(cmd);
