@@ -7,7 +7,6 @@
 char* getDateTimeForWishedOlsonTZ(char* wishedOlsonTZ)
 {
 	//
-	char* wishedTZ = "Pacific/Fakaofo";
     char* dtChoosenOlsonTZ = malloc(30);
 	char fullSize = strlen("TZ=") + strlen(" date") + strlen(wishedOlsonTZ);
 
@@ -27,7 +26,10 @@ char* getDateTimeForWishedOlsonTZ(char* wishedOlsonTZ)
 	//
     while ((c = fgetc(cmd)) != EOF)
 	{
+			//
         	dtChoosenOlsonTZ[i] = c;
+
+			//
 			i++;
 	}
 	
