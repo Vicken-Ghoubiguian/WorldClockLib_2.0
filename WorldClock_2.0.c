@@ -44,17 +44,17 @@ void getListOfAllKnownTZ()
 	char* command = "awk '/^Z/ { print $2 }; /^L/ { print $3 }' /usr/share/zoneinfo/tzdata.zi";
 
 	//
-	char* s;
+	char s[100];
 
 	//
     FILE *cmd=popen(command, "r");
 
 	//
-	/*while(fgets(s, 100, cmd))
+	while(fgets(s, 100, cmd))
 	{
 			//
-			//printf("%s\n", s);
-	}*/
+			printf("%s\n", s);
+	}
 
 	//
 	pclose(cmd);
