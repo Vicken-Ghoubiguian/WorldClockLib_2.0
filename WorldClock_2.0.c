@@ -40,7 +40,25 @@ enum OS getCurrentOS()
 //
 void getListOfAllKnownTZ()
 {
-	// awk '/^Z/ { print $2 }; /^L/ { print $3 }' /usr/share/zoneinfo/tzdata.zi
+	// 
+	char* command = "awk '/^Z/ { print $2 }; /^L/ { print $3 }' /usr/share/zoneinfo/tzdata.zi";
+
+	//
+	char s;
+	int i = 0;
+
+	//
+    FILE *cmd=popen(command, "r");
+
+	//
+	while((s = fgets(cmd)) != EOF)
+	{
+			//
+			printf("%s\n", s);
+
+			//
+			i++;
+	}
 }
 
 //
@@ -64,7 +82,7 @@ char* getDateTimeForWishedTZ(char* wishedTZ)
     FILE *cmd=popen(completeCommand, "r");
 
 	//
-    while ((c = fgetc(cmd)) != EOF)
+    while((c = fgetc(cmd)) != EOF)
 	{
 			//
         	dtChoosenTZ[i] = c;
@@ -85,6 +103,12 @@ int main()
 {
 	//
 	enum OS currentOS = getCurrentOS();
+
+	//
+	getListOfAllKnownTZ();
+
+	//
+	printf("\n\n\n\n");
 
 	//
 	char* resultDTForWishedTZ = getDateTimeForWishedTZ("Pacific/Honolulu");
