@@ -20,3 +20,12 @@ struct datetime
     char* tz;
 
 } datetime;
+
+//
+enum OS getCurrentOS();
+
+//
+char* getListOfAllKnownTZ();
+
+//
+char* getDateTimeForWishedTZ(char* wishedTZ);

@@ -4,6 +4,9 @@
 #include <string.h>
 
 //
+#include "WorldClock_2.0.h"
+
+//
 enum OS getCurrentOS()
 {
 	//
