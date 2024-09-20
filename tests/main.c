@@ -1,14 +1,8 @@
 //
+#include "../WorldClock_2.0/WorldClock_2.0.h"
 
 //
 int main()
-{
-    //
-    return 0;
-}
-
-//
-/*int main()
 {
 	//
 	enum OS currentOS = getCurrentOS();
@@ -33,4 +27,4 @@ int main()
 
 	//
 	return 0;
-}*/
+}
