@@ -109,7 +109,7 @@ int main()
 	enum OS currentOS = getCurrentOS();
 
 	//
-	getListOfAllKnownTZ();
+	char* arrayOfTZ = getListOfAllKnownTZ();
 
 	//
 	printf("\n\n\n\n");
