@@ -4,9 +4,6 @@
 #include <string.h>
 
 //
-enum OS {undefined, unix, macOS, windows, linux, android, freeBSD};
-
-//
 enum OS getCurrentOS()
 {
 	//
@@ -36,12 +33,6 @@ enum OS getCurrentOS()
 		return undefined;
 	#endif
 }
-
-//
-typedef struct
-{
-   
-} datetime;
 
 //
 char* getListOfAllKnownTZ()
