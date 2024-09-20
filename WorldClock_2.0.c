@@ -38,11 +38,12 @@ enum OS getCurrentOS()
 }
 
 //
-char** getListOfAllKnownTZ()
+char* getListOfAllKnownTZ()
 {
 	// 
 	char* command = "awk '/^Z/ { print $2 }; /^L/ { print $3 }' /usr/share/zoneinfo/tzdata.zi";
-	char** arrayOfTZ = malloc(50*100);
+	char* arrayOfTZ = malloc(50 * 100);
+	int i = 0;
 
 	//
 	char s[100];
@@ -55,6 +56,9 @@ char** getListOfAllKnownTZ()
 	{
 			//
 			printf("%s\n", s);
+
+			//
+			
 	}
 
 	//
