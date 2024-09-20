@@ -103,7 +103,7 @@ char* getDateTimeForWishedTZ(char* wishedTZ)
 }
 
 //
-int main()
+/*int main()
 {
 	//
 	enum OS currentOS = getCurrentOS();
@@ -128,4 +128,4 @@ int main()
 
 	//
 	return 0;
-}
+}*/
