@@ -38,6 +38,12 @@ enum OS getCurrentOS()
 }
 
 //
+typedef struct
+{
+   
+} datetime;
+
+//
 char* getListOfAllKnownTZ()
 {
 	// 
