@@ -42,7 +42,7 @@ char* getListOfAllKnownTZ()
 {
 	// 
 	char* command = "awk '/^Z/ { print $2 }; /^L/ { print $3 }' /usr/share/zoneinfo/tzdata.zi";
-	char* arrayOfTZ = malloc(50 * 100);
+	char* arrayOfTZ = malloc(100 * 200);
 	int i = 0;
 
 	//
@@ -54,9 +54,6 @@ char* getListOfAllKnownTZ()
 	//
 	while(fgets(s, 100, cmd))
 	{
-			//
-			printf("%s\n", s);
-
 			//
 			strcpy(&arrayOfTZ[i],s);
 	}
