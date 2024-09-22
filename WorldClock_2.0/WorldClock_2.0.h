@@ -7,6 +7,7 @@ struct datetime
     int year;
     int month;
     int dmonth;
+    int nweek;
     int dweek;
     int hour;
     int minute;
