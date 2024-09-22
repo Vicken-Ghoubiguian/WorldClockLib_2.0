@@ -70,13 +70,14 @@ char* getDateTimeForWishedTZ(char* wishedTZ)
 {
 	//
     char* dtChoosenTZ = malloc(30);
-	char fullSize = strlen("TZ=") + strlen(" date") + strlen(wishedTZ);
+	char fullSize = strlen("TZ=") + strlen(" date") + strlen(" +%Y_%m_%d_%U_%u_%H_%M_%S") + strlen(wishedTZ);
 
 	//
 	char* completeCommand = (char*) malloc(fullSize);
 	strcat(completeCommand, "TZ=");
 	strcat(completeCommand, wishedTZ);
 	strcat(completeCommand, " date");
+	strcat(completeCommand, " +%Y_%m_%d_%U_%u_%H_%M_%S");
 
 	//
 	char c;
