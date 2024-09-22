@@ -12,7 +12,6 @@ struct datetime
     int hour;
     int minute;
     int second;
-    char* amORpm;
     char* tz;
 
 } datetime;

@@ -77,7 +77,7 @@ char* getDateTimeForWishedTZ(char* wishedTZ)
 	strcat(completeCommand, "TZ=");
 	strcat(completeCommand, wishedTZ);
 	strcat(completeCommand, " date");
-	strcat(completeCommand, " +%Y_%m_%d_%U_%u_%H_%M_%S");
+	strcat(completeCommand, " +%Y_%m_%d_%U_%u_%H_%M_%S_");
 
 	//
 	char c;
