@@ -54,7 +54,7 @@ char* getListOfAllKnownTZ()
 	//
 	while(fgets(s, 100, cmd))
 	{
-			//printf("%s", s);
+			printf("%s", s);
 
 			//
 			strcpy(&arrayOfTZ[i],s);
