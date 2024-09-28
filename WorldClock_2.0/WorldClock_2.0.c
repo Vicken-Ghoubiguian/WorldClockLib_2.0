@@ -67,14 +67,17 @@ char* getListOfAllKnownTZ()
 	return arrayOfTZ;
 }
 
-//
+// Funtion 'getDateTimeForWishedTZ' to get date and time for the wished timezone
 char* getDateTimeForWishedTZ(char* wishedTZ)
 {
 	//
     char* dtChoosenTZ = malloc(30);
 	char fullSize = strlen("TZ=") + strlen(" date") + strlen(" +%Y_%m_%d_%U_%u_%H_%M_%S") + strlen(wishedTZ);
+	char c;
+	int i = 0;
+    FILE *cmd;
 
-	//
+	// Definition of the bash command to have date and time for the choosen timezone
 	char* completeCommand = (char*) malloc(fullSize);
 	strcat(completeCommand, "TZ=");
 	strcat(completeCommand, wishedTZ);
@@ -82,11 +85,7 @@ char* getDateTimeForWishedTZ(char* wishedTZ)
 	strcat(completeCommand, " +%Y_%m_%d_%U_%u_%H_%M_%S");
 
 	//
-	char c;
-	int i = 0;
-
-	//
-    FILE *cmd=popen(completeCommand, "r");
+    cmd=popen(completeCommand, "r");
 
 	//
     while((c = fgetc(cmd)) != EOF)
@@ -101,6 +100,6 @@ char* getDateTimeForWishedTZ(char* wishedTZ)
 	//
     pclose(cmd);
 
-	//
+	// Return the date and time for the choosen timezone
     return dtChoosenTZ;
 }
