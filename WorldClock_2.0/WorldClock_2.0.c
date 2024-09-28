@@ -37,7 +37,7 @@ enum OS getCurrentOS()
 	#endif
 }
 
-//
+// Function 
 char* getListOfAllKnownTZ()
 {
 	// 

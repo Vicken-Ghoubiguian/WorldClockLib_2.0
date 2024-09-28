@@ -21,5 +21,5 @@ enum OS getCurrentOS();
 //
 char* getListOfAllKnownTZ();
 
-//
+// Funtion 'getDateTimeForWishedTZ' to get date and time for the wished timezone
 char* getDateTimeForWishedTZ(char* wishedTZ);
