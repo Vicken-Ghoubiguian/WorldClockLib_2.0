@@ -84,7 +84,7 @@ char* getDateTimeForWishedTZ(char* wishedTZ)
 	strcat(completeCommand, " date");
 	strcat(completeCommand, " +%Y_%m_%d_%U_%u_%H_%M_%S");
 
-	//
+	// Execution of the command '' to have the date and time for the wished timezone
     cmd=popen(completeCommand, "r");
 
 	//
