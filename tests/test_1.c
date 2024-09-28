@@ -9,9 +9,8 @@ int main()
 {
 	//
 	enum OS currentOS = getCurrentOS();
-
-	//
 	char* arrayOfTZ = getListOfAllKnownTZ();
+	char wishedTimeZone[100];
 
 	//
 	for (int i = 0; i < 3; i++)
@@ -24,7 +23,11 @@ int main()
 	printf("\n\n\n\n");
 
 	//
-	char* resultDTForWishedTZ = getDateTimeForWishedTZ("Pacific/Honolulu");
+	scanf("%s", wishedTimeZone);
+	//printf("%s", wishedTimeZone);
+
+	//
+	char* resultDTForWishedTZ = getDateTimeForWishedTZ(wishedTimeZone);
 
 	//
 	printf("%s", resultDTForWishedTZ);
