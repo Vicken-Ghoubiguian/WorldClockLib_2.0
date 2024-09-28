@@ -23,14 +23,16 @@ int main()
 	printf("\n\n\n\n");
 
 	//
+	printf("Please, write the timezone you want : ");
 	scanf("%s", wishedTimeZone);
-	//printf("%s", wishedTimeZone);
+	printf("\n\n");
 
 	//
 	char* resultDTForWishedTZ = getDateTimeForWishedTZ(wishedTimeZone);
 
 	//
-	printf("%s", resultDTForWishedTZ);
+	printf("%s : %s", wishedTimeZone, resultDTForWishedTZ);
+	printf("\n\n");
 
 	//
 	return 0;
