@@ -2,6 +2,13 @@
 enum OS {undefined, unix, macOS, windows, linux, android, freeBSD};
 
 //
+enum OS getCurrentOS();
+
+/*
+    Definition of the 'datetime' struct to define and manipulate results
+*/
+
+//
 struct datetime
 {
     int year;
@@ -15,11 +22,12 @@ struct datetime
 
 } datetime;
 
-//
-enum OS getCurrentOS();
+// Funtion 'getDateTimeForWishedTZ' to get date and time for the wished timezone
+char* getDateTimeForWishedTZ(char* wishedTZ);
+
+/*
+    Def
+*/
 
 //
 char* getListOfAllKnownTZ();
-
-// Funtion 'getDateTimeForWishedTZ' to get date and time for the wished timezone
-char* getDateTimeForWishedTZ(char* wishedTZ);
