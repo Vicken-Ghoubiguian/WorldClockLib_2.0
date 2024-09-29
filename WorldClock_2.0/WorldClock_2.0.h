@@ -1,3 +1,7 @@
+/*
+    Definition of the 'OS' enum to determine the current operating system
+*/
+
 //
 enum OS {undefined, unix, macOS, windows, linux, android, freeBSD};
 
@@ -26,7 +30,7 @@ struct datetime
 char* getDateTimeForWishedTZ(char* wishedTZ);
 
 /*
-    Def
+    Definition of various useful functions
 */
 
 //
