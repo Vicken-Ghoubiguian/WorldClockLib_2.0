@@ -104,7 +104,7 @@ struct datetime getDateTimeForWishedTZ(char* wishedTZ)
 	// Close the file 'cmd'
     pclose(cmd);
 
-	//
+	// Conversion of the first extract element of the datetime to an integer
 	extrArray = strtok(dtChoosenTZ, "_");
 
 	//
@@ -126,10 +126,10 @@ struct datetime getDateTimeForWishedTZ(char* wishedTZ)
 			case 7 : resultDT.second = valOfTrans; break;
 		}
 
-		//
+		// 
     	extrArray = strtok(NULL, "_");
 
-		//
+		// Incrementation of the 'j' incrementor's value
 		j++;
    }
 
