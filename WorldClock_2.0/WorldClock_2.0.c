@@ -97,7 +97,7 @@ struct datetime getDateTimeForWishedTZ(char* wishedTZ)
 			//
         	dtChoosenTZ[i] = c;
 
-			//
+			// Incrementation of the 'i' incrementor's value
 			i++;
 	}
 	
@@ -107,7 +107,7 @@ struct datetime getDateTimeForWishedTZ(char* wishedTZ)
 	// Conversion of the first extract element of the datetime to an integer
 	extrArray = strtok(dtChoosenTZ, "_");
 
-	//
+	// Loop to extract all elements of the datetime to an integer and put them in the 'resultDT' struct datetime
 	while(extrArray != NULL) {
 
 		//valOfTrans = (int)extrArray;
