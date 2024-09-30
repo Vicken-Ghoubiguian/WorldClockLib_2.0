@@ -77,6 +77,8 @@ char* getDateTimeForWishedTZ(char* wishedTZ)
 	int i = 0;
     FILE *cmd;
 
+	char* extrArray;
+
 	// Definition of the bash command to have date and time for the choosen timezone
 	char* completeCommand = (char*) malloc(fullSize);
 	strcat(completeCommand, "TZ=");
@@ -99,6 +101,14 @@ char* getDateTimeForWishedTZ(char* wishedTZ)
 	
 	// Close the file 'cmd'
     pclose(cmd);
+
+	/* FOR THE TEST (DOWN) */
+	/*extrArray = strtok(dtChoosenTZ, "_");
+	while(extrArray != NULL) {
+      printf("%s\n", extrArray);
+      extrArray = strtok(NULL, "_");
+   }*/
+   /* FOR THE TEST (UP) */
 
 	// Return the date and time for the choosen timezone
     return dtChoosenTZ;
