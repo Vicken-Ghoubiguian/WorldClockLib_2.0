@@ -23,7 +23,7 @@ int main()
 	printf("\n\n\n\n");
 
 	//
-	printf("Please, write the timezone you want : ");
+	/*printf("Please, write the timezone you want : ");
 	scanf("%s", wishedTimeZone);
 	printf("\n\n");
 
@@ -32,7 +32,7 @@ int main()
 
 	//
 	printf("%s : %s", wishedTimeZone, resultDTForWishedTZ);
-	printf("\n\n");
+	printf("\n\n");*/
 
 	//
 	return 0;

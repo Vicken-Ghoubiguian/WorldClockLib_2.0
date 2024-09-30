@@ -68,7 +68,7 @@ char* getListOfAllKnownTZ()
 }
 
 // Funtion 'getDateTimeForWishedTZ' to get date and time for the wished timezone
-char* getDateTimeForWishedTZ(char* wishedTZ)
+struct datetime getDateTimeForWishedTZ(char* wishedTZ)
 {
 	// Definition of all necessary variables
     char* dtChoosenTZ = malloc(30);
@@ -110,8 +110,8 @@ char* getDateTimeForWishedTZ(char* wishedTZ)
 	//
 	while(extrArray != NULL) {
 
-		//
-		valOfTrans = extrArray - '0';
+		//valOfTrans = (int)extrArray;
+		sscanf(extrArray, "%d", &valOfTrans);
 
 		//
 		switch(j)
@@ -133,6 +133,8 @@ char* getDateTimeForWishedTZ(char* wishedTZ)
 		j++;
    }
 
+   printf("%d", resultDT.hour);
+
 	// Return the date and time for the choosen timezone
-    return dtChoosenTZ;
+    return resultDT;
 }
