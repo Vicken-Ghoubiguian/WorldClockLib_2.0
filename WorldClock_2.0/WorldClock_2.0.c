@@ -133,8 +133,6 @@ struct datetime getDateTimeForWishedTZ(char* wishedTZ)
 		j++;
    }
 
-   printf("%d", resultDT.hour);
-
 	// Return the date and time for the choosen timezone
     return resultDT;
 }
