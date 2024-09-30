@@ -29,6 +29,9 @@ struct datetime
 // Funtion 'getDateTimeForWishedTZ' to get date and time for the wished timezone
 struct datetime getDateTimeForWishedTZ(char* wishedTZ);
 
+//
+void printfDateTime(struct datetime dateTimeToDisplay);
+
 /*
     Definition of various useful functions
 */

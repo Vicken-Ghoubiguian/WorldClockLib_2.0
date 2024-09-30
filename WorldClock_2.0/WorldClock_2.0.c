@@ -136,3 +136,9 @@ struct datetime getDateTimeForWishedTZ(char* wishedTZ)
 	// Return the date and time for the choosen timezone
     return resultDT;
 }
+
+//
+void printfDateTime(struct datetime dateTimeToDisplay)
+{
+	
+}
