@@ -68,17 +68,17 @@ char* getListOfAllKnownTZ()
 }
 
 // Funtion 'getWorldClock_2_0ForWishedTZ' to get date and time for the wished timezone
-struct WorldClock_2_0 getWorldClock_2_0ForWishedTZ(char* wishedTZ)
+struct worldClock_2_0 getWorldClock_2_0ForWishedTZ(char* wishedTZ)
 {
 	// Definition of all necessary variables
-    char* WorldClock_2_0ChoosenTZ = malloc(30);
+    char* worldClock_2_0ChoosenTZ = malloc(30);
 	char fullSize = strlen("TZ=") + strlen(" date") + strlen(" +%Y_%m_%d_%U_%u_%H_%M_%S") + strlen(wishedTZ);
 	char c;
 	int i = 0;
 	int j = 0;
     FILE *cmd;
 	char* extrArray;
-	struct WorldClock_2_0 resultWorldClock_2_0;
+	struct worldClock_2_0 resultWorldClock_2_0;
 	int valOfTrans = 0;
 
 	// Definition of the bash command to have date and time for the choosen timezone
@@ -95,7 +95,7 @@ struct WorldClock_2_0 getWorldClock_2_0ForWishedTZ(char* wishedTZ)
     while((c = fgetc(cmd)) != EOF)
 	{
 			//
-        	WorldClock_2_0ChoosenTZ[i] = c;
+        	worldClock_2_0ChoosenTZ[i] = c;
 
 			// Incrementation of the 'i' incrementor's value
 			i++;
@@ -105,7 +105,7 @@ struct WorldClock_2_0 getWorldClock_2_0ForWishedTZ(char* wishedTZ)
     pclose(cmd);
 
 	// Conversion of the first extract element of the WorldClock_2_0 to an integer
-	extrArray = strtok(WorldClock_2_0ChoosenTZ, "_");
+	extrArray = strtok(worldClock_2_0ChoosenTZ, "_");
 
 	// Loop to extract all elements of the WorldClock_2_0 to an integer and put them in the 'resultWorldClock_2_0' struct WorldClock_2_0
 	while(extrArray != NULL) {
@@ -138,7 +138,7 @@ struct WorldClock_2_0 getWorldClock_2_0ForWishedTZ(char* wishedTZ)
 }
 
 //
-void printfWorldClock_2_0(struct WorldClock_2_0 WorldClock_2_0ToDisplay)
+void printfWorldClock_2_0(struct worldClock_2_0 worldClock_2_0ToDisplay)
 {
 	
 }
