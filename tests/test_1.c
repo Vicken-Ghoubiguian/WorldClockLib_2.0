@@ -23,16 +23,16 @@ int main()
 	printf("\n\n\n\n");
 
 	//
-	/*printf("Please, write the timezone you want : ");
+	printf("Please, write the timezone you want : ");
 	scanf("%s", wishedTimeZone);
 	printf("\n\n");
 
 	//
-	char* resultDTForWishedTZ = getDateTimeForWishedTZ(wishedTimeZone);
+struct worldClock_2_0 resultWorldClock_2_0ForWishedTZ = getWorldClock_2_0ForWishedTZ(wishedTimeZone);
 
 	//
-	printf("%s : %s", wishedTimeZone, resultDTForWishedTZ);
-	printf("\n\n");*/
+	printf("%s : %d", wishedTimeZone, resultWorldClock_2_0ForWishedTZ.hour);
+	printf("\n\n");
 
 	//
 	return 0;
