@@ -138,7 +138,7 @@ struct worldClock_2_0 getWorldClock_2_0ForWishedTZ(char* wishedTZ)
 }
 
 //
-void printfWorldClock_2_0(struct worldClock_2_0 worldClock_2_0ToDisplay)
+char* printfWorldClock_2_0(struct worldClock_2_0 worldClock_2_0ToDisplay)
 {
-	
+	return "";
 }
