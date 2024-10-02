@@ -140,5 +140,19 @@ struct worldClock_2_0 getWorldClock_2_0ForWishedTZ(char* wishedTZ)
 //
 char* printfWorldClock_2_0(struct worldClock_2_0 worldClock_2_0ToDisplay)
 {
+	//
+	char yearAsString[10];
+    char monthAsString[10];
+    char dmonthAsString[10];
+    char nweekAsString[10];
+    char dweekAsString[10];
+    char hourAsString[10];
+    char minuteAsString[10];
+    char secondAsString[10];
+
+	//
+	
+
+	//
 	return "";
 }
