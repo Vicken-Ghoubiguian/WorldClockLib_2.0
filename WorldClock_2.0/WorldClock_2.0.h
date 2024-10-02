@@ -29,7 +29,7 @@ struct datetime
 // Funtion 'getDateTimeForWishedTZ' to get date and time for the wished timezone
 struct datetime getDateTimeForWishedTZ(char* wishedTZ);
 
-//
+// Funtion 'printfDateTime' to display date and time from a struct datetime object
 void printfDateTime(struct datetime dateTimeToDisplay);
 
 /*
