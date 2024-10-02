@@ -151,8 +151,8 @@ char* printfWorldClock_2_0(struct worldClock_2_0 worldClock_2_0ToDisplay)
     char secondAsString[10];
 
 	//
-	
+
 
 	//
-	return "";
+	return "date :  ｜ time : ｜ number of week in the year : ｜ number of day in the week : ";
 }
