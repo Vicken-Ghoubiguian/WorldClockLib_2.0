@@ -67,18 +67,18 @@ char* getListOfAllKnownTZ()
 	return arrayOfTZ;
 }
 
-// Funtion 'getDateTimeForWishedTZ' to get date and time for the wished timezone
-struct datetime getDateTimeForWishedTZ(char* wishedTZ)
+// Funtion 'getWorldClock_2_0ForWishedTZ' to get date and time for the wished timezone
+struct WorldClock_2_0 getWorldClock_2_0ForWishedTZ(char* wishedTZ)
 {
 	// Definition of all necessary variables
-    char* dtChoosenTZ = malloc(30);
+    char* WorldClock_2_0ChoosenTZ = malloc(30);
 	char fullSize = strlen("TZ=") + strlen(" date") + strlen(" +%Y_%m_%d_%U_%u_%H_%M_%S") + strlen(wishedTZ);
 	char c;
 	int i = 0;
 	int j = 0;
     FILE *cmd;
 	char* extrArray;
-	struct datetime resultDT;
+	struct WorldClock_2_0 resultWorldClock_2_0;
 	int valOfTrans = 0;
 
 	// Definition of the bash command to have date and time for the choosen timezone
@@ -95,7 +95,7 @@ struct datetime getDateTimeForWishedTZ(char* wishedTZ)
     while((c = fgetc(cmd)) != EOF)
 	{
 			//
-        	dtChoosenTZ[i] = c;
+        	WorldClock_2_0ChoosenTZ[i] = c;
 
 			// Incrementation of the 'i' incrementor's value
 			i++;
@@ -104,10 +104,10 @@ struct datetime getDateTimeForWishedTZ(char* wishedTZ)
 	// Close the file 'cmd'
     pclose(cmd);
 
-	// Conversion of the first extract element of the datetime to an integer
-	extrArray = strtok(dtChoosenTZ, "_");
+	// Conversion of the first extract element of the WorldClock_2_0 to an integer
+	extrArray = strtok(WorldClock_2_0ChoosenTZ, "_");
 
-	// Loop to extract all elements of the datetime to an integer and put them in the 'resultDT' struct datetime
+	// Loop to extract all elements of the WorldClock_2_0 to an integer and put them in the 'resultWorldClock_2_0' struct WorldClock_2_0
 	while(extrArray != NULL) {
 
 		//valOfTrans = (int)extrArray;
@@ -116,14 +116,14 @@ struct datetime getDateTimeForWishedTZ(char* wishedTZ)
 		//
 		switch(j)
 		{
-			case 0 : resultDT.year = valOfTrans; break;
-			case 1 : resultDT.month = valOfTrans; break;
-			case 2 : resultDT.dmonth = valOfTrans; break;
-			case 3 : resultDT.nweek = valOfTrans; break;
-			case 4 : resultDT.dweek = valOfTrans; break;
-			case 5 : resultDT.hour = valOfTrans; break;
-			case 6 : resultDT.minute = valOfTrans; break;
-			case 7 : resultDT.second = valOfTrans; break;
+			case 0 : resultWorldClock_2_0.year = valOfTrans; break;
+			case 1 : resultWorldClock_2_0.month = valOfTrans; break;
+			case 2 : resultWorldClock_2_0.dmonth = valOfTrans; break;
+			case 3 : resultWorldClock_2_0.nweek = valOfTrans; break;
+			case 4 : resultWorldClock_2_0.dweek = valOfTrans; break;
+			case 5 : resultWorldClock_2_0.hour = valOfTrans; break;
+			case 6 : resultWorldClock_2_0.minute = valOfTrans; break;
+			case 7 : resultWorldClock_2_0.second = valOfTrans; break;
 		}
 
 		// 
@@ -134,11 +134,11 @@ struct datetime getDateTimeForWishedTZ(char* wishedTZ)
    }
 
 	// Return the date and time for the choosen timezone
-    return resultDT;
+    return resultWorldClock_2_0;
 }
 
 //
-void printfDateTime(struct datetime dateTimeToDisplay)
+void printfWorldClock_2_0(struct WorldClock_2_0 WorldClock_2_0ToDisplay)
 {
 	
 }
