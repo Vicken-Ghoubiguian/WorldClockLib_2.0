@@ -183,7 +183,7 @@ char* printfWorldClock_2_0(struct worldClock_2_0 worldClock_2_0ToDisplay)
 	tostring(secondAsString, worldClock_2_0ToDisplay.second);
 
 	//
-	sprintf(resultString, "date : %s/%s/%s｜ time : %s:%s:%s｜ number of week in the year : %s｜ number of day in the week : %s", yearAsString, monthAsString, dmonthAsString, hourAsString, minuteAsString, secondAsString, nweekAsString, dweekAsString);
+	sprintf(resultString, "date : %s/%s/%s｜ time : %s:%s:%s｜ number of the week in the year : %s｜ number of the day in the week : %s", yearAsString, monthAsString, dmonthAsString, hourAsString, minuteAsString, secondAsString, nweekAsString, dweekAsString);
 
 	//
 	return resultString;
