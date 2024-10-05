@@ -7,7 +7,7 @@
 #include "WorldClock_2.0.h"
 
 //
-void tostring(char str[], int num)
+/*void tostring(char str[], int num)
 {
     int i, rem, len = 0, n;
     n = num;
@@ -23,7 +23,7 @@ void tostring(char str[], int num)
         str[len - (i + 1)] = rem + '0';
     }
     str[len] = '\0';
-}
+}*/
 
 //
 enum OS getCurrentOS()
@@ -170,10 +170,10 @@ char* sprintfWorldClock_2_0(struct worldClock_2_0 worldClock_2_0ToDisplay)
     char secondAsString[3];
 
 	//
-	char* resultString = malloc(70 * sizeof(char));
+	char* resultString = malloc(20 * sizeof(char));
 
 	//
-	tostring(yearAsString, worldClock_2_0ToDisplay.year);
+	/*tostring(yearAsString, worldClock_2_0ToDisplay.year);
 	tostring(monthAsString, worldClock_2_0ToDisplay.month);
 	tostring(dmonthAsString, worldClock_2_0ToDisplay.dmonth);
 	tostring(nweekAsString, worldClock_2_0ToDisplay.nweek);
@@ -181,10 +181,10 @@ char* sprintfWorldClock_2_0(struct worldClock_2_0 worldClock_2_0ToDisplay)
 	tostring(hourAsString, worldClock_2_0ToDisplay.hour);
 	tostring(minuteAsString, worldClock_2_0ToDisplay.minute);
 	tostring(secondAsString, worldClock_2_0ToDisplay.second);
-	
-	//
-	sprintf(resultString, "date : %s/%s/%s - time : %s:%s:%s｜ number of the week in the year : %s｜ number of the day in the week : %s", dmonthAsString, monthAsString, yearAsString, hourAsString, minuteAsString, secondAsString, nweekAsString, dweekAsString);
 
 	//
-	return resultString;
+	sprintf(resultString, "date : %s/%s/%s", dmonthAsString, monthAsString, yearAsString);*/
+
+	//
+	return "";
 }
