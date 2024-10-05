@@ -5,9 +5,6 @@
 //
 char* getListOfAllKnownTZ();
 
-//
-//void tostring(char str[], int num);
-
 /*
     Definition of the 'OS' enum to determine the current operating system
 */
