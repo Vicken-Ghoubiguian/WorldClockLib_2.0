@@ -38,3 +38,7 @@ struct worldClock_2_0 getWorldClock_2_0ForWishedTZ(char* wishedTZ);
 
 // Funtion 'printfWorldClock_2_0' to display date and time from a struct WorldClock_2_0 object
 char* sprintfWorldClock_2_0(struct worldClock_2_0 worldClock_2_0ToDisplay);
+
+/*
+    Conversions between 'worldClock_2_0', 'time_t' and 'tm'
+*/
