@@ -28,10 +28,10 @@ int main()
 	printf("\n\n");
 
 	//
-struct worldClock_2_0 resultWorldClock_2_0ForWishedTZ = getWorldClock_2_0ForWishedTZ(wishedTimeZone);
+	struct worldClock_2_0 resultWorldClock_2_0ForWishedTZ = getWorldClock_2_0ForWishedTZ(wishedTimeZone);
 
 	//
-	printf("%s : %d", wishedTimeZone, resultWorldClock_2_0ForWishedTZ.hour);
+	printf("%s : %s", wishedTimeZone, printfWorldClock_2_0(resultWorldClock_2_0ForWishedTZ));
 	printf("\n\n");
 
 	//
