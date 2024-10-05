@@ -40,5 +40,5 @@ struct worldClock_2_0 getWorldClock_2_0ForWishedTZ(char* wishedTZ);
 char* sprintfWorldClock_2_0(struct worldClock_2_0 worldClock_2_0ToDisplay);
 
 /*
-    Conversions between 'worldClock_2_0', 'time_t' and 'tm'
+    Definition of functions for conversions between 'worldClock_2_0', 'time_t' and 'tm'
 */
