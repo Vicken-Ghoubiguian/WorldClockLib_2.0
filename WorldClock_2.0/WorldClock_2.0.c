@@ -144,7 +144,7 @@ char* sprintfWorldClock_2_0(struct worldClock_2_0 worldClock_2_0ToDisplay)
 	char* resultString = malloc(20 * sizeof(char));
 
 	//
-	sprintf(resultString, "date : %d/%d/%d | hour : %d:%d:%d | ", worldClock_2_0ToDisplay.dmonth, worldClock_2_0ToDisplay.month, worldClock_2_0ToDisplay.year, worldClock_2_0ToDisplay.hour, worldClock_2_0ToDisplay.minute, worldClock_2_0ToDisplay.second);
+	sprintf(resultString, "date : %d/%d/%d | time : %d:%d:%d | ", worldClock_2_0ToDisplay.dmonth, worldClock_2_0ToDisplay.month, worldClock_2_0ToDisplay.year, worldClock_2_0ToDisplay.hour, worldClock_2_0ToDisplay.minute, worldClock_2_0ToDisplay.second);
 
 	//
 	return resultString;
