@@ -140,7 +140,7 @@ struct worldClock_2_0 getWorldClock_2_0ForWishedTZ(char* wishedTZ)
 // Funtion 'sprintfWorldClock_2_0' to return date and time from a struct WorldClock_2_0 object as a string
 char* sprintfWorldClock_2_0(struct worldClock_2_0 worldClock_2_0ToDisplay)
 {
-	//
+	// Definition of the 'resultString' string which will contain the result
 	char* resultString = malloc(20 * sizeof(char));
 
 	//
