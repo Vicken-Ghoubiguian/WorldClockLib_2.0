@@ -38,3 +38,6 @@ char* printfWorldClock_2_0(struct worldClock_2_0 worldClock_2_0ToDisplay);
 
 //
 char* getListOfAllKnownTZ();
+
+//
+void tostring(char str[], int num);

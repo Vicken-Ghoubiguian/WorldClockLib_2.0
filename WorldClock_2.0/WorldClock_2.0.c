@@ -7,6 +7,25 @@
 #include "WorldClock_2.0.h"
 
 //
+void tostring(char str[], int num)
+{
+    int i, rem, len = 0, n;
+    n = num;
+    while (n != 0)
+    {
+        len++;
+        n /= 10;
+    }
+    for (i = 0; i < len; i++)
+    {
+        rem = num % 10;
+        num = num / 10;
+        str[len - (i + 1)] = rem + '0';
+    }
+    str[len] = '\0';
+}
+
+//
 enum OS getCurrentOS()
 {
 	//
@@ -151,7 +170,14 @@ char* printfWorldClock_2_0(struct worldClock_2_0 worldClock_2_0ToDisplay)
     char secondAsString[10];
 
 	//
-
+	tostring(yearAsString, worldClock_2_0ToDisplay.year);
+	tostring(monthAsString, worldClock_2_0ToDisplay.month);
+	tostring(dmonthAsString, worldClock_2_0ToDisplay.dmonth);
+	tostring(nweekAsString, worldClock_2_0ToDisplay.nweek);
+	tostring(dweekAsString, worldClock_2_0ToDisplay.dweek);
+	tostring(hourAsString, worldClock_2_0ToDisplay.hour);
+	tostring(minuteAsString, worldClock_2_0ToDisplay.minute);
+	tostring(secondAsString, worldClock_2_0ToDisplay.second);
 
 	//
 	return "date :  ｜ time : ｜ number of week in the year : ｜ number of day in the week : ";
