@@ -146,6 +146,6 @@ char* sprintfWorldClock_2_0(struct worldClock_2_0 worldClock_2_0ToDisplay)
 	//
 	sprintf(resultString, "date : %d/%d/%d | time : %d:%d:%d | number of the day in the week : %d | number of the week in the year : %d |", worldClock_2_0ToDisplay.dmonth, worldClock_2_0ToDisplay.month, worldClock_2_0ToDisplay.year, worldClock_2_0ToDisplay.hour, worldClock_2_0ToDisplay.minute, worldClock_2_0ToDisplay.second, worldClock_2_0ToDisplay.dweek, worldClock_2_0ToDisplay.nweek);
 
-	//
+	// Return the date and time as a string
 	return resultString;
 }
