@@ -157,7 +157,7 @@ struct worldClock_2_0 getWorldClock_2_0ForWishedTZ(char* wishedTZ)
 }
 
 //
-char* printfWorldClock_2_0(struct worldClock_2_0 worldClock_2_0ToDisplay)
+char* sprintfWorldClock_2_0(struct worldClock_2_0 worldClock_2_0ToDisplay)
 {
 	//
 	char yearAsString[3];
@@ -170,7 +170,7 @@ char* printfWorldClock_2_0(struct worldClock_2_0 worldClock_2_0ToDisplay)
     char secondAsString[3];
 
 	//
-	char* resultString = malloc(50 * sizeof(char));
+	char* resultString = malloc(70 * sizeof(char));
 
 	//
 	tostring(yearAsString, worldClock_2_0ToDisplay.year);

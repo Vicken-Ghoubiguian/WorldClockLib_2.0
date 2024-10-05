@@ -31,7 +31,7 @@ int main()
 	struct worldClock_2_0 resultWorldClock_2_0ForWishedTZ = getWorldClock_2_0ForWishedTZ(wishedTimeZone);
 
 	//
-	printf("%s : %s", wishedTimeZone, printfWorldClock_2_0(resultWorldClock_2_0ForWishedTZ));
+	printf("%s : %s", wishedTimeZone, sprintfWorldClock_2_0(resultWorldClock_2_0ForWishedTZ));
 	printf("\n\n");
 
 	//
