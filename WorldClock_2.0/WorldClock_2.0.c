@@ -160,31 +160,11 @@ struct worldClock_2_0 getWorldClock_2_0ForWishedTZ(char* wishedTZ)
 char* sprintfWorldClock_2_0(struct worldClock_2_0 worldClock_2_0ToDisplay)
 {
 	//
-	char yearAsString[3];
-    char monthAsString[3];
-    char dmonthAsString[3];
-    char nweekAsString[3];
-    char dweekAsString[3];
-    char hourAsString[3];
-    char minuteAsString[3];
-    char secondAsString[3];
-
-	//
 	char* resultString = malloc(20 * sizeof(char));
 
 	//
-	/*tostring(yearAsString, worldClock_2_0ToDisplay.year);
-	tostring(monthAsString, worldClock_2_0ToDisplay.month);
-	tostring(dmonthAsString, worldClock_2_0ToDisplay.dmonth);
-	tostring(nweekAsString, worldClock_2_0ToDisplay.nweek);
-	tostring(dweekAsString, worldClock_2_0ToDisplay.dweek);
-	tostring(hourAsString, worldClock_2_0ToDisplay.hour);
-	tostring(minuteAsString, worldClock_2_0ToDisplay.minute);
-	tostring(secondAsString, worldClock_2_0ToDisplay.second);
+	sprintf(resultString, "date : %d/%d/%d | hour : %d:%d:%d | ", worldClock_2_0ToDisplay.dmonth, worldClock_2_0ToDisplay.month, worldClock_2_0ToDisplay.year, worldClock_2_0ToDisplay.hour, worldClock_2_0ToDisplay.minute, worldClock_2_0ToDisplay.second);
 
 	//
-	sprintf(resultString, "date : %s/%s/%s", dmonthAsString, monthAsString, yearAsString);*/
-
-	//
-	return "";
+	return resultString;
 }
