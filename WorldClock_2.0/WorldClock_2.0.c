@@ -140,7 +140,8 @@ struct worldClock_2_0 getWorldClock_2_0ForWishedTZ(char* wishedTZ)
 // Funtion 'printfWorldClock_2_0' to display date and time from a struct WorldClock_2_0 object as a string
 void printfWorldClock_2_0(struct worldClock_2_0 worldClock_2_0ToDisplay)
 {
-	
+	//
+	printf("date : %d/%d/%d | time : %d:%d:%d | number of the day in the week : %d | number of the week in the year : %d |", worldClock_2_0ToDisplay.dmonth, worldClock_2_0ToDisplay.month, worldClock_2_0ToDisplay.year, worldClock_2_0ToDisplay.hour, worldClock_2_0ToDisplay.minute, worldClock_2_0ToDisplay.second, worldClock_2_0ToDisplay.dweek, worldClock_2_0ToDisplay.nweek);
 }
 
 // Funtion 'sprintfWorldClock_2_0' to return date and time from a struct WorldClock_2_0 object as a string
