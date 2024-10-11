@@ -11,6 +11,7 @@ int main()
 	enum OS currentOS = getCurrentOS();
 	char* arrayOfTZ = getListOfAllKnownTZ();
 	char wishedTimeZone[100];
+	char* resultString;
 
 	//
 	for (int i = 0; i < 3; i++)
@@ -28,9 +29,13 @@ int main()
 	printf("\n\n");
 
 	//
+	struct worldClock_2_0 resultWorldClock_2_0ForWishedTZ = getWorldClock_2_0ForWishedTZ(wishedTimeZone);
 
 	//
-	printf("%s : %s", wishedTimeZone, "");
+	resultString = sprintfWorldClock_2_0(resultWorldClock_2_0ForWishedTZ);
+
+	//
+	printf("%s : %s", wishedTimeZone, resultString);
 	printf("\n\n");
 
 	//
