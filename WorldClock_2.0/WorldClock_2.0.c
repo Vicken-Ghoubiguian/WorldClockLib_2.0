@@ -1,9 +1,4 @@
 //
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
-//
 #include "WorldClock_2.0.h"
 
 //
