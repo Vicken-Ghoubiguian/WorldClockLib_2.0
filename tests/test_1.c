@@ -19,7 +19,7 @@ int main()
 		printf("%c\n", arrayOfTZ[i]);
 	}
 
-	//
+	// Breaking 4 lines
 	printf("\n\n\n\n");
 
 	//
