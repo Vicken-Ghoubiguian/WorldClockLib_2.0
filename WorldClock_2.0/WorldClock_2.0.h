@@ -51,3 +51,9 @@ char* sprintfWorldClock_2_0(struct worldClock_2_0 worldClock_2_0ToDisplay);
 /*
     Definition of functions for conversions between 'worldClock_2_0', 'time_t' and 'struct tm'
 */
+
+//
+struct tm conversion_of_worldClock_2_0_to_struct_tm(struct worldClock_2_0 worldClock_2_0ToConvert);
+
+//
+struct worldClock_2_0 conversion_of_struct_tm_to_worldClock_2_0(struct tm structTmToConvert);
