@@ -11,21 +11,13 @@
 // Function 'getListOfAllKnownTZ' to get all available timezones
 char* getListOfAllKnownTZ();
 
-/*
-    Definition of the 'OS' enum to determine the current operating system
-*/
-
-//
+// Definition of the 'OS' enum to determine the current operating system
 enum OS {undefined, unix, macOS, windows, linux, android, freeBSD};
 
 //
 enum OS getCurrentOS();
 
-/*
-    Definition of the 'worldClock_2_0' struct to define and manipulate results
-*/
-
-//
+// Definition of the 'worldClock_2_0' struct to define and manipulate results
 struct worldClock_2_0
 {
     int year;
