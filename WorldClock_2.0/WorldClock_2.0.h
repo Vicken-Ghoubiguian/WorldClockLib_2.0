@@ -49,5 +49,5 @@ void printfWorldClock_2_0(struct worldClock_2_0 worldClock_2_0ToDisplay);
 char* sprintfWorldClock_2_0(struct worldClock_2_0 worldClock_2_0ToDisplay);
 
 /*
-    Definition of functions for conversions between 'worldClock_2_0', 'time_t' and 'tm'
+    Definition of functions for conversions between 'worldClock_2_0', 'time_t' and 'struct tm'
 */
