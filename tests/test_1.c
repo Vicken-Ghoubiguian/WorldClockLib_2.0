@@ -9,15 +9,15 @@ int main()
 {
 	//
 	enum OS currentOS = getCurrentOS();
-	char* arrayOfTZ = getListOfAllKnownTZ();
+	//char* arrayOfTZ = getListOfAllKnownTZ();
 	char wishedTimeZone[100];
 
 	//
-	for (int i = 0; i < 3; i++)
+	/*for (int i = 0; i < 3; i++)
 	{
 		//
 		printf("%c\n", arrayOfTZ[i]);
-	}
+	}*/
 
 	// Breaking 4 lines
 	printf("\n\n\n\n");
