@@ -33,8 +33,6 @@ int main()
 
 	//
 	resultString = sprintfWorldClock_2_0(resultWorldClock_2_0ForWishedTZ);
-
-	//
 	printf("%s : %s", wishedTimeZone, resultString);
 	printf("\n\n");
 
