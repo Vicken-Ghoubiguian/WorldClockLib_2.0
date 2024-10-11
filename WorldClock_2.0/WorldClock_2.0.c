@@ -32,7 +32,7 @@ enum OS getCurrentOS()
 	#endif
 }
 
-// Function 
+// Function 'getListOfAllKnownTZ' to get all available timezones
 char* getListOfAllKnownTZ()
 {
 	// 

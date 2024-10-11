@@ -8,7 +8,7 @@
     Definition of various useful functions
 */
 
-//
+// Function 'getListOfAllKnownTZ' to get all available timezones
 char* getListOfAllKnownTZ();
 
 /*
