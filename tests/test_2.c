@@ -30,7 +30,7 @@ int main()
 	//
 
 	//
-	printf("%s : ", wishedTimeZone);
+	printf("%s : %s", wishedTimeZone, "");
 	printf("\n\n");
 
 	//
