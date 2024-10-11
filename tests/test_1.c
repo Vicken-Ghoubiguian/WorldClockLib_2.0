@@ -11,8 +11,8 @@ int main()
 	enum OS currentOS = getCurrentOS();
 	char wishedTimeZone[100];
 
-	// Breaking 4 lines
-	printf("\n\n\n\n");
+	// Breaking 2 lines
+	printf("\n\n");
 
 	//
 	printf("Please, write the timezone you want : ");
