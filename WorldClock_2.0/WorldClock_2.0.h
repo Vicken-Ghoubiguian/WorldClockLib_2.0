@@ -4,6 +4,9 @@
 #include <string.h>
 #include <time.h>
 
+//
+void displaytListOfAllKnownTZ();
+
 // Function 'getListOfAllKnownTZ' to get all available timezones
 char** getListOfAllKnownTZ();
 

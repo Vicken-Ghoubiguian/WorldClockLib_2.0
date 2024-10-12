@@ -8,19 +8,7 @@
 int main()
 {
 	//
-	enum OS currentOS = getCurrentOS();
-	char** arrayOfTZ;
-
-	arrayOfTZ = getListOfAllKnownTZ();
-
-	printf("%s\n", arrayOfTZ[0]);
-
-	//
-	/*for (int i = 0; i < 3; i++)
-	{
-		//
-		printf("%s\n", arrayOfTZ[i]);
-	}*/
+	displaytListOfAllKnownTZ();
 
     // Breaking 2 lines
 	printf("\n\n");

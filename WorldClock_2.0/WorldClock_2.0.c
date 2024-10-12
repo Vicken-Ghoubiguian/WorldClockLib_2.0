@@ -32,6 +32,27 @@ enum OS getCurrentOS()
 	#endif
 }
 
+//
+void displaytListOfAllKnownTZ()
+{
+	// 
+	char* command = "awk '/^Z/ { print $2 }; /^L/ { print $3 }' /usr/share/zoneinfo/tzdata.zi";
+	char tz[100];
+
+	//
+    FILE *cmd=popen(command, "r");
+
+	//
+	while(fgets(tz, 500, cmd))
+	{
+		//
+		printf("%s", tz);
+	}
+
+	//
+	pclose(cmd);
+}
+
 // Function 'getListOfAllKnownTZ' to get all available timezones
 char** getListOfAllKnownTZ()
 {
