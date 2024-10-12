@@ -89,11 +89,11 @@ struct worldClock_2_0 getWorldClock_2_0ForWishedTZ(char* wishedTZ)
 	//
     while((c = fgetc(cmd)) != EOF)
 	{
-			//
-        	worldClock_2_0ChoosenTZ[i] = c;
+		//
+    	worldClock_2_0ChoosenTZ[i] = c;
 
-			// Incrementation of the 'i' incrementor's value
-			i++;
+		// Incrementation of the 'i' incrementor's value
+		i++;
 	}
 	
 	// Close the file 'cmd'
@@ -126,7 +126,7 @@ struct worldClock_2_0 getWorldClock_2_0ForWishedTZ(char* wishedTZ)
 
 		// Incrementation of the 'j' incrementor's value
 		j++;
-   }
+   	}
 
 	// Return the date and time for the choosen timezone
     return resultWorldClock_2_0;
