@@ -33,11 +33,12 @@ enum OS getCurrentOS()
 }
 
 // Function 'getListOfAllKnownTZ' to get all available timezones
-char* getListOfAllKnownTZ()
+char** getListOfAllKnownTZ()
 {
 	// 
 	char* command = "awk '/^Z/ { print $2 }; /^L/ { print $3 }' /usr/share/zoneinfo/tzdata.zi";
-	char* arrayOfTZ = malloc(100 * 200);
+	char* arrayOfTZ[100];
+	char* currentTZ;
 	int i = 0;
 
 	//
@@ -49,10 +50,13 @@ char* getListOfAllKnownTZ()
 	//
 	while(fgets(s, 100, cmd))
 	{
-		printf("%s", s);
+		//
+		arrayOfTZ[i] = s;
+
+		printf("%s\n", arrayOfTZ[i]);
 
 		//
-		strcpy(&arrayOfTZ[i],s);
+		i++;
 	}
 
 	//

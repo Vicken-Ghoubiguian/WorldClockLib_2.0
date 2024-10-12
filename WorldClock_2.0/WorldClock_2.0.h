@@ -5,7 +5,7 @@
 #include <time.h>
 
 // Function 'getListOfAllKnownTZ' to get all available timezones
-char* getListOfAllKnownTZ();
+char** getListOfAllKnownTZ();
 
 // Definition of the 'OS' enum to determine the current operating system
 enum OS {undefined, unix, macOS, windows, linux, android, freeBSD};
