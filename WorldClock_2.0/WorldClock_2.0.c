@@ -32,7 +32,7 @@ enum OS getCurrentOS()
 	#endif
 }
 
-//
+// Function 'displaytListOfAllKnownTZ' to display all available timezones
 void displaytListOfAllKnownTZ()
 {
 	// 

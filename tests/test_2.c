@@ -10,7 +10,7 @@ int main()
 	// Breaking 2 lines
 	printf("\n\n");
 
-	//
+	// Display all available timezones
 	displaytListOfAllKnownTZ();
 
     // Breaking 2 lines
