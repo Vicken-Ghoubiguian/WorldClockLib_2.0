@@ -50,6 +50,8 @@ char** getListOfAllKnownTZ()
 	//
 	while(fgets(tz, 500, cmd))
 	{
+		printf("%s", tz);
+
 		//
 		arrayOfTZ[i] = tz;
 
