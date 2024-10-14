@@ -8,7 +8,7 @@
 int main()
 {
 	//
-	char wishedTimeZone[100];
+	char* wishedTimeZone = malloc(100 * sizeof(char));
 
 	// Breaking 2 lines
 	printf("\n\n");
