@@ -7,6 +7,9 @@
 //
 int main()
 {
+	//
+	char* wishedTimeZone;
+
 	// Breaking 2 lines
 	printf("\n\n");
 

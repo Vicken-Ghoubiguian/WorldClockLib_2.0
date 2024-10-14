@@ -1,37 +1,6 @@
 //
 #include "WorldClock_2.0.h"
 
-//
-enum OS getCurrentOS()
-{
-	//
-	#if defined(_WIN32)
-    	return windows;
-	#elif defined(_WIN64)
-		return windows;
-	#elif defined(__CYGWIN__)
-		return windows;
-	#elif defined(unix)
-		return unix;
-	#elif defined(__unix)
-		return unix;
-	#elif defined(__unix__)
-		return unix;
-	#elif defined(__APPLE__)
-		return macOS;
-	#elif defined(__MACH__)
-		return macOS;
-	#elif defined(__linux__)
-		return linux;
-	#elif defined(__FreeBSD__)
-		return freeBSD;
-	#elif defined(__ANDROID__)
-		return android;
-	#else
-		return undefined;
-	#endif
-}
-
 // Function 'displaytListOfAllKnownTZ' to display all available timezones
 void displaytListOfAllKnownTZ()
 {
@@ -54,7 +23,7 @@ void displaytListOfAllKnownTZ()
 }
 
 // Function 'getListOfAllKnownTZ' to get all available timezones
-char** getListOfAllKnownTZ()
+/*char** getListOfAllKnownTZ()
 {
 	// 
 	char* command = "awk '/^Z/ { print $2 }; /^L/ { print $3 }' /usr/share/zoneinfo/tzdata.zi";
@@ -87,7 +56,7 @@ char** getListOfAllKnownTZ()
 
 	//
 	return arrayOfTZ;
-}
+}*/
 
 // Funtion 'getWorldClock_2_0ForWishedTZ' to get date and time for the wished timezone
 struct worldClock_2_0 getWorldClock_2_0ForWishedTZ(char* wishedTZ)
