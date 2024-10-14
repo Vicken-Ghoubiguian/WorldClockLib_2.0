@@ -140,3 +140,34 @@ char* sprintfWorldClock_2_0(struct worldClock_2_0 worldClock_2_0ToDisplay)
 	// Return the date and time as a string
 	return resultString;
 }
+
+//
+enum OS getCurrentOS()
+{
+	//
+	#if defined(_WIN32)
+    	return windows;
+	#elif defined(_WIN64)
+		return windows;
+	#elif defined(__CYGWIN__)
+		return windows;
+	#elif defined(unix)
+		return unix;
+	#elif defined(__unix)
+		return unix;
+	#elif defined(__unix__)
+		return unix;
+	#elif defined(__APPLE__)
+		return macOS;
+	#elif defined(__MACH__)
+		return macOS;
+	#elif defined(__linux__)
+		return linux;
+	#elif defined(__FreeBSD__)
+		return freeBSD;
+	#elif defined(__ANDROID__)
+		return android;
+	#else
+		return undefined;
+	#endif
+}

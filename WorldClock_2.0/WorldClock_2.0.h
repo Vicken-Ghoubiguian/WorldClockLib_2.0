@@ -14,7 +14,7 @@ void displaytListOfAllKnownTZ();
 enum OS {undefined, unix, macOS, windows, linux, android, freeBSD};
 
 //
-//enum OS getCurrentOS();
+enum OS getCurrentOS();
 
 // Definition of the 'worldClock_2_0' struct to define and manipulate results
 struct worldClock_2_0
@@ -41,34 +41,3 @@ struct tm conversion_of_worldClock_2_0_to_struct_tm(struct worldClock_2_0 worldC
 
 //
 struct worldClock_2_0 conversion_of_struct_tm_to_worldClock_2_0(struct tm structTmToConvert);
-
-//
-enum OS getCurrentOS()
-{
-	//
-	#if defined(_WIN32)
-    	return windows;
-	#elif defined(_WIN64)
-		return windows;
-	#elif defined(__CYGWIN__)
-		return windows;
-	#elif defined(unix)
-		return unix;
-	#elif defined(__unix)
-		return unix;
-	#elif defined(__unix__)
-		return unix;
-	#elif defined(__APPLE__)
-		return macOS;
-	#elif defined(__MACH__)
-		return macOS;
-	#elif defined(__linux__)
-		return linux;
-	#elif defined(__FreeBSD__)
-		return freeBSD;
-	#elif defined(__ANDROID__)
-		return android;
-	#else
-		return undefined;
-	#endif
-}
