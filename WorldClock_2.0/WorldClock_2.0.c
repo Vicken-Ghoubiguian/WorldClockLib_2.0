@@ -146,9 +146,14 @@ char* sprintfWorldClock_2_0(struct worldClock_2_0 worldClock_2_0ToDisplay)
 
 	//
 	sprintf(s_year, "%d", worldClock_2_0ToDisplay.year);
+	if(worldClock_2_0ToDisplay.month < 10){sprintf(s_month, "0%d", worldClock_2_0ToDisplay.month);}else{sprintf(s_month, "%d", worldClock_2_0ToDisplay.month);}
+	if(worldClock_2_0ToDisplay.dmonth < 10){sprintf(s_dmonth, "0%d", worldClock_2_0ToDisplay.dmonth);}else{sprintf(s_dmonth, "%d", worldClock_2_0ToDisplay.dmonth);}
+	if(worldClock_2_0ToDisplay.hour < 10){sprintf(s_hour, "0%d", worldClock_2_0ToDisplay.hour);}else{sprintf(s_hour, "%d", worldClock_2_0ToDisplay.hour);}
+	if(worldClock_2_0ToDisplay.minute < 10){sprintf(s_minute, "0%d", worldClock_2_0ToDisplay.minute);}else{sprintf(s_minute, "%d", worldClock_2_0ToDisplay.minute);}
+	if(worldClock_2_0ToDisplay.second < 10){sprintf(s_second, "0%d", worldClock_2_0ToDisplay.second);}else{sprintf(s_second, "%d", worldClock_2_0ToDisplay.second);}
 
 	//
-	sprintf(resultString, "date : %d/%d/%s | time : %d:%d:%d | number of the day in the week : %d | number of the week in the year : %d |", worldClock_2_0ToDisplay.dmonth, worldClock_2_0ToDisplay.month, s_year, worldClock_2_0ToDisplay.hour, worldClock_2_0ToDisplay.minute, worldClock_2_0ToDisplay.second, worldClock_2_0ToDisplay.dweek, worldClock_2_0ToDisplay.nweek);
+	sprintf(resultString, "date : %s/%s/%s | time : %s:%s:%s | number of the day in the week : %d | number of the week in the year : %d |", s_dmonth, s_month, s_year, s_hour, s_minute, s_second, worldClock_2_0ToDisplay.dweek, worldClock_2_0ToDisplay.nweek);
 
 	// Return the date and time as a string
 	return resultString;
