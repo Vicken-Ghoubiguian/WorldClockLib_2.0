@@ -8,8 +8,8 @@
 int main()
 {
 	//
-	enum OS currentOS = getCurrentOS();
-	char wishedTimeZone[100];
+	/*enum OS currentOS = getCurrentOS();
+	char wishedTimeZone[100];*/
 
 	// Breaking 2 lines
 	printf("\n\n");
