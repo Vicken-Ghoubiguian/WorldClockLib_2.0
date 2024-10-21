@@ -1,52 +1,15 @@
-# Prerequisites
-*.d
+# Unignore source code files
+!WorldClock_2.0/WorldClock_2.0.c
+!WorldClock_2.0/WorldClock_2.0.h
+!WorldClock_2.0/README.md
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+#
+!tests/*.c
+!tests/README.md
 
-# Linker output
-*.ilk
-*.map
-*.exp
+#
+!LICENSE
+!README.md
 
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+#
+*
