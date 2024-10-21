@@ -21,7 +21,7 @@ Tests folder of the [WorldClock_2.0](https://github.com/Vicken-Ghoubiguian/World
 <a name="test_1"></a>
 ### Test 1 : get date and time of the choosen timezone
 
-#### function used : [getWorldClock_2_0ForWishedTZ]()
+#### Tested function : [getWorldClock_2_0ForWishedTZ]()
 
 #### Compilation
 
@@ -38,7 +38,7 @@ gcc test_1.c ../WorldClock_2.0/WorldClock_2.0.c -o test_1
 <a name="test_2"></a>
 ### Test 2 : display all existing timezones
 
-#### function used : [displaytListOfAllKnownTZ]()
+#### Tested function : [displaytListOfAllKnownTZ]()
 
 #### Compilation
 
@@ -54,6 +54,8 @@ gcc test_2.c ../WorldClock_2.0/WorldClock_2.0.c -o test_2
 
 <a name="test_3"></a>
 ### Test 3 :
+
+#### Tested function : 
 
 ```bash
 gcc test_3.c ../WorldClock_2.0/WorldClock_2.0.c -o test_3
