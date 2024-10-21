@@ -6,6 +6,10 @@ Tests folder of the [WorldClock_2.0](https://github.com/Vicken-Ghoubiguian/World
 
 * [Presentation](#presentation),
 * [Tests](#tests),
+    * [Test 1](#test_1),
+    * [Test 2](#test_2),
+    * [Test 3](#test_3),
+    * [Test 4](#test_4).
 * [Conclusion](#conclusion).
 
 <a name="presentation"></a>
