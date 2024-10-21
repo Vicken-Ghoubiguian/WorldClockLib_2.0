@@ -57,6 +57,8 @@ gcc test_2.c ../WorldClock_2.0/WorldClock_2.0.c -o test_2
 
 #### Tested function : 
 
+#### Compilation
+
 ```bash
 gcc test_3.c ../WorldClock_2.0/WorldClock_2.0.c -o test_3
 ```
@@ -69,6 +71,12 @@ gcc test_3.c ../WorldClock_2.0/WorldClock_2.0.c -o test_3
 
 <a name="test_4"></a>
 ### Test 4 :
+
+#### Tested function : 
+
+#### Compilation
+
+#### Execution
 
 <a name="conclusion"></a>
 ## Conclusion
