@@ -21,11 +21,45 @@ Tests folder of the [WorldClock_2.0](https://github.com/Vicken-Ghoubiguian/World
 <a name="test_1"></a>
 ### Test 1 :
 
+#### Compilation
+
+```bash
+gcc test_1.c ../WorldClock_2.0/WorldClock_2.0.c -o test_1
+```
+
+#### Execution
+
+```bash
+./test_1
+```
+
 <a name="test_2"></a>
 ### Test 2 :
 
+#### Compilation
+
+```bash
+gcc test_2.c ../WorldClock_2.0/WorldClock_2.0.c -o test_2
+```
+
+#### Execution
+
+```bash
+./test_2
+```
+
 <a name="test_3"></a>
 ### Test 3 :
+
+```bash
+gcc test_3.c ../WorldClock_2.0/WorldClock_2.0.c -o test_3
+```
+
+#### Execution
+
+```bash
+./test_3
+```
 
 <a name="test_4"></a>
 ### Test 4 :
