@@ -19,7 +19,7 @@ Tests folder of the [WorldClock_2.0](https://github.com/Vicken-Ghoubiguian/World
 ## Tests
 
 <a name="test_1"></a>
-### Test 1 :
+### Test 1 : get date and time of the choosen timezone
 
 #### Compilation
 
@@ -34,7 +34,7 @@ gcc test_1.c ../WorldClock_2.0/WorldClock_2.0.c -o test_1
 ```
 
 <a name="test_2"></a>
-### Test 2 :
+### Test 2 : display all existing timezones
 
 #### Compilation
 
