@@ -31,7 +31,7 @@ struct worldClock_2_0
 
 } worldClock_2_0;
 
-//
+// Definition of the 'like_time_t' struct to add a date and time with its specific timezone as 'time_t'
 struct like_time_t
 {
     time_t time_t_according_UTC;
@@ -41,7 +41,7 @@ struct like_time_t
 
 } like_time_t;
 
-//
+// Definition of the 'like_struct_tm' struct to add a date and time with its specific timezone as 'struct tm'
 struct like_struct_tm
 {
     struct tm tm_according_UTC;
