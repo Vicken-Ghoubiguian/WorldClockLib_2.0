@@ -38,6 +38,7 @@ struct like_time_t
     int nweek;
     int dweek;
     char* timezone;
+
 } like_time_t;
 
 //
@@ -47,6 +48,7 @@ struct like_struct_tm
     int nweek;
     int dweek;
     char* timezone;
+    
 } like_struct_tm;
 
 // Funtion 'getWorldClock_2_0ForWishedTZ' to get date and time for the wished timezone
