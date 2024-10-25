@@ -101,7 +101,7 @@ struct worldClock_2_0 getWorldClock_2_0ForWishedTZ(char* wishedTZ)
 	// Loop to extract all elements of the WorldClock_2_0 to an integer and put them in the 'resultWorldClock_2_0' struct WorldClock_2_0
 	while(extrArray != NULL) {
 
-		//valOfTrans = (int)extrArray;
+		// 
 		sscanf(extrArray, "%d", &valOfTrans);
 
 		//
@@ -124,7 +124,7 @@ struct worldClock_2_0 getWorldClock_2_0ForWishedTZ(char* wishedTZ)
 		j++;
    	}
 
-	//
+	// 
 	resultWorldClock_2_0.timezone = wishedTZ;
 
 	// Return the date and time for the choosen timezone
@@ -158,7 +158,7 @@ char* sprintfWorldClock_2_0(struct worldClock_2_0 worldClock_2_0ToDisplay)
 	if(worldClock_2_0ToDisplay.nweek < 10){sprintf(s_nweek, "0%d", worldClock_2_0ToDisplay.nweek);}else{sprintf(s_nweek, "%d", worldClock_2_0ToDisplay.nweek);}
 	if(worldClock_2_0ToDisplay.dweek < 10){sprintf(s_dweek, "0%d", worldClock_2_0ToDisplay.dweek);}else{sprintf(s_dweek, "%d", worldClock_2_0ToDisplay.dweek);}	
 
-	//
+	// 
 	s_timezone = worldClock_2_0ToDisplay.timezone;
 
 	//
