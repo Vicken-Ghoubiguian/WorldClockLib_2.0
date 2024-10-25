@@ -48,7 +48,7 @@ struct like_struct_tm
     int nweek;
     int dweek;
     char* timezone;
-    
+
 } like_struct_tm;
 
 // Funtion 'getWorldClock_2_0ForWishedTZ' to get date and time for the wished timezone
@@ -64,4 +64,7 @@ struct like_struct_tm conversion_of_worldClock_2_0_to_struct_tm(struct worldCloc
 struct like_time_t conversion_of_worldClock_2_0_to_time_t(struct worldClock_2_0 worldClock_2_0ToConvert);
 
 //
-struct worldClock_2_0 conversion_of_struct_tm_to_worldClock_2_0(struct tm structTmToConvert);
+struct worldClock_2_0 conversion_of_struct_tm_to_worldClock_2_0(struct like_struct_tm structTmToConvert);
+
+//
+struct worldClock_2_0 conversion_of_time_t_to_worldClock_2_0(struct like_time_t time_tToConvert);
