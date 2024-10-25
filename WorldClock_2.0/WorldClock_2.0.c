@@ -124,6 +124,9 @@ struct worldClock_2_0 getWorldClock_2_0ForWishedTZ(char* wishedTZ)
 		j++;
    	}
 
+	//
+	resultWorldClock_2_0.timezone = wishedTZ;
+
 	// Return the date and time for the choosen timezone
     return resultWorldClock_2_0;
 }
@@ -140,9 +143,10 @@ char* sprintfWorldClock_2_0(struct worldClock_2_0 worldClock_2_0ToDisplay)
 	char* s_hour = malloc(2 * sizeof(char));
 	char* s_minute = malloc(2 * sizeof(char));
 	char* s_second = malloc(2 * sizeof(char));
+	char* s_timezone = malloc(50 * sizeof(char));
 
 	// Definition of the 'resultString' string which will contain the result
-	char* resultString = malloc(100 * sizeof(char));
+	char* resultString = malloc(150 * sizeof(char));
 
 	//
 	sprintf(s_year, "%d", worldClock_2_0ToDisplay.year);
@@ -155,7 +159,10 @@ char* sprintfWorldClock_2_0(struct worldClock_2_0 worldClock_2_0ToDisplay)
 	if(worldClock_2_0ToDisplay.dweek < 10){sprintf(s_dweek, "0%d", worldClock_2_0ToDisplay.dweek);}else{sprintf(s_dweek, "%d", worldClock_2_0ToDisplay.dweek);}	
 
 	//
-	sprintf(resultString, "date : %s/%s/%s | time : %s:%s:%s | number of the day in the week : %s | number of the week in the year : %s |", s_dmonth, s_month, s_year, s_hour, s_minute, s_second, s_dweek, s_nweek);
+	s_timezone = worldClock_2_0ToDisplay.timezone;
+
+	//
+	sprintf(resultString, "%s : date : %s/%s/%s | time : %s:%s:%s | number of the day in the week : %s | number of the week in the year : %s |", s_timezone, s_dmonth, s_month, s_year, s_hour, s_minute, s_second, s_dweek, s_nweek);
 
 	// Return the date and time as a string
 	return resultString;
