@@ -30,6 +30,24 @@ struct worldClock_2_0
 
 } worldClock_2_0;
 
+//
+struct like_time_t
+{
+    time_t time_t_according_UTC;
+    int nweek;
+    int dweek;
+    char* timezone;
+} like_time_t;
+
+//
+struct like_struct_tm
+{
+    struct tm tm_according_UTC;
+    int nweek;
+    int dweek;
+    char* timezone;
+} like_struct_tm;
+
 // Funtion 'getWorldClock_2_0ForWishedTZ' to get date and time for the wished timezone
 struct worldClock_2_0 getWorldClock_2_0ForWishedTZ(char* wishedTZ);
 
