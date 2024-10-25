@@ -44,7 +44,7 @@ struct like_time_t
 // Definition of the 'like_struct_tm' struct to add a date and time with its specific timezone as 'struct tm'
 struct like_struct_tm
 {
-    struct tm tm_according_UTC;
+    struct tm struct_tm_according_UTC;
     int nweek;
     int dweek;
     char* timezone;
