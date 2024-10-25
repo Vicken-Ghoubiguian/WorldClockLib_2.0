@@ -124,7 +124,7 @@ struct worldClock_2_0 getWorldClock_2_0ForWishedTZ(char* wishedTZ)
 		j++;
    	}
 
-	// 
+	// Assign the wished timezone to the 'timezone' field of the 'resultWorldClock_2_0' variable
 	resultWorldClock_2_0.timezone = wishedTZ;
 
 	// Return the date and time for the choosen timezone
