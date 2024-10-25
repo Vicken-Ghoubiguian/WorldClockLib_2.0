@@ -31,6 +31,12 @@ struct worldClock_2_0
 
 } worldClock_2_0;
 
+// Funtion 'getWorldClock_2_0ForWishedTZ' to get date and time for the wished timezone
+struct worldClock_2_0 getWorldClock_2_0ForWishedTZ(char* wishedTZ);
+
+// Funtion 'sprintfWorldClock_2_0' to return date and time from a struct WorldClock_2_0 object as a string
+char* sprintfWorldClock_2_0(struct worldClock_2_0 worldClock_2_0ToDisplay);
+
 // Definition of the 'like_time_t' struct to add a date and time with its specific timezone as 'time_t'
 struct like_time_t
 {
@@ -68,9 +74,3 @@ struct like_struct_tm conversion_of_worldClock_2_0_to_struct_tm(struct worldCloc
 
 //
 char* sprintfLike_struct_tm(struct like_struct_tm structTmToDisplay);
-
-// Funtion 'getWorldClock_2_0ForWishedTZ' to get date and time for the wished timezone
-struct worldClock_2_0 getWorldClock_2_0ForWishedTZ(char* wishedTZ);
-
-// Funtion 'sprintfWorldClock_2_0' to return date and time from a struct WorldClock_2_0 object as a string
-char* sprintfWorldClock_2_0(struct worldClock_2_0 worldClock_2_0ToDisplay);
