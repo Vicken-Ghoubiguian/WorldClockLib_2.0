@@ -27,6 +27,7 @@ struct worldClock_2_0
     int hour;
     int minute;
     int second;
+    char* timezone;
 
 } worldClock_2_0;
 
