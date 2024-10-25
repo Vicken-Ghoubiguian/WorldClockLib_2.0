@@ -162,7 +162,7 @@ char* sprintfWorldClock_2_0(struct worldClock_2_0 worldClock_2_0ToDisplay)
 	s_timezone = worldClock_2_0ToDisplay.timezone;
 
 	//
-	sprintf(resultString, "%s : date : %s/%s/%s | time : %s:%s:%s | number of the day in the week : %s | number of the week in the year : %s |", s_timezone, s_dmonth, s_month, s_year, s_hour, s_minute, s_second, s_dweek, s_nweek);
+	sprintf(resultString, "%s ====> {date : %s/%s/%s | time : %s:%s:%s | number of the day in the week : %s | number of the week in the year : %s}", s_timezone, s_dmonth, s_month, s_year, s_hour, s_minute, s_second, s_dweek, s_nweek);
 
 	// Return the date and time as a string
 	return resultString;
