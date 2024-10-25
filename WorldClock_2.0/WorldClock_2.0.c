@@ -158,7 +158,7 @@ char* sprintfWorldClock_2_0(struct worldClock_2_0 worldClock_2_0ToDisplay)
 	if(worldClock_2_0ToDisplay.nweek < 10){sprintf(s_nweek, "0%d", worldClock_2_0ToDisplay.nweek);}else{sprintf(s_nweek, "%d", worldClock_2_0ToDisplay.nweek);}
 	if(worldClock_2_0ToDisplay.dweek < 10){sprintf(s_dweek, "0%d", worldClock_2_0ToDisplay.dweek);}else{sprintf(s_dweek, "%d", worldClock_2_0ToDisplay.dweek);}	
 
-	// 
+	// Assign the timezone in the 'timezone' field of the 'resultWorldClock_2_0' variable to the 's_timezone' string
 	s_timezone = worldClock_2_0ToDisplay.timezone;
 
 	//
