@@ -196,3 +196,29 @@ enum OS getCurrentOS()
 		return undefined;
 	#endif
 }
+
+//
+struct like_struct_tm conversion_of_worldClock_2_0_to_struct_tm(struct worldClock_2_0 worldClock_2_0ToConvert)
+{
+	// Definition of all necessary variables
+	struct like_struct_tm resultLike_struct_tm;
+	struct tm struct_tm_of_dt;
+
+	//
+	struct_tm_of_dt.tm_sec = worldClock_2_0ToConvert.second;
+	struct_tm_of_dt.tm_min = worldClock_2_0ToConvert.minute;
+	struct_tm_of_dt.tm_hour = worldClock_2_0ToConvert.hour;
+	struct_tm_of_dt.tm_mday = worldClock_2_0ToConvert.dmonth;
+	struct_tm_of_dt.tm_mon = worldClock_2_0ToConvert.month;
+	struct_tm_of_dt.tm_year = worldClock_2_0ToConvert.year;
+	struct_tm_of_dt.tm_wday = worldClock_2_0ToConvert.dweek;
+	//struct_tm_of_dt.tm_yday = 
+
+	//
+	resultLike_struct_tm.dt_as_struct_tm = struct_tm_of_dt;
+	resultLike_struct_tm.nweek = worldClock_2_0ToConvert.nweek;
+    resultLike_struct_tm.timezone = worldClock_2_0ToConvert.timezone;
+
+	//
+	return resultLike_struct_tm;
+}
