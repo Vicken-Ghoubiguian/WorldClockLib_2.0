@@ -4,7 +4,7 @@
 !WorldClock_2.0/README.md
 
 #
-tests/*.c
+!tests/*.c
 !tests/README.md
 
 #
