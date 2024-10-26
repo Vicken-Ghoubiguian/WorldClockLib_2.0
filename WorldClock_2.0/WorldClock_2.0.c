@@ -63,7 +63,7 @@ struct worldClock_2_0 getWorldClock_2_0ForWishedTZ(char* wishedTZ)
 {
 	// Definition of all necessary variables
     char* worldClock_2_0ChoosenTZ = malloc(30);
-	char fullSize = strlen("TZ=") + strlen(" date") + strlen(" +%Y_%m_%d_%U_%u_%H_%M_%S") + strlen(wishedTZ);
+	char fullSize = strlen("TZ=") + strlen(" date") + strlen(" +%Y_%m_%d_%U_%u_%H_%M_%S_%j") + strlen(wishedTZ);
 	char c;
 	int i = 0;
 	int j = 0;
@@ -77,7 +77,7 @@ struct worldClock_2_0 getWorldClock_2_0ForWishedTZ(char* wishedTZ)
 	strcat(completeCommand, "TZ=");
 	strcat(completeCommand, wishedTZ);
 	strcat(completeCommand, " date");
-	strcat(completeCommand, " +%Y_%m_%d_%U_%u_%H_%M_%S");
+	strcat(completeCommand, " +%Y_%m_%d_%U_%u_%H_%M_%S_%j");
 
 	// Execution of the command "TZ={wishedTZ} date +'%Y_%m_%d_%U_%u_%H_%M_%S'" to have the date and time for the wished timezone via the 'cmd' file
     cmd=popen(completeCommand, "r");
@@ -115,6 +115,7 @@ struct worldClock_2_0 getWorldClock_2_0ForWishedTZ(char* wishedTZ)
 			case 5 : resultWorldClock_2_0.hour = valOfTrans; break;
 			case 6 : resultWorldClock_2_0.minute = valOfTrans; break;
 			case 7 : resultWorldClock_2_0.second = valOfTrans; break;
+			case 8 : resultWorldClock_2_0.dyear = valOfTrans; break;
 		}
 
 		// 
@@ -143,6 +144,7 @@ char* sprintfWorldClock_2_0(struct worldClock_2_0 worldClock_2_0ToDisplay)
 	char* s_hour = malloc(2 * sizeof(char));
 	char* s_minute = malloc(2 * sizeof(char));
 	char* s_second = malloc(2 * sizeof(char));
+	char* s_dyear = malloc(3 * sizeof(char));
 	char* s_timezone = malloc(50 * sizeof(char));
 
 	// Definition of the 'resultString' string which will contain the result
@@ -157,10 +159,11 @@ char* sprintfWorldClock_2_0(struct worldClock_2_0 worldClock_2_0ToDisplay)
 	if(worldClock_2_0ToDisplay.second < 10){sprintf(s_second, "0%d", worldClock_2_0ToDisplay.second);}else{sprintf(s_second, "%d", worldClock_2_0ToDisplay.second);}
 	if(worldClock_2_0ToDisplay.nweek < 10){sprintf(s_nweek, "0%d", worldClock_2_0ToDisplay.nweek);}else{sprintf(s_nweek, "%d", worldClock_2_0ToDisplay.nweek);}
 	if(worldClock_2_0ToDisplay.dweek < 10){sprintf(s_dweek, "0%d", worldClock_2_0ToDisplay.dweek);}else{sprintf(s_dweek, "%d", worldClock_2_0ToDisplay.dweek);}	
+	if(worldClock_2_0ToDisplay.dyear < 10){sprintf(s_dyear, "00%d", worldClock_2_0ToDisplay.dyear);}else if(worldClock_2_0ToDisplay.dyear >= 10 && worldClock_2_0ToDisplay.dyear < 100){sprintf(s_dyear, "0%d", worldClock_2_0ToDisplay.dyear);}else{sprintf(s_dyear, "%d", worldClock_2_0ToDisplay.dyear);}
 	s_timezone = worldClock_2_0ToDisplay.timezone;
 
 	//
-	sprintf(resultString, "%s ====> {date : %s/%s/%s | time : %s:%s:%s | number of the day in the week : %s | number of the week in the year : %s}", s_timezone, s_dmonth, s_month, s_year, s_hour, s_minute, s_second, s_dweek, s_nweek);
+	sprintf(resultString, "%s ====> {date : %s/%s/%s | time : %s:%s:%s | number of the day in the week : %s | number of the week in the year : %s | number of the day in the year : %s}", s_timezone, s_dmonth, s_month, s_year, s_hour, s_minute, s_second, s_dweek, s_nweek, s_dyear);
 
 	// Return the date and time as a string
 	return resultString;

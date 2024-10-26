@@ -24,6 +24,7 @@ struct worldClock_2_0
     int dmonth;
     int nweek;
     int dweek;
+    int dyear;
     int hour;
     int minute;
     int second;
