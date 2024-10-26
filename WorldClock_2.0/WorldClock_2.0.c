@@ -215,7 +215,7 @@ struct like_struct_tm conversion_of_worldClock_2_0_to_struct_tm(struct worldCloc
 	struct_tm_of_dt.tm_mon = worldClock_2_0ToConvert.month;
 	struct_tm_of_dt.tm_year = worldClock_2_0ToConvert.year;
 	struct_tm_of_dt.tm_wday = worldClock_2_0ToConvert.dweek;
-	//struct_tm_of_dt.tm_yday = 
+	struct_tm_of_dt.tm_yday = worldClock_2_0ToConvert.dyear;
 
 	//
 	resultLike_struct_tm.dt_as_struct_tm = struct_tm_of_dt;
