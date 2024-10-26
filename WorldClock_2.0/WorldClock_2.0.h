@@ -42,7 +42,6 @@ struct like_time_t
 {
     time_t dt_as_time_t;
     int nweek;
-    int dweek;
     char* timezone;
 
 } like_time_t;
@@ -61,7 +60,6 @@ struct like_struct_tm
 {
     struct tm dt_as_struct_tm;
     int nweek;
-    int dweek;
     char* timezone;
 
 } like_struct_tm;
