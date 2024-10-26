@@ -40,7 +40,7 @@ char* sprintfWorldClock_2_0(struct worldClock_2_0 worldClock_2_0ToDisplay);
 // Definition of the 'like_time_t' struct to add a date and time with its specific timezone as 'time_t'
 struct like_time_t
 {
-    time_t time_t_according_UTC;
+    time_t dt_as_time_t;
     int nweek;
     int dweek;
     char* timezone;
@@ -59,7 +59,7 @@ char* sprintfLike_time_t(struct like_time_t time_tToDisplay);
 // Definition of the 'like_struct_tm' struct to add a date and time with its specific timezone as 'struct tm'
 struct like_struct_tm
 {
-    struct tm struct_tm_according_UTC;
+    struct tm dt_as_struct_tm;
     int nweek;
     int dweek;
     char* timezone;
