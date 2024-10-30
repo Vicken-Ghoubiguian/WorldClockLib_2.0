@@ -207,7 +207,7 @@ char* sprintfWorldClock_2_0(struct worldClock_2_0 worldClock_2_0ToDisplay)
 	s_timezone = worldClock_2_0ToDisplay.timezone;
 
 	//
-	sprintf(resultString, "%s ====> {date : %s/%s/%s | time : %s:%s:%s | number of the day in the week : %s | number of the week in the year : %s | number of the day in the year : %s}", s_timezone, s_dmonth, s_month, s_year, s_hour, s_minute, s_second, s_dweek, s_nweek, s_dyear);
+	sprintf(resultString, "{timezone : %s | date : %s/%s/%s | time : %s:%s:%s | number of the day in the week : %s | number of the week in the year : %s | number of the day in the year : %s}", s_timezone, s_dmonth, s_month, s_year, s_hour, s_minute, s_second, s_dweek, s_nweek, s_dyear);
 
 	// Return the date and time as a string
 	return resultString;
@@ -228,7 +228,7 @@ char* sprintfLike_time_t(struct like_time_t time_tToDisplay)
 	char* resultString = malloc(150 * sizeof(char));
 
 	//
-	sprintf(resultString, "%s ====> {datetime : %ld | number of the week in the year : %s}", s_timezone, time_tToDisplay.dt_as_time_t, s_nweek);
+	sprintf(resultString, "{timezone : %s | datetime : %ld | number of the week in the year : %s}", s_timezone, time_tToDisplay.dt_as_time_t, s_nweek);
 
 	//
 	return resultString;
