@@ -156,7 +156,7 @@ struct like_time_t getLike_time_tForWishedTZ(char* wishedTZ)
 	strcat(completeCommand, " date");
 	strcat(completeCommand, " +%s_%U");
 
-	// Execution of the command "TZ={wishedTZ} date +'%s'" to have the date and time for the wished timezone via the 'cmd' file
+	// Execution of the command "TZ={wishedTZ} date +'%s_%U'" to have the date and time for the wished timezone via the 'cmd' file
     cmd=popen(completeCommand, "r");
 
 	//
