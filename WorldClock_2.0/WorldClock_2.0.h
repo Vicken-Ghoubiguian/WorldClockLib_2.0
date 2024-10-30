@@ -50,7 +50,7 @@ struct like_time_t
 //
 struct like_time_t getLike_time_tForWishedTZ(char* wishedTZ);
 
-//
+// Funtion 'sprintfLike_time_t' to return date and time from a struct like_time_t object as a string
 char* sprintfLike_time_t(struct like_time_t time_tToDisplay);
 
 // Definition of the 'like_struct_tm' struct to add a date and time with its specific timezone as 'struct tm'
