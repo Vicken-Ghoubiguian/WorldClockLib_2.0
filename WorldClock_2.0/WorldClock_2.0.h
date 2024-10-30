@@ -48,7 +48,7 @@ struct like_time_t
 } like_time_t;
 
 //
-//struct like_time_t conversion_of_worldClock_2_0_to_time_t(struct worldClock_2_0 worldClock_2_0ToConvert);
+struct like_time_t getLike_time_tForWishedTZ(char* wishedTZ);
 
 //
 char* sprintfLike_time_t(struct like_time_t time_tToDisplay);
