@@ -48,10 +48,10 @@ struct like_time_t
 } like_time_t;
 
 //
-struct worldClock_2_0 conversion_of_time_t_to_worldClock_2_0(struct like_time_t time_tToConvert);
+//struct worldClock_2_0 conversion_of_time_t_to_worldClock_2_0(struct like_time_t time_tToConvert);
 
 //
-struct like_time_t conversion_of_worldClock_2_0_to_time_t(struct worldClock_2_0 worldClock_2_0ToConvert);
+//struct like_time_t conversion_of_worldClock_2_0_to_time_t(struct worldClock_2_0 worldClock_2_0ToConvert);
 
 //
 char* sprintfLike_time_t(struct like_time_t time_tToDisplay);
