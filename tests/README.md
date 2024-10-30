@@ -19,7 +19,7 @@ Tests folder of the [WorldClock_2.0](https://github.com/Vicken-Ghoubiguian/World
 ## Tests
 
 <a name="test_1"></a>
-### Test 1 : get date and time of the choosen timezone
+### Test 1 : get date and time of the choosen timezone as a struct worldClock_2_0 value
 
 #### Tested function : [getWorldClock_2_0ForWishedTZ]()
 
@@ -53,7 +53,7 @@ gcc test_2.c ../WorldClock_2.0/WorldClock_2.0.c -o test_2
 ```
 
 <a name="test_3"></a>
-### Test 3 :
+### Test 3 : get date and time of the choosen timezone as a struct like_time_t value
 
 #### Tested function : 
 
