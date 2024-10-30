@@ -21,10 +21,8 @@ int main()
 	//
 	struct like_time_t resultLike_time_tForWishedTZ = getLike_time_tForWishedTZ(wishedTimeZone);
 
-	printf("%ld\n", resultLike_time_tForWishedTZ.dt_as_time_t);
-
 	//
-	/*printf("%s", sprintfWorldClock_2_0(resultWorldClock_2_0ForWishedTZ));*/
+	printf("%s", sprintfLike_time_t(resultLike_time_tForWishedTZ));
 	printf("\n\n");
 
 	//
