@@ -216,8 +216,22 @@ char* sprintfWorldClock_2_0(struct worldClock_2_0 worldClock_2_0ToDisplay)
 //
 char* sprintfLike_time_t(struct like_time_t time_tToDisplay)
 {
+	// Definition of all needed variables with memory allocations
+	char* s_nweek = malloc(2 * sizeof(char));
+	char* s_timezone = malloc(50 * sizeof(char));
+
 	//
-	return "";
+	if(time_tToDisplay.nweek < 10){sprintf(s_nweek, "0%d", time_tToDisplay.nweek);}else{sprintf(s_nweek, "%d", time_tToDisplay.nweek);}
+	s_timezone = time_tToDisplay.timezone;
+
+	// Definition of the 'resultString' string which will contain the result
+	char* resultString = malloc(150 * sizeof(char));
+
+	//
+	sprintf(resultString, "%s ====> {datetime : %ld | number of the week in the year : %s}", s_timezone, time_tToDisplay.dt_as_time_t, s_nweek);
+
+	//
+	return resultString;
 }
 
 //
