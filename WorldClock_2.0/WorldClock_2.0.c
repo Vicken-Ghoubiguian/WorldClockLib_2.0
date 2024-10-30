@@ -1,4 +1,4 @@
-//
+// Import the corresponding '.h' file
 #include "WorldClock_2.0.h"
 
 // Function 'displaytListOfAllKnownTZ' to display all available timezones
