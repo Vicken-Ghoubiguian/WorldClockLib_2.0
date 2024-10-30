@@ -55,7 +55,7 @@ gcc test_2.c ../WorldClock_2.0/WorldClock_2.0.c -o test_2
 <a name="test_3"></a>
 ### Test 3 : get date and time of the choosen timezone as a struct like_time_t value
 
-#### Tested function : 
+#### Tested function : [getLike_time_tForWishedTZ]()
 
 #### Compilation
 
