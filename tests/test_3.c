@@ -8,5 +8,25 @@
 int main()
 {
 	//
+	char* wishedTimeZone = malloc(100 * sizeof(char));
+
+	// Breaking 2 lines
+	printf("\n\n");
+
+	//
+	printf("Please, write the timezone you want : ");
+	scanf("%s", wishedTimeZone);
+	printf("\n\n");
+
+	//
+	struct like_time_t resultLike_time_tForWishedTZ = getLike_time_tForWishedTZ(wishedTimeZone);
+
+	printf("%ld\n", resultLike_time_tForWishedTZ.dt_as_time_t);
+
+	//
+	/*printf("%s", sprintfWorldClock_2_0(resultWorldClock_2_0ForWishedTZ));*/
+	printf("\n\n");
+
+	//
 	return 0;
 }
