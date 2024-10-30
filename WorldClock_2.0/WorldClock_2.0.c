@@ -214,6 +214,13 @@ char* sprintfWorldClock_2_0(struct worldClock_2_0 worldClock_2_0ToDisplay)
 }
 
 //
+char* sprintfLike_time_t(struct like_time_t time_tToDisplay)
+{
+	//
+	return "";
+}
+
+//
 enum OS getCurrentOS()
 {
 	//
