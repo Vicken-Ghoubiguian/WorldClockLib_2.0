@@ -174,6 +174,7 @@ struct like_time_t getLike_time_tForWishedTZ(char* wishedTZ)
 	// Conversion of the first extract element of the WorldClock_2_0 to an integer
 	extrArray = strtok(time_tChoosenTZAsString, "_");
 
+	//
 	while(extrArray != NULL) {
 
 		// 
@@ -194,35 +195,6 @@ struct like_time_t getLike_time_tForWishedTZ(char* wishedTZ)
    	}
 
 	//
-	/*i = 0;
-	free(completeCommand);
-
-	//
-	completeCommand = (char*) malloc(fullSize);
-	strcat(completeCommand, "TZ=");
-	strcat(completeCommand, wishedTZ);
-	strcat(completeCommand, " date");
-	strcat(completeCommand, " +%U");
-
-	// Execution of the command "TZ={wishedTZ} date +'%U'" to have the date and time for the wished timezone via the 'cmd' file
-    cmd=popen(completeCommand, "r");
-
-	//
-    while((c = fgetc(cmd)) != EOF)
-	{
-		//
-    	nb_of_weeks[i] = c;
-
-		// Incrementation of the 'i' incrementor's value
-		i++;
-	}
-
-	// Close the file 'cmd'
-    pclose(cmd);*/
-
-	//
-	/*resultLike_time_t.dt_as_time_t = atoll(time_tChoosenTZAsString);
-	resultLike_time_t.nweek = atoll(nb_of_weeks);*/
 	resultLike_time_t.timezone = wishedTZ;
 
 	// Return the date and time for the choosen timezone
