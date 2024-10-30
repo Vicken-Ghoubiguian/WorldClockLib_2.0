@@ -47,7 +47,7 @@ struct like_time_t
 
 } like_time_t;
 
-//
+// Funtion 'getWorldClock_2_0ForWishedTZ' to get date and time for the wished timezone
 struct like_time_t getLike_time_tForWishedTZ(char* wishedTZ);
 
 // Funtion 'sprintfLike_time_t' to return date and time from a struct like_time_t object as a string
