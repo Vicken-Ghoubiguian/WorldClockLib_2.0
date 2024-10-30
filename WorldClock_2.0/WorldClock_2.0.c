@@ -139,7 +139,7 @@ struct like_time_t getLike_time_tForWishedTZ(char* wishedTZ)
 	long long int time_tChoosenTZ = 0;
 	char* time_tChoosenTZAsString = malloc(30);
 	char* nb_of_weeks = malloc(2);
-	char fullSize = strlen("TZ=") + strlen(" date") + strlen(" +%s") + strlen(wishedTZ);
+	char fullSize = strlen("TZ=") + strlen(" date") + strlen(" +%s_%U") + strlen(wishedTZ);
 	char c;
 	int i = 0;
 	FILE *cmd;
