@@ -220,7 +220,7 @@ char* sprintfWorldClock_2_0(struct worldClock_2_0 worldClock_2_0ToDisplay)
 	// Definition of the 'resultString' string which will contain the result
 	char* resultString = malloc(150 * sizeof(char));
 
-	//
+	// Configuration and definition of all values for all variables
 	sprintf(s_year, "%d", worldClock_2_0ToDisplay.year);
 	if(worldClock_2_0ToDisplay.month < 10){sprintf(s_month, "0%d", worldClock_2_0ToDisplay.month);}else{sprintf(s_month, "%d", worldClock_2_0ToDisplay.month);}
 	if(worldClock_2_0ToDisplay.dmonth < 10){sprintf(s_dmonth, "0%d", worldClock_2_0ToDisplay.dmonth);}else{sprintf(s_dmonth, "%d", worldClock_2_0ToDisplay.dmonth);}
@@ -246,7 +246,7 @@ char* sprintfLike_time_t(struct like_time_t time_tToDisplay)
 	char* s_nweek = malloc(2 * sizeof(char));
 	char* s_timezone = malloc(50 * sizeof(char));
 
-	//
+	// Configuration and definition of all values for all variables
 	if(time_tToDisplay.nweek < 10){sprintf(s_nweek, "0%d", time_tToDisplay.nweek);}else{sprintf(s_nweek, "%d", time_tToDisplay.nweek);}
 	s_timezone = time_tToDisplay.timezone;
 
