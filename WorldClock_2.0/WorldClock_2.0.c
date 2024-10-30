@@ -219,6 +219,16 @@ struct like_struct_tm conversion_of_worldClock_2_0_to_struct_tm(struct worldCloc
 	// struct_tm_of_dt.tm_isdst = 
 
 	//
+	/*if()
+	{
+		struct_tm_of_dt.tm_gmtoff = 
+	}
+	else
+	{
+		struct_tm_of_dt.__tm_gmtoff = 
+	}*/
+
+	//
 	resultLike_struct_tm.dt_as_struct_tm = struct_tm_of_dt;
 	resultLike_struct_tm.nweek = worldClock_2_0ToConvert.nweek;
     resultLike_struct_tm.timezone = worldClock_2_0ToConvert.timezone;
