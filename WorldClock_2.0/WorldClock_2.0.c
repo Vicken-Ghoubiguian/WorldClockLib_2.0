@@ -142,15 +142,18 @@ struct like_time_t getLike_time_tForWishedTZ(char* wishedTZ)
 	char fullSize = strlen("TZ=") + strlen(" date") + strlen(" +%s_%U") + strlen(wishedTZ);
 	char c;
 	int i = 0;
+	int j = 0;
 	FILE *cmd;
+	char* extrArray;
 	struct like_time_t resultLike_time_t;
+	int valOfTrans = 0;
 
 	// Definition of the bash command to have date and time for the choosen timezone
 	char* completeCommand = (char*) malloc(fullSize);
 	strcat(completeCommand, "TZ=");
 	strcat(completeCommand, wishedTZ);
 	strcat(completeCommand, " date");
-	strcat(completeCommand, " +%s");
+	strcat(completeCommand, " +%s_%U");
 
 	// Execution of the command "TZ={wishedTZ} date +'%s'" to have the date and time for the wished timezone via the 'cmd' file
     cmd=popen(completeCommand, "r");
@@ -168,8 +171,30 @@ struct like_time_t getLike_time_tForWishedTZ(char* wishedTZ)
 	// Close the file 'cmd'
     pclose(cmd);
 
+	// Conversion of the first extract element of the WorldClock_2_0 to an integer
+	extrArray = strtok(time_tChoosenTZAsString, "_");
+
+	while(extrArray != NULL) {
+
+		// 
+		sscanf(extrArray, "%d", &valOfTrans);
+
+		//
+		switch(j)
+		{
+			case 0 : resultLike_time_t.dt_as_time_t = valOfTrans; break;
+			case 1 : resultLike_time_t.nweek = valOfTrans; break;
+		}
+
+		// 
+    	extrArray = strtok(NULL, "_");
+
+		// Incrementation of the 'j' incrementor's value
+		j++;
+   	}
+
 	//
-	i = 0;
+	/*i = 0;
 	free(completeCommand);
 
 	//
@@ -193,11 +218,11 @@ struct like_time_t getLike_time_tForWishedTZ(char* wishedTZ)
 	}
 
 	// Close the file 'cmd'
-    pclose(cmd);
+    pclose(cmd);*/
 
 	//
-	resultLike_time_t.dt_as_time_t = atoll(time_tChoosenTZAsString);
-	resultLike_time_t.nweek = atoll(nb_of_weeks);
+	/*resultLike_time_t.dt_as_time_t = atoll(time_tChoosenTZAsString);
+	resultLike_time_t.nweek = atoll(nb_of_weeks);*/
 	resultLike_time_t.timezone = wishedTZ;
 
 	// Return the date and time for the choosen timezone
