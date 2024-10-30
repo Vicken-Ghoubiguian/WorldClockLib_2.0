@@ -225,3 +225,22 @@ struct like_struct_tm conversion_of_worldClock_2_0_to_struct_tm(struct worldCloc
 	//
 	return resultLike_struct_tm;
 }
+
+//
+struct like_time_t conversion_of_worldClock_2_0_to_time_t(struct worldClock_2_0 worldClock_2_0ToConvert)
+{
+	// Definition of all necessary variables
+	struct like_time_t resultLike_time_t;
+	struct like_struct_tm resultLike_struct_tm;
+
+	//
+	resultLike_struct_tm = conversion_of_worldClock_2_0_to_struct_tm(worldClock_2_0ToConvert);
+
+	//
+	
+	resultLike_struct_tm.nweek = resultLike_struct_tm.nweek;
+	resultLike_struct_tm.timezone = resultLike_struct_tm.timezone;
+
+	//
+	return resultLike_time_t;
+}
