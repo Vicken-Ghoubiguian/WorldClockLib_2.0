@@ -213,7 +213,7 @@ char* sprintfWorldClock_2_0(struct worldClock_2_0 worldClock_2_0ToDisplay)
 	return resultString;
 }
 
-//
+// Funtion 'sprintfLike_time_t' to return date and time from a struct like_time_t object as a string
 char* sprintfLike_time_t(struct like_time_t time_tToDisplay)
 {
 	// Definition of all needed variables with memory allocations
