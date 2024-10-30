@@ -138,6 +138,7 @@ struct like_time_t getLike_time_tForWishedTZ(char* wishedTZ)
 	// Definition of all necessary variables
 	long long int time_tChoosenTZ = 0;
 	char* time_tChoosenTZAsString = malloc(30);
+	char* nb_of_weeks = malloc(2);
 	char fullSize = strlen("TZ=") + strlen(" date") + strlen(" +%s") + strlen(wishedTZ);
 	char c;
 	int i = 0;
@@ -168,8 +169,34 @@ struct like_time_t getLike_time_tForWishedTZ(char* wishedTZ)
     pclose(cmd);
 
 	//
+	i = 0;
+
+	//
+	char* completeCommand_2 = (char*) malloc(fullSize);
+	strcat(completeCommand_2, "TZ=");
+	strcat(completeCommand_2, wishedTZ);
+	strcat(completeCommand_2, " date");
+	strcat(completeCommand_2, " +%U");
+
+	// Execution of the command "TZ={wishedTZ} date +'%U'" to have the date and time for the wished timezone via the 'cmd' file
+    cmd=popen(completeCommand_2, "r");
+
+	//
+    while((c = fgetc(cmd)) != EOF)
+	{
+		//
+    	nb_of_weeks[i] = c;
+
+		// Incrementation of the 'i' incrementor's value
+		i++;
+	}
+
+	// Close the file 'cmd'
+    pclose(cmd);
+
+	//
 	resultLike_time_t.dt_as_time_t = atoll(time_tChoosenTZAsString);
-	resultLike_time_t.nweek = 0;
+	resultLike_time_t.nweek = atoll(nb_of_weeks);
 	resultLike_time_t.timezone = wishedTZ;
 
 	// Return the date and time for the choosen timezone
