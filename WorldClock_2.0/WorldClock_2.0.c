@@ -99,7 +99,8 @@ struct worldClock_2_0 getWorldClock_2_0ForWishedTZ(char* wishedTZ)
 	extrArray = strtok(worldClock_2_0ChoosenTZ, "_");
 
 	// Loop to extract all elements of the WorldClock_2_0 to an integer and put them in the 'resultWorldClock_2_0' struct WorldClock_2_0
-	while(extrArray != NULL) {
+	while(extrArray != NULL)
+	{
 
 		// 
 		sscanf(extrArray, "%d", &valOfTrans);
@@ -171,12 +172,12 @@ struct like_time_t getLike_time_tForWishedTZ(char* wishedTZ)
 	// Close the file 'cmd'
     pclose(cmd);
 
-	// Conversion of the first extract element of the WorldClock_2_0 to an integer
+	// Conversion of the first extract element of the time_tChoosenTZAsString to an integer
 	extrArray = strtok(time_tChoosenTZAsString, "_");
 
-	//
-	while(extrArray != NULL) {
-
+	// Loop to extract all elements of the time_tChoosenTZAsString to an integer and put them in the 'resultLike_time_t' struct like_time_t
+	while(extrArray != NULL)
+	{
 		// 
 		sscanf(extrArray, "%d", &valOfTrans);
 
@@ -194,7 +195,7 @@ struct like_time_t getLike_time_tForWishedTZ(char* wishedTZ)
 		j++;
    	}
 
-	//
+	// Assign the wished timezone to the 'timezone' field of the 'resultLike_time_t' variable
 	resultLike_time_t.timezone = wishedTZ;
 
 	// Return the date and time for the choosen timezone
