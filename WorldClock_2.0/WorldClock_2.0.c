@@ -170,16 +170,17 @@ struct like_time_t getLike_time_tForWishedTZ(char* wishedTZ)
 
 	//
 	i = 0;
+	free(completeCommand);
 
 	//
-	char* completeCommand_2 = (char*) malloc(fullSize);
-	strcat(completeCommand_2, "TZ=");
-	strcat(completeCommand_2, wishedTZ);
-	strcat(completeCommand_2, " date");
-	strcat(completeCommand_2, " +%U");
+	completeCommand = (char*) malloc(fullSize);
+	strcat(completeCommand, "TZ=");
+	strcat(completeCommand, wishedTZ);
+	strcat(completeCommand, " date");
+	strcat(completeCommand, " +%U");
 
 	// Execution of the command "TZ={wishedTZ} date +'%U'" to have the date and time for the wished timezone via the 'cmd' file
-    cmd=popen(completeCommand_2, "r");
+    cmd=popen(completeCommand, "r");
 
 	//
     while((c = fgetc(cmd)) != EOF)
