@@ -241,10 +241,41 @@ struct like_struct_tm conversion_of_worldClock_2_0_to_struct_tm(struct worldCloc
 struct like_time_t getLike_time_tForWishedTZ(char* wishedTZ)
 {
 	// Definition of all necessary variables
+	long long int time_tChoosenTZ = 0;
+	char* time_tChoosenTZAsString = malloc(30);
+	char fullSize = strlen("TZ=") + strlen(" date") + strlen(" +%s") + strlen(wishedTZ);
+	char c;
+	int i = 0;
+	FILE *cmd;
 	struct like_time_t resultLike_time_t;
 
+	// Definition of the bash command to have date and time for the choosen timezone
+	char* completeCommand = (char*) malloc(fullSize);
+	strcat(completeCommand, "TZ=");
+	strcat(completeCommand, wishedTZ);
+	strcat(completeCommand, " date");
+	strcat(completeCommand, " +%s");
+
+	// Execution of the command "TZ={wishedTZ} date +'%s'" to have the date and time for the wished timezone via the 'cmd' file
+    cmd=popen(completeCommand, "r");
+
 	//
-	
+    while((c = fgetc(cmd)) != EOF)
+	{
+		//
+    	time_tChoosenTZAsString[i] = c;
+
+		// Incrementation of the 'i' incrementor's value
+		i++;
+	}
+
+	// Close the file 'cmd'
+    pclose(cmd);
+
+	//
+	resultLike_time_t.dt_as_time_t = atoll(time_tChoosenTZAsString);
+	resultLike_time_t.nweek = 0;
+	resultLike_time_t.timezone = wishedTZ;
 
 	//
 	return resultLike_time_t;
