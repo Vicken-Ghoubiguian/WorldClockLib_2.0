@@ -21,7 +21,7 @@ int main()
 	//
 	struct like_time_t resultLike_time_tForWishedTZ = getLike_time_tForWishedTZ(wishedTimeZone);
 
-	//
+	// Display the date and time of the specific timezone
 	printf("%s", sprintfLike_time_t(resultLike_time_tForWishedTZ));
 	printf("\n\n");
 
