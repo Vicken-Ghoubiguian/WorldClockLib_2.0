@@ -9,7 +9,8 @@ Tests folder of the [WorldClock_2.0](https://github.com/Vicken-Ghoubiguian/World
     * [Test 1](#test_1),
     * [Test 2](#test_2),
     * [Test 3](#test_3),
-    * [Test 4](#test_4).
+    * [Test 4](#test_4),
+    * [Test 5](#test_5).
 * [Conclusion](#conclusion).
 
 <a name="presentation"></a>
@@ -73,6 +74,15 @@ gcc test_3.c ../WorldClock_2.0/WorldClock_2.0.c -o test_3
 ### Test 4 :
 
 #### Tested function : [getListOfAllKnownTZ]()
+
+#### Compilation
+
+#### Execution
+
+<a name="test_5"></a>
+### Test 5 : get and display the corresponding operating system
+
+#### Tested function : [getCurrentOS]()
 
 #### Compilation
 
