@@ -13,7 +13,7 @@ int main()
     // Definition of the 'currentOS' variable to get the current OS enum as the current operating system and running the 'getCurrentOS' function to obtain it
      enum OS currentOS = getCurrentOS();
 
-    //
+    // Selecting the case corresponding of the 'currentOS' value
     switch(currentOS)
     {
         case unix_1 : printf("Unix 1\n\n"); break;
