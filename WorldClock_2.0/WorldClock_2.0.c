@@ -265,21 +265,21 @@ enum OS getCurrentOS()
 {
 	//
 	#if defined(_WIN32)
-    	return windows;
+    	return windows_32;
 	#elif defined(_WIN64)
-		return windows;
+		return windows_64;
 	#elif defined(__CYGWIN__)
-		return windows;
+		return cygwin;
 	#elif defined(unix)
-		return unix;
+		return unix_1;
 	#elif defined(__unix)
-		return unix;
+		return unix_2;
 	#elif defined(__unix__)
-		return unix;
+		return unix_3;
 	#elif defined(__APPLE__)
-		return macOS;
+		return macOS_apple;
 	#elif defined(__MACH__)
-		return macOS;
+		return macOS_mach;
 	#elif defined(__linux__)
 		return linux;
 	#elif defined(__FreeBSD__)
