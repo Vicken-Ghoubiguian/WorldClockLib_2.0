@@ -7,13 +7,13 @@
 //
 int main()
 {
-	//
+	// Definition of the 'wishedTimeZone' variable to get the specific timezone to have its date and time
 	char* wishedTimeZone = malloc(100 * sizeof(char));
 
 	// Breaking 2 lines
 	printf("\n\n");
 
-	//
+	// Instrcutions bloc to get the specific timezone to have its date and time
 	printf("Please, write the timezone you want : ");
 	scanf("%s", wishedTimeZone);
 	printf("\n\n");
