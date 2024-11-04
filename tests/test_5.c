@@ -13,8 +13,8 @@ int main()
     // Breaking 2 lines
 	printf("\n\n");
 
-    //
-    currentOS = getCurrentOS();
+    // Definition of the 'currentOS' variable to get the current OS enum as the current operating system and running the 'getCurrentOS' function to obtain it
+     enum OS currentOS = getCurrentOS();
 
     //
     switch(currentOS)
