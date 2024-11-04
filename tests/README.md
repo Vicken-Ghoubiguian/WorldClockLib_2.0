@@ -72,7 +72,7 @@ gcc test_3.c ../WorldClock_2.0/WorldClock_2.0.c -o test_3
 <a name="test_4"></a>
 ### Test 4 :
 
-#### Tested function : 
+#### Tested function : [getListOfAllKnownTZ]()
 
 #### Compilation
 
