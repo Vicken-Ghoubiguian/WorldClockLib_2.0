@@ -260,7 +260,7 @@ char* sprintfLike_time_t(struct like_time_t time_tToDisplay)
 	return resultString;
 }
 
-//
+// Definition of the 'getCurrentOS' to return the current operating system as 'enum OS'
 enum OS getCurrentOS()
 {
 	//
