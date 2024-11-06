@@ -78,3 +78,6 @@ struct time_zone_abbreviations
     int is_dst;
 
 } time_zone_abbreviations;
+
+//
+const struct time_zone_abbreviations[50];
