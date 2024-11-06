@@ -71,7 +71,7 @@ struct like_struct_tm conversion_of_worldClock_2_0_to_struct_tm(struct worldCloc
 //
 char* sprintfLike_struct_tm(struct like_struct_tm structTmToDisplay);
 
-//
+// Definition of the 'time_zone_abbreviations' struct to determine if current time of wished timezone is DST or not
 struct time_zone_abbreviations
 {
     char* tz_abr;
