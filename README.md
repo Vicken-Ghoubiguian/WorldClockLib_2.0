@@ -1,4 +1,4 @@
-# WorldClock_2.0
+# WorldClockLib_2.0
 
 New version of the ['WorldClockLib'](https://github.com/Vicken-Ghoubiguian/WorldClockLib) previous project using OS tools
 
