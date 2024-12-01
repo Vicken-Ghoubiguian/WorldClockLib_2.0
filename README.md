@@ -1,6 +1,6 @@
 # WorldClock_2.0
 
-New version of the 'WorldClock' previous project using OS tools
+New version of the ['WorldClockLib'](https://github.com/Vicken-Ghoubiguian/WorldClockLib) previous project using OS tools
 
 ## Contents
 
