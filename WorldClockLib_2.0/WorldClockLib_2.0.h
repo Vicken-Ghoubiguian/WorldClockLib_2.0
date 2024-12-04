@@ -80,4 +80,4 @@ struct time_zone_abbreviations
 } time_zone_abbreviations;
 
 //
-const struct time_zone_abbreviations[50];
+//const struct time_zone_abbreviations[50];

@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 //
-#include "../WorldClock_2.0/WorldClock_2.0.h"
+#include "../WorldClockLib_2.0/WorldClockLib_2.0.h"
 
 //
 int main()
