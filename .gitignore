@@ -1,7 +1,7 @@
 # Unignore source code files
-!WorldClock_2.0/WorldClock_2.0.c
-!WorldClock_2.0/WorldClock_2.0.h
-!WorldClock_2.0/README.md
+!WorldClockLib_2.0/WorldClockLib_2.0.c
+!WorldClockLib_2.0/WorldClockLib_2.0.h
+!WorldClockLib_2.0/README.md
 
 #
 !tests/*.c
