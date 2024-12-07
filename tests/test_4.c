@@ -8,5 +8,8 @@
 int main()
 {
 	//
+	displaytListOfAllKnownTZ();
+
+	//
 	return 0;
 }

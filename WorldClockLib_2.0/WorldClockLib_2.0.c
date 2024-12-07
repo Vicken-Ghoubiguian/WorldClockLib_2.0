@@ -23,12 +23,27 @@ void displaytListOfAllKnownTZ()
 }
 
 // Function 'getListOfAllKnownTZ' to get all available timezones
-/*struct time_zone_abbreviations getListOfAllKnownTZ()[]
+char** getListOfAllKnownTZ()
 {
 	// 
 	char* command = "awk '/^Z/ { print $2 }; /^L/ { print $3 }' /usr/share/zoneinfo/tzdata.zi";
-	struct time_zone_abbreviations time_zone_abbreviations_array[500];
-	char* currentTZ;
+	char** arrayOfTZ;
+	char tz[100];
+
+	//
+    FILE *cmd=popen(command, "r");
+
+	//
+	while(fgets(tz, 500, cmd))
+	{
+		//
+		printf("%s", tz);
+	}
+
+	//
+	pclose(cmd);
+
+	/*char* currentTZ;
 	int i = 0;
 	char tz[100];
 
@@ -38,7 +53,7 @@ void displaytListOfAllKnownTZ()
 	//
 	while(fgets(tz, 500, cmd))
 	{
-		printf("%s", tz);
+		printf("%s\n", tz);
 
 		//
 		arrayOfTZ[i] = tz;
@@ -50,11 +65,11 @@ void displaytListOfAllKnownTZ()
 	}
 
 	//
-	pclose(cmd);
+	pclose(cmd);*/
 
 	//
-	return time_zone_abbreviations_array;
-}*/
+	return arrayOfTZ;
+}
 
 // Funtion 'getWorldClock_2_0ForWishedTZ' to get date and time for the wished timezone as struct WorldClock_2_0 object
 struct worldClock_2_0 getWorldClock_2_0ForWishedTZ(char* wishedTZ)
