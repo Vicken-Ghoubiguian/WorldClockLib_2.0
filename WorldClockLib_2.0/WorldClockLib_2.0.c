@@ -25,9 +25,10 @@ void displaytListOfAllKnownTZ()
 // Function 'getListOfAllKnownTZ' to get all available timezones
 char* getListOfAllKnownTZ()
 {
-	// 
+	// Definition of all necessary variables
 	char* command = "awk '/^Z/ { print $2 }; /^L/ { print $3 }' /usr/share/zoneinfo/tzdata.zi | { tr '\n' ':'; echo; }";
-	char* arrayOfTZ = malloc(600 * (100 * sizeof(char)));
+	char* stringOfTZ = malloc(600 * (100 * sizeof(char)));
+	//char* arrayOfTZ = malloc(600 * (100 * sizeof(char)));
 	int i = 0;
 	char c;
 	FILE *cmd;
@@ -39,7 +40,7 @@ char* getListOfAllKnownTZ()
     while((c = fgetc(cmd)) != EOF)
 	{
 		//
-    	arrayOfTZ[i] = c;
+    	stringOfTZ[i] = c;
 
 		// Incrementation of the 'i' incrementor's value
 		i++;
@@ -52,7 +53,7 @@ char* getListOfAllKnownTZ()
 	// =======> For the sequel of the process
 
 	//
-	return arrayOfTZ;
+	return stringOfTZ;
 }
 
 // Funtion 'getWorldClock_2_0ForWishedTZ' to get date and time for the wished timezone as struct WorldClock_2_0 object
