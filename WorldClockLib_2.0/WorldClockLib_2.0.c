@@ -27,7 +27,7 @@ char** getListOfAllKnownTZ()
 {
 	// 
 	char* command = "awk '/^Z/ { print $2 }; /^L/ { print $3 }' /usr/share/zoneinfo/tzdata.zi";
-	char** arrayOfTZ = malloc(500 * (100 * sizeof(char)));
+	char** arrayOfTZ = malloc(600 * (100 * sizeof(char)));
 	char tz[100];
 	int i = 0;
 
@@ -40,15 +40,19 @@ char** getListOfAllKnownTZ()
 		//
 		arrayOfTZ[i] = tz;
 
-		/*printf("%d", i);
-		printf("%s", arrayOfTZ[i]);*/
-
 		//
 		i++;
 	}
 
 	//
 	pclose(cmd);
+
+	// =====> FOR TESTS (B)
+	for(int j = 0; j < 600; j++)
+	{
+		printf("%d _ %s\n", j, arrayOfTZ[j]);
+	}
+	// =====> FOR TESTS (E)
 
 	//
 	return arrayOfTZ;
