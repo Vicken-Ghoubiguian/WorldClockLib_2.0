@@ -49,6 +49,9 @@ char* getListOfAllKnownTZ()
     pclose(cmd);
 
 	//
+	// =======> For the sequel of the process
+
+	//
 	return arrayOfTZ;
 }
 
