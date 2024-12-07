@@ -7,8 +7,8 @@
 //
 int main()
 {
-	//
-	printf("\n");
+	// Breaking 2 lines
+	printf("\n\n");
 
 	//
 	char* allOfTimezones = getListOfAllKnownTZ();
@@ -16,8 +16,8 @@ int main()
     //
     printf("%s", allOfTimezones);
 
-	//
-	printf("\n");
+	// Breaking 2 lines
+	printf("\n\n");
 
 	//
 	return 0;
