@@ -11,10 +11,10 @@ int main()
 	printf("\n");
 
 	//
-	char* test = getListOfAllKnownTZ();
+	char* allOfTimezones = getListOfAllKnownTZ();
 
     //
-    printf("%s", test);
+    printf("%s", allOfTimezones);
 
 	//
 	printf("\n");
