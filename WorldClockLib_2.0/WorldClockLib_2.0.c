@@ -4,21 +4,21 @@
 // Function 'displaytListOfAllKnownTZ' to display all available timezones
 void displaytListOfAllKnownTZ()
 {
-	// 
+	// Definition of all necessary variables
 	char* command = "awk '/^Z/ { print $2 }; /^L/ { print $3 }' /usr/share/zoneinfo/tzdata.zi";
 	char tz[100];
 
-	//
+	// Execution of the command "awk '/^Z/ { print $2 }; /^L/ { print $3 }' /usr/share/zoneinfo/tzdata.zi" to have all of timezones via the 'cmd' file
     FILE *cmd=popen(command, "r");
 
-	//
+	// 
 	while(fgets(tz, 100, cmd))
 	{
-		//
+		// Display the current timezone 'tz'
 		printf("%s", tz);
 	}
 
-	//
+	// Close the file 'cmd'
 	pclose(cmd);
 }
 
