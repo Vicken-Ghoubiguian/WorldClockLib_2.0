@@ -7,14 +7,14 @@
 //
 int main()
 {
-	//
-	printf("\n");
+	// Breaking 2 lines
+	printf("\n\n");
 
-	//
+	// Display all of known timezones
 	displaytListOfAllKnownTZ();
 
-	//
-	printf("\n");
+	// Breaking 2 lines
+	printf("\n\n");
 
 	//
 	return 0;
