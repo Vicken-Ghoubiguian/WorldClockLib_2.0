@@ -29,6 +29,7 @@ char** getListOfAllKnownTZ()
 	char* command = "awk '/^Z/ { print $2 }; /^L/ { print $3 }' /usr/share/zoneinfo/tzdata.zi";
 	char** arrayOfTZ;
 	char tz[100];
+	int i = 0;
 
 	//
     FILE *cmd=popen(command, "r");
@@ -38,34 +39,13 @@ char** getListOfAllKnownTZ()
 	{
 		//
 		printf("%s", tz);
+
+		//
+		strcpy(arrayOfTZ[i], tz);
 	}
 
 	//
 	pclose(cmd);
-
-	/*char* currentTZ;
-	int i = 0;
-	char tz[100];
-
-	//
-    FILE *cmd=popen(command, "r");
-
-	//
-	while(fgets(tz, 500, cmd))
-	{
-		printf("%s\n", tz);
-
-		//
-		arrayOfTZ[i] = tz;
-
-		printf("%s\n", arrayOfTZ[i]);
-
-		//
-		i++;
-	}
-
-	//
-	pclose(cmd);*/
 
 	//
 	return arrayOfTZ;
