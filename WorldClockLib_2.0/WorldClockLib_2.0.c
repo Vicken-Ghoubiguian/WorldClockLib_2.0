@@ -12,7 +12,7 @@ void displaytListOfAllKnownTZ()
     FILE *cmd=popen(command, "r");
 
 	//
-	while(fgets(tz, 500, cmd))
+	while(fgets(tz, 100, cmd))
 	{
 		//
 		printf("%s", tz);
@@ -27,7 +27,7 @@ char** getListOfAllKnownTZ()
 {
 	// 
 	char* command = "awk '/^Z/ { print $2 }; /^L/ { print $3 }' /usr/share/zoneinfo/tzdata.zi";
-	char** arrayOfTZ;
+	char** arrayOfTZ = malloc(500 * (100 * sizeof(char)));
 	char tz[100];
 	int i = 0;
 
@@ -35,13 +35,16 @@ char** getListOfAllKnownTZ()
     FILE *cmd=popen(command, "r");
 
 	//
-	while(fgets(tz, 500, cmd))
+	while(fgets(tz, 100, cmd))
 	{
 		//
-		printf("%s", tz);
+		arrayOfTZ[i] = tz;
+
+		/*printf("%d", i);
+		printf("%s", arrayOfTZ[i]);*/
 
 		//
-		strcpy(arrayOfTZ[i], tz);
+		i++;
 	}
 
 	//
