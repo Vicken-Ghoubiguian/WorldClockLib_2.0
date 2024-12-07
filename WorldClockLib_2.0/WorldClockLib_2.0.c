@@ -23,15 +23,13 @@ void displaytListOfAllKnownTZ()
 }
 
 // Function 'getListOfAllKnownTZ' to get all available timezones
-/*char** getListOfAllKnownTZ()
+/*struct time_zone_abbreviations getListOfAllKnownTZ()[]
 {
 	// 
 	char* command = "awk '/^Z/ { print $2 }; /^L/ { print $3 }' /usr/share/zoneinfo/tzdata.zi";
-	char* arrayOfTZ[500];
+	struct time_zone_abbreviations time_zone_abbreviations_array[500];
 	char* currentTZ;
 	int i = 0;
-
-	//
 	char tz[100];
 
 	//
@@ -55,7 +53,7 @@ void displaytListOfAllKnownTZ()
 	pclose(cmd);
 
 	//
-	return arrayOfTZ;
+	return time_zone_abbreviations_array;
 }*/
 
 // Funtion 'getWorldClock_2_0ForWishedTZ' to get date and time for the wished timezone as struct WorldClock_2_0 object
