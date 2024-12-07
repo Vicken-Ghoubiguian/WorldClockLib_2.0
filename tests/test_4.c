@@ -8,7 +8,13 @@
 int main()
 {
 	//
+	printf("\n");
+
+	//
 	displaytListOfAllKnownTZ();
+
+	//
+	printf("\n");
 
 	//
 	return 0;
