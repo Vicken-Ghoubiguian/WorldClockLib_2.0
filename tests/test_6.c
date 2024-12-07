@@ -11,10 +11,10 @@ int main()
 	printf("\n");
 
 	//
-	char** test = getListOfAllKnownTZ();
+	char* test = getListOfAllKnownTZ();
 
     //
-    printf("%s", test[300]);
+    printf("%s", test);
 
 	//
 	printf("\n");

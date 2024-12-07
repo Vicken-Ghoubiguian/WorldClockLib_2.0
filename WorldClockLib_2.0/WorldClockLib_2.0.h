@@ -8,7 +8,7 @@
 void displaytListOfAllKnownTZ();
 
 // Function 'getListOfAllKnownTZ' to get all available timezones
-char** getListOfAllKnownTZ();
+char* getListOfAllKnownTZ();
 
 // Definition of the 'OS' enum to determine the current operating system
 enum OS {undefined, unix_1, unix_2, unix_3, macOS_apple, macOS_mach, windows_32, windows_64, cygwin, linux, android, freeBSD};

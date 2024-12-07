@@ -23,36 +23,30 @@ void displaytListOfAllKnownTZ()
 }
 
 // Function 'getListOfAllKnownTZ' to get all available timezones
-char** getListOfAllKnownTZ()
+char* getListOfAllKnownTZ()
 {
 	// 
-	char* command = "awk '/^Z/ { print $2 }; /^L/ { print $3 }' /usr/share/zoneinfo/tzdata.zi";
-	char** arrayOfTZ = malloc(600 * (100 * sizeof(char)));
-	char tz[100];
+	char* command = "awk '/^Z/ { print $2 }; /^L/ { print $3 }' /usr/share/zoneinfo/tzdata.zi | { tr '\n' ':'; echo; }";
+	char* arrayOfTZ = malloc(600 * (100 * sizeof(char)));
 	int i = 0;
+	char c;
+	FILE *cmd;
+
+	// 
+    cmd=popen(command, "r");
 
 	//
-    FILE *cmd=popen(command, "r");
-
-	//
-	while(fgets(tz, 100, cmd))
+    while((c = fgetc(cmd)) != EOF)
 	{
 		//
-		arrayOfTZ[i] = tz;
+    	arrayOfTZ[i] = c;
 
-		//
+		// Incrementation of the 'i' incrementor's value
 		i++;
 	}
-
-	//
-	pclose(cmd);
-
-	// =====> FOR TESTS (B)
-	for(int j = 0; j < 600; j++)
-	{
-		printf("%d _ %s\n", j, arrayOfTZ[j]);
-	}
-	// =====> FOR TESTS (E)
+	
+	// Close the file 'cmd'
+    pclose(cmd);
 
 	//
 	return arrayOfTZ;
