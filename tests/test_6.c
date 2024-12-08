@@ -24,9 +24,17 @@ int main()
 	isWishedTZExistOrNot = isWishedTZExist(wishedTimeZone);
 
 	//
-	printf("\n%d", isWishedTZExistOrNot);
-
-	// Breaking 2 lines
+	if(isWishedTZExistOrNot)
+	{
+		//
+		printf("The timezone named %s does exist, all my congratulations !", wishedTimeZone);
+	}
+	//
+	else
+	{
+		//
+		printf("The timezone named %s does not exist, sorry !", wishedTimeZone);
+	}
 	printf("\n\n");
 
 	//
