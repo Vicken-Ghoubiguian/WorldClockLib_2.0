@@ -31,7 +31,7 @@ char* getListOfAllKnownTZ()
 	return stringOfTZ;
 }
 
-//
+// Function 'isWishedTZExist' to check if the 'wishedTZ' timezone exists or not
 bool isWishedTZExist(char* wishedTZ)
 {
 	// Definition of all necessary variables
@@ -50,7 +50,7 @@ bool isWishedTZExist(char* wishedTZ)
 	while(extractionOfEachTZ != NULL)
 	{
 		//
-		if(strcmp(extractionOfEachTZ, "Europe/Paris") == 0)
+		if(strcmp(extractionOfEachTZ, wishedTZ) == 0)
 		{
 			//
 			cmpResult = true;

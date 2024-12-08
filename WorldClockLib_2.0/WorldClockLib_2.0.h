@@ -8,7 +8,7 @@
 // Function 'getListOfAllKnownTZ' to get all available timezones
 char* getListOfAllKnownTZ();
 
-//
+// Function 'isWishedTZExist' to check if the 'wishedTZ' timezone exists or not
 bool isWishedTZExist(char* wishedTZ);
 
 // Definition of the 'OS' enum to determine the current operating system
