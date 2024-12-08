@@ -7,8 +7,6 @@ char* getListOfAllKnownTZ()
 	// Definition of all necessary variables
 	char* command = "awk '/^Z/ { print $2 }; /^L/ { print $3 }' /usr/share/zoneinfo/tzdata.zi | { tr '\n' ':'; echo; }";
 	char* stringOfTZ = malloc(600 * (100 * sizeof(char)));
-	//char* extrArray;
-	//char** arrayOfTZ = malloc(600 * (100 * sizeof(char)));
 	int i = 0;
 	char c;
 	FILE *cmd;
