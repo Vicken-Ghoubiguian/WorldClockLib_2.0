@@ -52,8 +52,11 @@ bool isWishedTZExist(char* wishedTZ)
 		// In the case where the the wished timezone is in the list of all available timezones on the OS...
 		if(strcmp(extractionOfEachTZ, wishedTZ) == 0)
 		{
-			// ...so set the 'cmpResult' variable as TRUE
+			// ...so set the 'cmpResult' variable as TRUE...
 			cmpResult = true;
+
+			// ...and break the loop
+			break;
 		}
 
 		// 
