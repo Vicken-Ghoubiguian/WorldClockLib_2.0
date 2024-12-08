@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-//
+// Import the 'WorldClockLib_2.0' library
 #include "../WorldClockLib_2.0/WorldClockLib_2.0.h"
 
 //
