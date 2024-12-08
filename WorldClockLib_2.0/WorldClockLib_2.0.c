@@ -33,6 +33,42 @@ char* getListOfAllKnownTZ()
 	return stringOfTZ;
 }
 
+//
+bool isWishedTZExist(char* wishedTZ)
+{
+	// Definition of all necessary variables
+	char* extractionOfEachTZ;
+	char* stringContainingAllTZ;
+	bool cmpResult = false;
+	int i = 0;
+
+	//
+	stringContainingAllTZ = getListOfAllKnownTZ();
+
+	//
+	extractionOfEachTZ = strtok(stringContainingAllTZ, ":");
+
+	//
+	while(extractionOfEachTZ != NULL)
+	{
+		//
+		if(strcmp(extractionOfEachTZ, "Europe/Paris") == 0)
+		{
+			//
+			cmpResult = true;
+		}
+
+		// 
+    	extractionOfEachTZ = strtok(NULL, ":");
+
+		// Incrementation of the 'i' incrementor's value
+		i++;
+	}
+
+	//
+	return cmpResult;
+}
+
 // Funtion 'getWorldClock_2_0ForWishedTZ' to get date and time for the wished timezone as struct WorldClock_2_0 object
 struct worldClock_2_0 getWorldClock_2_0ForWishedTZ(char* wishedTZ)
 {

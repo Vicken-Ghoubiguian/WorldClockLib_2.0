@@ -9,39 +9,16 @@
 int main()
 {
 	// Definition of all necessary variables
-	char* extractionOfEachTZ;
-	char* stringContainingAllTZ;
-	bool cmpResult;
-	int i = 0;
+	bool isWishedTZExistOrNot;
 
 	// Breaking 2 lines
 	printf("\n\n");
 
 	//
-	stringContainingAllTZ = getListOfAllKnownTZ();
+	isWishedTZExistOrNot = isWishedTZExist("Europe/Paris");
 
 	//
-	extractionOfEachTZ = strtok(stringContainingAllTZ, ":");
-
-	//
-	while(extractionOfEachTZ != NULL)
-	{
-		//
-		if(strcmp(extractionOfEachTZ, "Europe/Paris") == 0)
-		{
-			//
-			cmpResult = true;
-		}
-
-		// 
-    	extractionOfEachTZ = strtok(NULL, ":");
-
-		// Incrementation of the 'i' incrementor's value
-		i++;
-	}
-
-	//
-	printf("\n%d", cmpResult);
+	printf("\n%d", isWishedTZExistOrNot);
 
 	// Breaking 2 lines
 	printf("\n\n");
