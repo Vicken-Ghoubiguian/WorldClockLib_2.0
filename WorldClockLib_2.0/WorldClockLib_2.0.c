@@ -11,7 +11,7 @@ char* getListOfAllKnownTZ()
 	char c;
 	FILE *cmd;
 
-	// 
+	// Execution of the command "awk '/^Z/ { print $2 }; /^L/ { print $3 }' /usr/share/zoneinfo/tzdata.zi | { tr '\n' ':'; echo; }" to have the list of all available timezones on the OS via the 'cmd' file
     cmd=popen(command, "r");
 
 	//
@@ -27,7 +27,7 @@ char* getListOfAllKnownTZ()
 	// Close the file 'cmd'
     pclose(cmd);
 
-	//
+	// Return the list of all available timezones on the OS as a long string
 	return stringOfTZ;
 }
 
