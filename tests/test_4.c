@@ -11,7 +11,7 @@ int main()
 	printf("\n\n");
 
 	// Display all of known timezones
-	displaytListOfAllKnownTZ();
+	//displaytListOfAllKnownTZ();
 
 	// Breaking 2 lines
 	printf("\n\n");

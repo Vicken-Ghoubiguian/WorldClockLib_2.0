@@ -1,34 +1,14 @@
 // Import the corresponding '.h' file
 #include "WorldClockLib_2.0.h"
 
-// Function 'displaytListOfAllKnownTZ' to display all available timezones
-void displaytListOfAllKnownTZ()
-{
-	// Definition of all necessary variables
-	char* command = "awk '/^Z/ { print $2 }; /^L/ { print $3 }' /usr/share/zoneinfo/tzdata.zi";
-	char tz[100];
-
-	// Execution of the command "awk '/^Z/ { print $2 }; /^L/ { print $3 }' /usr/share/zoneinfo/tzdata.zi" to have all of timezones via the 'cmd' file
-    FILE *cmd=popen(command, "r");
-
-	// 
-	while(fgets(tz, 100, cmd))
-	{
-		// Display the current timezone 'tz'
-		printf("%s", tz);
-	}
-
-	// Close the file 'cmd'
-	pclose(cmd);
-}
-
 // Function 'getListOfAllKnownTZ' to get all available timezones
 char* getListOfAllKnownTZ()
 {
 	// Definition of all necessary variables
 	char* command = "awk '/^Z/ { print $2 }; /^L/ { print $3 }' /usr/share/zoneinfo/tzdata.zi | { tr '\n' ':'; echo; }";
 	char* stringOfTZ = malloc(600 * (100 * sizeof(char)));
-	//char* arrayOfTZ = malloc(600 * (100 * sizeof(char)));
+	//char* extrArray;
+	//char** arrayOfTZ = malloc(600 * (100 * sizeof(char)));
 	int i = 0;
 	char c;
 	FILE *cmd;
@@ -49,8 +29,27 @@ char* getListOfAllKnownTZ()
 	// Close the file 'cmd'
     pclose(cmd);
 
+	// Conversion of the first extract element of the WorldClock_2_0 to an integer
+	/*extrArray = strtok(stringOfTZ, ":");
+
 	//
-	// =======> For the sequel of the process
+	while(extrArray != NULL)
+	{
+		//
+		//arrayOfTZ[i] = (char*)malloc(100 * sizeof(char));
+
+		//
+		//strcat(arrayOfTZ[i], extrArray);
+
+		// 
+    	extrArray = strtok(NULL, ":");
+
+		// Incrementation of the 'i' incrementor's value
+		i++;
+	}*/
+
+	//
+	//printf("%s", arrayOfTZ[0]);
 
 	//
 	return stringOfTZ;

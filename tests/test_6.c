@@ -7,11 +7,14 @@
 //
 int main()
 {
+	//
+	char* allOfTimezones = malloc(600 * (100 * sizeof(char)));
+
 	// Breaking 2 lines
 	printf("\n\n");
 
 	//
-	char* allOfTimezones = getListOfAllKnownTZ();
+	allOfTimezones = getListOfAllKnownTZ();
 
     //
     printf("%s", allOfTimezones);
