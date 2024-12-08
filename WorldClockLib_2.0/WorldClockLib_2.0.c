@@ -1,7 +1,7 @@
 // Import the corresponding '.h' file
 #include "WorldClockLib_2.0.h"
 
-// Function 'getListOfAllKnownTZ' to get all available timezones
+// Function 'getListOfAllKnownTZ' to get all available timezones on the OS
 char* getListOfAllKnownTZ()
 {
 	// Definition of all necessary variables
@@ -40,7 +40,7 @@ bool isWishedTZExist(char* wishedTZ)
 	bool cmpResult = false;
 	int i = 0;
 
-	//
+	// Get all available timezones on the OS
 	stringContainingAllTZ = getListOfAllKnownTZ();
 
 	// Conversion of the first extract element of the stringContainingAllTZ string
