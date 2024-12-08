@@ -43,7 +43,7 @@ bool isWishedTZExist(char* wishedTZ)
 	//
 	stringContainingAllTZ = getListOfAllKnownTZ();
 
-	//
+	// Conversion of the first extract element of the stringContainingAllTZ string
 	extractionOfEachTZ = strtok(stringContainingAllTZ, ":");
 
 	//
