@@ -1,5 +1,6 @@
-//
+// Import all necessary C libraries
 #include <stdio.h>
+#include <stdbool.h>
 
 //
 #include "../WorldClockLib_2.0/WorldClockLib_2.0.h"

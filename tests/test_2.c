@@ -1,4 +1,4 @@
-//
+// Import all necessary C libraries
 #include <stdio.h>
 
 //
@@ -11,7 +11,7 @@ int main()
 	printf("\n\n");
 
 	// Display all available timezones
-	displaytListOfAllKnownTZ();
+	//displaytListOfAllKnownTZ();
 
     // Breaking 2 lines
 	printf("\n\n");

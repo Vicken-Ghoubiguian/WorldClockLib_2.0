@@ -1,4 +1,4 @@
-//
+// Import all necessary C libraries
 #include <stdio.h>
 
 //
