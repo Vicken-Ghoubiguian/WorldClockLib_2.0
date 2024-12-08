@@ -23,17 +23,14 @@ int main()
 	//
 	isWishedTZExistOrNot = isWishedTZExist(wishedTimeZone);
 
-	//
+	// Instructions bloc to display the result of the 'isWishedTZExistOrNot' function
 	if(isWishedTZExistOrNot)
 	{
-		//
-		printf("The timezone named %s does exist, all my congratulations !", wishedTimeZone);
+		printf("The timezone named '%s' does exist, all my congratulations !", wishedTimeZone);
 	}
-	//
 	else
 	{
-		//
-		printf("The timezone named %s does not exist, sorry !", wishedTimeZone);
+		printf("The timezone named '%s' does not exist, sorry !", wishedTimeZone);
 	}
 	printf("\n\n");
 
