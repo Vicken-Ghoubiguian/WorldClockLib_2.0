@@ -9,16 +9,39 @@
 int main()
 {
 	// Definition of all necessary variables
-	char* allOfTimezones;
+	char* extractionOfEachTZ;
+	char* stringContainingAllTZ;
+	bool cmpResult;
+	int i = 0;
 
 	// Breaking 2 lines
 	printf("\n\n");
 
 	//
-	allOfTimezones = getListOfAllKnownTZ();
+	stringContainingAllTZ = getListOfAllKnownTZ();
 
-    //
-    printf("%s", allOfTimezones);
+	//
+	extractionOfEachTZ = strtok(stringContainingAllTZ, ":");
+
+	//
+	while(extractionOfEachTZ != NULL)
+	{
+		//
+		if(strcmp(extractionOfEachTZ, "Europe/Paris") == 0)
+		{
+			//
+			cmpResult = true;
+		}
+
+		// 
+    	extractionOfEachTZ = strtok(NULL, ":");
+
+		// Incrementation of the 'i' incrementor's value
+		i++;
+	}
+
+	//
+	printf("\n%d", cmpResult);
 
 	// Breaking 2 lines
 	printf("\n\n");
