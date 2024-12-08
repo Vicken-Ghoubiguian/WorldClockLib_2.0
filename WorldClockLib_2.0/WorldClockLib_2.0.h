@@ -80,5 +80,5 @@ struct time_zone_abbreviations
 
 } time_zone_abbreviations;
 
-//
+// Definition of the 'tz_abr_s' which is an array of 'struct time_zone_abbreviations' values
 const struct time_zone_abbreviations tz_abr_s[50];
