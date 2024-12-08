@@ -7,8 +7,8 @@
 //
 int main()
 {
-	//
-	char* allOfTimezones = malloc(600 * (100 * sizeof(char)));
+	// Definition of all necessary variables
+	char* allOfTimezones;
 
 	// Breaking 2 lines
 	printf("\n\n");
