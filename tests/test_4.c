@@ -7,11 +7,32 @@
 //
 int main()
 {
+	// Definition of all necessary variables
+	char* extractionOfEachTZ;
+	char* stringContainingAllTZ;
+	int i = 0;
+
 	// Breaking 2 lines
 	printf("\n\n");
 
-	// Display all of known timezones
-	//displaytListOfAllKnownTZ();
+	//
+	stringContainingAllTZ = getListOfAllKnownTZ();
+
+	//
+	extractionOfEachTZ = strtok(stringContainingAllTZ, ":");
+
+	//
+	while(extractionOfEachTZ != NULL)
+	{
+		//
+		printf("%s\n", extractionOfEachTZ);
+
+		// 
+    	extractionOfEachTZ = strtok(NULL, ":");
+
+		// Incrementation of the 'i' incrementor's value
+		i++;
+	}
 
 	// Breaking 2 lines
 	printf("\n\n");

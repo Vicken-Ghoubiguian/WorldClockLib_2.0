@@ -29,28 +29,6 @@ char* getListOfAllKnownTZ()
 	// Close the file 'cmd'
     pclose(cmd);
 
-	// Conversion of the first extract element of the WorldClock_2_0 to an integer
-	/*extrArray = strtok(stringOfTZ, ":");
-
-	//
-	while(extrArray != NULL)
-	{
-		//
-		//arrayOfTZ[i] = (char*)malloc(100 * sizeof(char));
-
-		//
-		//strcat(arrayOfTZ[i], extrArray);
-
-		// 
-    	extrArray = strtok(NULL, ":");
-
-		// Incrementation of the 'i' incrementor's value
-		i++;
-	}*/
-
-	//
-	//printf("%s", arrayOfTZ[0]);
-
 	//
 	return stringOfTZ;
 }
