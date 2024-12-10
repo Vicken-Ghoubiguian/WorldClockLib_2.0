@@ -4,7 +4,11 @@
 // Definition of the 'tz_abr_s' which is an array of 'struct time_zone_abbreviations' values
 const struct time_zone_abbreviations tz_abr_s[50];
 
+//
+const struct  worldClock_2_0 nullWorldClock_2_0 = {0};
 
+//
+const struct like_struct_tm nullLike_time_t = {0};
 
 // Function 'getListOfAllKnownTZ' to get all available timezones on the OS
 char* getListOfAllKnownTZ()
@@ -104,7 +108,7 @@ struct worldClock_2_0 getWorldClock_2_0ForWishedTZ(char* wishedTZ)
 	if(!isWishedTZExistOrNot)
 	{
 		//
-		//return nullWorldClock_2_0;
+		return nullWorldClock_2_0;
 	}
 
 	// Execution of the command "TZ={wishedTZ} date +'%Y_%m_%d_%U_%u_%H_%M_%S'" to have the date and time for the wished timezone via the 'cmd' file
@@ -192,7 +196,7 @@ struct like_time_t getLike_time_tForWishedTZ(char* wishedTZ)
 	if(!isWishedTZExistOrNot)
 	{
 		//
-		//return nullLike_time_t;
+		return nullLike_time_t;
 	}
 
 	// Execution of the command "TZ={wishedTZ} date +'%s_%U'" to have the date and time for the wished timezone via the 'cmd' file
