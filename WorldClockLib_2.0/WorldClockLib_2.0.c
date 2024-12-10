@@ -4,11 +4,11 @@
 // Definition of the 'tz_abr_s' which is an array of 'struct time_zone_abbreviations' values
 const struct time_zone_abbreviations tz_abr_s[50];
 
-//
+// 
 const struct  worldClock_2_0 nullWorldClock_2_0 = {0};
 
 //
-const struct like_struct_tm nullLike_time_t = {0};
+const struct like_time_t nullLike_time_t = {0};
 
 // Function 'getListOfAllKnownTZ' to get all available timezones on the OS
 char* getListOfAllKnownTZ()
