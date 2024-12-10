@@ -95,6 +95,13 @@ struct worldClock_2_0 getWorldClock_2_0ForWishedTZ(char* wishedTZ)
 	//
 	isWishedTZExistOrNot = isWishedTZExist(wishedTZ);
 
+	//
+	if(!isWishedTZExistOrNot)
+	{
+		//
+		//return nullWorldClock_2_0;
+	}
+
 	// Execution of the command "TZ={wishedTZ} date +'%Y_%m_%d_%U_%u_%H_%M_%S'" to have the date and time for the wished timezone via the 'cmd' file
     cmd=popen(completeCommand, "r");
 
@@ -175,6 +182,13 @@ struct like_time_t getLike_time_tForWishedTZ(char* wishedTZ)
 
 	//
 	isWishedTZExistOrNot = isWishedTZExist(wishedTZ);
+
+	//
+	if(!isWishedTZExistOrNot)
+	{
+		//
+		//return nullLike_time_t;
+	}
 
 	// Execution of the command "TZ={wishedTZ} date +'%s_%U'" to have the date and time for the wished timezone via the 'cmd' file
     cmd=popen(completeCommand, "r");
