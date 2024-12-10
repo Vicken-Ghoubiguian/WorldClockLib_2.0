@@ -1,19 +1,40 @@
 // Import all necessary C libraries
 #include <stdio.h>
 
-// Import the 'WorldClockLib_2.0' library
+//Import the 'WorldClockLib_2.0' library
 #include "../WorldClockLib_2.0/WorldClockLib_2.0.h"
 
 //
 int main()
 {
+	// Definition of all necessary variables
+	char* extractionOfEachTZ;
+	char* stringContainingAllTZ;
+	int i = 0;
+
 	// Breaking 2 lines
 	printf("\n\n");
 
-	// Display all available timezones
-	//getListOfAllKnownTZ();
+	//
+	stringContainingAllTZ = getListOfAllKnownTZ();
 
-    // Breaking 2 lines
+	//
+	extractionOfEachTZ = strtok(stringContainingAllTZ, ":");
+
+	//
+	while(extractionOfEachTZ != NULL)
+	{
+		//
+		printf("%s\n", extractionOfEachTZ);
+
+		// 
+    	extractionOfEachTZ = strtok(NULL, ":");
+
+		// Incrementation of the 'i' incrementor's value
+		i++;
+	}
+
+	// Breaking 2 lines
 	printf("\n\n");
 
 	//
