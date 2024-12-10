@@ -79,11 +79,3 @@ struct time_zone_abbreviations
     int is_dst;
 
 } time_zone_abbreviations;
-
-// Definition of the 'tz_abr_s' which is an array of 'struct time_zone_abbreviations' values
-const struct time_zone_abbreviations tz_abr_s[50];
-
-//
-//const struct worldClock_2_0 nullWorldClock_2_0 = {-1,-1,-1,-1,-1,-1,-1,-1,-1,"-1"};
-
-//
