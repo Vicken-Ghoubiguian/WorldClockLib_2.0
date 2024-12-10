@@ -92,10 +92,10 @@ struct worldClock_2_0 getWorldClock_2_0ForWishedTZ(char* wishedTZ)
 	strcat(completeCommand, " date");
 	strcat(completeCommand, " +%Y_%m_%d_%U_%u_%H_%M_%S_%j");
 
-	//
+	// Check if the 'wishedTZ' timezone is available timezones and get the result in the 'isWishedTZExistOrNot' variable
 	isWishedTZExistOrNot = isWishedTZExist(wishedTZ);
 
-	//
+	// In the case where the 'wishedTZ' timezone is not in available timezones...
 	if(!isWishedTZExistOrNot)
 	{
 		//
@@ -180,10 +180,10 @@ struct like_time_t getLike_time_tForWishedTZ(char* wishedTZ)
 	strcat(completeCommand, " date");
 	strcat(completeCommand, " +%s_%U");
 
-	//
+	// Check if the 'wishedTZ' timezone is available timezones and get the result in the 'isWishedTZExistOrNot' variable
 	isWishedTZExistOrNot = isWishedTZExist(wishedTZ);
 
-	//
+	// In the case where the 'wishedTZ' timezone is not in available timezones...
 	if(!isWishedTZExistOrNot)
 	{
 		//
