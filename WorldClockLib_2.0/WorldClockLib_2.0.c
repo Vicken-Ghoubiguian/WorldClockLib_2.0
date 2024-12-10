@@ -145,7 +145,7 @@ struct worldClock_2_0 getWorldClock_2_0ForWishedTZ(char* wishedTZ)
     return resultWorldClock_2_0;
 }
 
-// Funtion 'getWorldClock_2_0ForWishedTZ' to get date and time for the wished timezone as struct WorldClock_2_0 object
+// Funtion 'getLike_time_tForWishedTZ' to get date and time for the wished timezone as struct like_time_t object
 struct like_time_t getLike_time_tForWishedTZ(char* wishedTZ)
 {
 	// Definition of all necessary variables
