@@ -4,7 +4,7 @@
 // Definition of the 'tz_abr_s' which is an array of 'struct time_zone_abbreviations' values
 const struct time_zone_abbreviations tz_abr_s[50];
 
-// 
+// Definition of NULL values for the 'struct  worldClock_2_0', 'struct like_time_t' and 'struct like_struct_tm' structures
 const struct  worldClock_2_0 nullWorldClock_2_0 = {0};
 const struct like_time_t nullLike_time_t = {0};
 const struct like_struct_tm nullLike_struct_tm = {0};
