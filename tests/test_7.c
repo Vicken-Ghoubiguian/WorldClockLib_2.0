@@ -19,11 +19,11 @@ int main()
 	printf("\n\n");
 
 	// Get the date and time of the specific timezone
-	//struct worldClock_2_0 resultWorldClock_2_0ForWishedTZ = getWorldClock_2_0ForWishedTZ(wishedTimeZone);
+	struct like_time_t resultLike_time_tForWishedTZ = getLike_time_tForWishedTZ(wishedTimeZone);
 
 	// Display the date and time of the specific timezone
-	/*printf("%s", sprintfWorldClock_2_0(resultWorldClock_2_0ForWishedTZ));
-	printf("\n\n");*/
+	printf("%s", sprintfLike_time_t(resultLike_time_tForWishedTZ));
+	printf("\n\n");
 
 	//
 	return 0;

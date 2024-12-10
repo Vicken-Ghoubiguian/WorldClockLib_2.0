@@ -256,7 +256,7 @@ char* sprintfLike_time_t(struct like_time_t time_tToDisplay)
 {
 	// Definition of all needed variables with memory allocations
 	char* s_nweek = malloc(2 * sizeof(char));
-	char* s_timezone = malloc(50 * sizeof(char));
+	char* s_timezone = malloc(100 * sizeof(char));
 
 	// Configuration and definition of all values for all variables
 	if(time_tToDisplay.nweek < 10){sprintf(s_nweek, "0%d", time_tToDisplay.nweek);}else{sprintf(s_nweek, "%d", time_tToDisplay.nweek);}
