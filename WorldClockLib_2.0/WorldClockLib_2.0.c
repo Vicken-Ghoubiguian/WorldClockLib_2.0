@@ -83,6 +83,7 @@ struct worldClock_2_0 getWorldClock_2_0ForWishedTZ(char* wishedTZ)
 	char* extrArray;
 	struct worldClock_2_0 resultWorldClock_2_0;
 	int valOfTrans = 0;
+	bool isWishedTZExistOrNot;
 
 	// Definition of the bash command to have date and time for the choosen timezone
 	char* completeCommand = (char*) malloc(fullSize);
@@ -90,6 +91,9 @@ struct worldClock_2_0 getWorldClock_2_0ForWishedTZ(char* wishedTZ)
 	strcat(completeCommand, wishedTZ);
 	strcat(completeCommand, " date");
 	strcat(completeCommand, " +%Y_%m_%d_%U_%u_%H_%M_%S_%j");
+
+	//
+	isWishedTZExistOrNot = isWishedTZExist(wishedTZ);
 
 	// Execution of the command "TZ={wishedTZ} date +'%Y_%m_%d_%U_%u_%H_%M_%S'" to have the date and time for the wished timezone via the 'cmd' file
     cmd=popen(completeCommand, "r");
@@ -160,6 +164,7 @@ struct like_time_t getLike_time_tForWishedTZ(char* wishedTZ)
 	char* extrArray;
 	struct like_time_t resultLike_time_t;
 	int valOfTrans = 0;
+	bool isWishedTZExistOrNot;
 
 	// Definition of the bash command to have date and time for the choosen timezone
 	char* completeCommand = (char*) malloc(fullSize);
@@ -167,6 +172,9 @@ struct like_time_t getLike_time_tForWishedTZ(char* wishedTZ)
 	strcat(completeCommand, wishedTZ);
 	strcat(completeCommand, " date");
 	strcat(completeCommand, " +%s_%U");
+
+	//
+	isWishedTZExistOrNot = isWishedTZExist(wishedTZ);
 
 	// Execution of the command "TZ={wishedTZ} date +'%s_%U'" to have the date and time for the wished timezone via the 'cmd' file
     cmd=popen(completeCommand, "r");
