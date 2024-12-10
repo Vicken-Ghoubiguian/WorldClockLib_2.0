@@ -4,7 +4,7 @@
 // Definition of the 'tz_abr_s' which is an array of 'struct time_zone_abbreviations' values
 const struct time_zone_abbreviations tz_abr_s[50];
 
-// Definition of NULL values for the 'struct  worldClock_2_0', 'struct like_time_t' and 'struct like_struct_tm' structures
+// Definition of NULL values for the 'struct worldClock_2_0', 'struct like_time_t' and 'struct like_struct_tm' structures
 const struct  worldClock_2_0 nullWorldClock_2_0 = {0};
 const struct like_time_t nullLike_time_t = {0};
 const struct like_struct_tm nullLike_struct_tm = {0};
@@ -247,6 +247,10 @@ struct like_time_t getLike_time_tForWishedTZ(char* wishedTZ)
 // Funtion 'sprintfWorldClock_2_0' to return date and time from a struct WorldClock_2_0 object as a string
 char* sprintfWorldClock_2_0(struct worldClock_2_0 worldClock_2_0ToDisplay)
 {
+	//
+	// ====> If the 'struct worldClock_2_0' value is NULL : return ERROR mesage string
+	//
+
 	// Definition of all needed variables with memory allocations
 	char* s_year = malloc(4 * sizeof(char));
 	char* s_month = malloc(2 * sizeof(char));
@@ -284,6 +288,10 @@ char* sprintfWorldClock_2_0(struct worldClock_2_0 worldClock_2_0ToDisplay)
 // Funtion 'sprintfLike_time_t' to return date and time from a struct like_time_t object as a string
 char* sprintfLike_time_t(struct like_time_t time_tToDisplay)
 {
+	//
+	// ====> If the 'struct like_time_t' value is NULL : return ERROR mesage string
+	//
+
 	// Definition of all needed variables with memory allocations
 	char* s_nweek = malloc(2 * sizeof(char));
 	char* s_timezone = malloc(100 * sizeof(char));
