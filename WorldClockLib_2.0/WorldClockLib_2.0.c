@@ -247,11 +247,11 @@ struct like_time_t getLike_time_tForWishedTZ(char* wishedTZ)
 // Funtion 'sprintfWorldClock_2_0' to return date and time from a struct WorldClock_2_0 object as a string
 char* sprintfWorldClock_2_0(struct worldClock_2_0 worldClock_2_0ToDisplay)
 {
-	//
+	// In the case where the 'worldClock_2_0ToDisplay' struct worldClock_2_0 is empty...
 	if(worldClock_2_0ToDisplay.timezone == NULL && worldClock_2_0ToDisplay.year == 0 && worldClock_2_0ToDisplay.month == 0 && worldClock_2_0ToDisplay.dmonth == 0 && worldClock_2_0ToDisplay.nweek == 0 && worldClock_2_0ToDisplay.dweek == 0 && worldClock_2_0ToDisplay.dyear == 0 && worldClock_2_0ToDisplay.hour == 0 && worldClock_2_0ToDisplay.minute == 0 && worldClock_2_0ToDisplay.second == 0)
 	{
-		//
-		return "Test";
+		// ...then, return the error message
+		return "Error : invalid timezone !";
 	}
 
 	// Definition of all needed variables with memory allocations
