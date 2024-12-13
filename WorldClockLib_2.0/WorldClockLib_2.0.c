@@ -5,7 +5,7 @@
 const struct time_zone_abbreviations tz_abr_s[50];
 
 // Definition of NULL values for the 'struct worldClock_2_0', 'struct like_time_t' and 'struct like_struct_tm' structures
-const struct  worldClock_2_0 nullWorldClock_2_0 = {0};
+const struct worldClock_2_0 nullWorldClock_2_0 = {0};
 const struct like_time_t nullLike_time_t = {0};
 const struct like_struct_tm nullLike_struct_tm = {0};
 
@@ -106,7 +106,7 @@ struct worldClock_2_0 getWorldClock_2_0ForWishedTZ(char* wishedTZ)
 	// In the case where the 'wishedTZ' timezone is not in available timezones...
 	if(!isWishedTZExistOrNot)
 	{
-		//
+		// ...then, return the NULL value of the 'worldClock_2_0' struct
 		return nullWorldClock_2_0;
 	}
 
