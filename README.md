@@ -7,6 +7,7 @@ New version of the ['WorldClockLib'](https://github.com/Vicken-Ghoubiguian/World
 * [Presentation](#presentation),
 * [How to use it ?](#how_to_use_it) :
 * [How to test it and how to integrate it to your software project ?](#how_to_test_it_and_integrate_it),
+* [A few usefull links](#a_few_usefull_links),
 * [Conclusion](#conclusion).
 
 <a name="presentation"></a>
@@ -17,6 +18,9 @@ New version of the ['WorldClockLib'](https://github.com/Vicken-Ghoubiguian/World
 
 <a name="how_to_test_it_and_integrate_it"></a>
 ## How to test it and how to integrate it to your software project ?
+
+<a name="a_few_usefull_links"></a>
+## A few usefull links
 
 <a name="conclusion"></a>
 ## Conclusion
