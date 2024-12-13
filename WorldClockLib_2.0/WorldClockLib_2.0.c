@@ -1,6 +1,9 @@
 // Import the corresponding '.h' file
 #include "WorldClockLib_2.0.h"
 
+//
+#include "colors.h"
+
 // Definition of the 'tz_abr_s' which is an array of 'struct time_zone_abbreviations' values
 const struct time_zone_abbreviations tz_abr_s[50];
 
