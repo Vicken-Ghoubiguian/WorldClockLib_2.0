@@ -312,7 +312,7 @@ char* sprintfLike_time_t(struct like_time_t time_tToDisplay)
 	//
 	sprintf(resultString, "{timezone : %s | datetime : %ld | number of the week in the year : %s}", s_timezone, time_tToDisplay.dt_as_time_t, s_nweek);
 
-	//
+	// Return the 'resultString' string result
 	return resultString;
 }
 
