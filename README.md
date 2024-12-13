@@ -22,5 +22,8 @@ New version of the ['WorldClockLib'](https://github.com/Vicken-Ghoubiguian/World
 <a name="a_few_usefull_links"></a>
 ## A few usefull links
 
+* [Bash: get date and time from another time zone](https://stackoverflow.com/questions/26802201/bash-get-date-and-time-from-another-time-zone),
+* [](),
+
 <a name="conclusion"></a>
 ## Conclusion
