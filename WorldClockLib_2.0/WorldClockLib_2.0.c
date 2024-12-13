@@ -292,8 +292,11 @@ char* sprintfWorldClock_2_0(struct worldClock_2_0 worldClock_2_0ToDisplay)
 char* sprintfLike_time_t(struct like_time_t time_tToDisplay)
 {
 	//
-	// ====> If the 'struct like_time_t' value is NULL : return ERROR mesage string
-	//
+	if(time_tToDisplay.timezone == NULL && time_tToDisplay.nweek == 0 && time_tToDisplay.dt_as_time_t == 0)
+	{
+		//
+		return "Test";
+	}
 
 	// Definition of all needed variables with memory allocations
 	char* s_nweek = malloc(2 * sizeof(char));
