@@ -291,11 +291,11 @@ char* sprintfWorldClock_2_0(struct worldClock_2_0 worldClock_2_0ToDisplay)
 // Funtion 'sprintfLike_time_t' to return date and time from a struct like_time_t object as a string
 char* sprintfLike_time_t(struct like_time_t time_tToDisplay)
 {
-	//
+	// In the case where the 'like_time_t' struct like_time_t is empty...
 	if(time_tToDisplay.timezone == NULL && time_tToDisplay.nweek == 0 && time_tToDisplay.dt_as_time_t == 0)
 	{
-		//
-		return "Test";
+		// ...then, return the error message
+		return "Error : invalid timezone !";
 	}
 
 	// Definition of all needed variables with memory allocations
