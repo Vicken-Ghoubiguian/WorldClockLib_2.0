@@ -264,12 +264,15 @@ char* sprintfWorldClock_2_0(struct worldClock_2_0 worldClock_2_0ToDisplay)
 
 	// Definition of the 'resultString' string which will contain the result
 	char* resultString = malloc(150 * sizeof(char));
-	
+
 	// In the case where the 'worldClock_2_0ToDisplay' struct worldClock_2_0 is empty...
 	if(worldClock_2_0ToDisplay.timezone == NULL && worldClock_2_0ToDisplay.year == 0 && worldClock_2_0ToDisplay.month == 0 && worldClock_2_0ToDisplay.dmonth == 0 && worldClock_2_0ToDisplay.nweek == 0 && worldClock_2_0ToDisplay.dweek == 0 && worldClock_2_0ToDisplay.dyear == 0 && worldClock_2_0ToDisplay.hour == 0 && worldClock_2_0ToDisplay.minute == 0 && worldClock_2_0ToDisplay.second == 0)
 	{
+		//
+		sprintf(resultString, "%sError : invalid timezone !%s", RED, RESET);
+
 		// ...then, return the error message
-		return "\033[0;31mError : invalid timezone !\033[0m";
+		return resultString;
 	}
 
 	// Configuration and definition of all values for all variables
@@ -304,8 +307,11 @@ char* sprintfLike_time_t(struct like_time_t time_tToDisplay)
 	// In the case where the 'like_time_t' struct like_time_t is empty...
 	if(time_tToDisplay.timezone == NULL && time_tToDisplay.nweek == 0 && time_tToDisplay.dt_as_time_t == 0)
 	{
+		//
+		sprintf(resultString, "%sError : invalid timezone !%s", RED, RESET);
+
 		// ...then, return the error message
-		return "\033[0;31mError : invalid timezone !\033[0m";
+		return resultString;
 	}
 
 	// Configuration and definition of all values for all variables
