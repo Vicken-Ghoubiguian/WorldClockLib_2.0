@@ -250,13 +250,6 @@ struct like_time_t getLike_time_tForWishedTZ(char* wishedTZ)
 // Funtion 'sprintfWorldClock_2_0' to return date and time from a struct WorldClock_2_0 object as a string
 char* sprintfWorldClock_2_0(struct worldClock_2_0 worldClock_2_0ToDisplay)
 {
-	// In the case where the 'worldClock_2_0ToDisplay' struct worldClock_2_0 is empty...
-	if(worldClock_2_0ToDisplay.timezone == NULL && worldClock_2_0ToDisplay.year == 0 && worldClock_2_0ToDisplay.month == 0 && worldClock_2_0ToDisplay.dmonth == 0 && worldClock_2_0ToDisplay.nweek == 0 && worldClock_2_0ToDisplay.dweek == 0 && worldClock_2_0ToDisplay.dyear == 0 && worldClock_2_0ToDisplay.hour == 0 && worldClock_2_0ToDisplay.minute == 0 && worldClock_2_0ToDisplay.second == 0)
-	{
-		// ...then, return the error message
-		return "\033[0;31mError : invalid timezone !\033[0m";
-	}
-
 	// Definition of all needed variables with memory allocations
 	char* s_year = malloc(4 * sizeof(char));
 	char* s_month = malloc(2 * sizeof(char));
@@ -271,6 +264,13 @@ char* sprintfWorldClock_2_0(struct worldClock_2_0 worldClock_2_0ToDisplay)
 
 	// Definition of the 'resultString' string which will contain the result
 	char* resultString = malloc(150 * sizeof(char));
+	
+	// In the case where the 'worldClock_2_0ToDisplay' struct worldClock_2_0 is empty...
+	if(worldClock_2_0ToDisplay.timezone == NULL && worldClock_2_0ToDisplay.year == 0 && worldClock_2_0ToDisplay.month == 0 && worldClock_2_0ToDisplay.dmonth == 0 && worldClock_2_0ToDisplay.nweek == 0 && worldClock_2_0ToDisplay.dweek == 0 && worldClock_2_0ToDisplay.dyear == 0 && worldClock_2_0ToDisplay.hour == 0 && worldClock_2_0ToDisplay.minute == 0 && worldClock_2_0ToDisplay.second == 0)
+	{
+		// ...then, return the error message
+		return "\033[0;31mError : invalid timezone !\033[0m";
+	}
 
 	// Configuration and definition of all values for all variables
 	sprintf(s_year, "%d", worldClock_2_0ToDisplay.year);
@@ -294,6 +294,13 @@ char* sprintfWorldClock_2_0(struct worldClock_2_0 worldClock_2_0ToDisplay)
 // Funtion 'sprintfLike_time_t' to return date and time from a struct like_time_t object as a string
 char* sprintfLike_time_t(struct like_time_t time_tToDisplay)
 {
+	// Definition of all needed variables with memory allocations
+	char* s_nweek = malloc(2 * sizeof(char));
+	char* s_timezone = malloc(100 * sizeof(char));
+
+	// Definition of the 'resultString' string which will contain the result
+	char* resultString = malloc(150 * sizeof(char));
+
 	// In the case where the 'like_time_t' struct like_time_t is empty...
 	if(time_tToDisplay.timezone == NULL && time_tToDisplay.nweek == 0 && time_tToDisplay.dt_as_time_t == 0)
 	{
@@ -301,16 +308,9 @@ char* sprintfLike_time_t(struct like_time_t time_tToDisplay)
 		return "\033[0;31mError : invalid timezone !\033[0m";
 	}
 
-	// Definition of all needed variables with memory allocations
-	char* s_nweek = malloc(2 * sizeof(char));
-	char* s_timezone = malloc(100 * sizeof(char));
-
 	// Configuration and definition of all values for all variables
 	if(time_tToDisplay.nweek < 10){sprintf(s_nweek, "0%d", time_tToDisplay.nweek);}else{sprintf(s_nweek, "%d", time_tToDisplay.nweek);}
 	s_timezone = time_tToDisplay.timezone;
-
-	// Definition of the 'resultString' string which will contain the result
-	char* resultString = malloc(150 * sizeof(char));
 
 	//
 	sprintf(resultString, "%s{timezone : %s | datetime : %ld | number of the week in the year : %s}%s", GREEN, s_timezone, time_tToDisplay.dt_as_time_t, s_nweek, RESET);
