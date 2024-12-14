@@ -268,10 +268,10 @@ char* sprintfWorldClock_2_0(struct worldClock_2_0 worldClock_2_0ToDisplay)
 	// In the case where the 'worldClock_2_0ToDisplay' struct worldClock_2_0 is empty...
 	if(worldClock_2_0ToDisplay.timezone == NULL && worldClock_2_0ToDisplay.year == 0 && worldClock_2_0ToDisplay.month == 0 && worldClock_2_0ToDisplay.dmonth == 0 && worldClock_2_0ToDisplay.nweek == 0 && worldClock_2_0ToDisplay.dweek == 0 && worldClock_2_0ToDisplay.dyear == 0 && worldClock_2_0ToDisplay.hour == 0 && worldClock_2_0ToDisplay.minute == 0 && worldClock_2_0ToDisplay.second == 0)
 	{
-		//
+		// ...then, configure and define the error message...
 		sprintf(resultString, "%sError : invalid timezone !%s", RED, RESET);
 
-		// ...then, return the error message
+		// ...and return the error message
 		return resultString;
 	}
 
@@ -307,10 +307,10 @@ char* sprintfLike_time_t(struct like_time_t time_tToDisplay)
 	// In the case where the 'like_time_t' struct like_time_t is empty...
 	if(time_tToDisplay.timezone == NULL && time_tToDisplay.nweek == 0 && time_tToDisplay.dt_as_time_t == 0)
 	{
-		//
+		// ...then, configure and define the error message...
 		sprintf(resultString, "%sError : invalid timezone !%s", RED, RESET);
 
-		// ...then, return the error message
+		// ...and return the error message
 		return resultString;
 	}
 
