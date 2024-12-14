@@ -287,7 +287,7 @@ char* sprintfWorldClock_2_0(struct worldClock_2_0 worldClock_2_0ToDisplay)
 	if(worldClock_2_0ToDisplay.dyear < 10){sprintf(s_dyear, "00%d", worldClock_2_0ToDisplay.dyear);}else if(worldClock_2_0ToDisplay.dyear >= 10 && worldClock_2_0ToDisplay.dyear < 100){sprintf(s_dyear, "0%d", worldClock_2_0ToDisplay.dyear);}else{sprintf(s_dyear, "%d", worldClock_2_0ToDisplay.dyear);}
 	s_timezone = worldClock_2_0ToDisplay.timezone;
 
-	//
+	// Configuration and definition of the returning string
 	sprintf(resultString, "%s{timezone : %s | date : %s/%s/%s | time : %s:%s:%s | number of the day in the week : %s | number of the week in the year : %s | number of the day in the year : %s}%s", GREEN, s_timezone, s_dmonth, s_month, s_year, s_hour, s_minute, s_second, s_dweek, s_nweek, s_dyear, RESET);
 
 	// Return the date and time as a string
@@ -318,7 +318,7 @@ char* sprintfLike_time_t(struct like_time_t time_tToDisplay)
 	if(time_tToDisplay.nweek < 10){sprintf(s_nweek, "0%d", time_tToDisplay.nweek);}else{sprintf(s_nweek, "%d", time_tToDisplay.nweek);}
 	s_timezone = time_tToDisplay.timezone;
 
-	//
+	// Configuration and definition of the returning string
 	sprintf(resultString, "%s{timezone : %s | datetime : %ld | number of the week in the year : %s}%s", GREEN, s_timezone, time_tToDisplay.dt_as_time_t, s_nweek, RESET);
 
 	// Return the 'resultString' string result
