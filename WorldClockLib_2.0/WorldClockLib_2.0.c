@@ -197,7 +197,7 @@ struct like_time_t getLike_time_tForWishedTZ(char* wishedTZ)
 	// In the case where the 'wishedTZ' timezone is not in available timezones...
 	if(!isWishedTZExistOrNot)
 	{
-		//
+		// ...then, return the NULL value of the 'like_time_t' struct
 		return nullLike_time_t;
 	}
 
