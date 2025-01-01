@@ -14,6 +14,9 @@ bool isWishedTZExist(char* wishedTZ);
 // Definition of the 'interpreter' enum to determine the current interpreter on which the current program is running
 enum interpreter {sh, ash, dash, bash, ksh, zsh, csh, tcsh, ch, eshell, fish, pwsh, rc, sash, scsh};
 
+// Definition of the 'getCurrentInterpreter' to return the current interpreter as 'enum interpreter'
+enum interpreter getCurrentInterpreter();
+
 // Definition of the 'worldClock_2_0' struct to define and manipulate results
 struct worldClock_2_0
 {

@@ -81,9 +81,9 @@ gcc test_3.c ../WorldClock_2.0/WorldClock_2.0.c -o test_3
 #### Execution
 
 <a name="test_5"></a>
-### Test 5 : get and display the corresponding operating system
+### Test 5 : get and display the corresponding interpreter on which the current test is running
 
-#### Tested function : [getCurrentOS]()
+#### Tested function : [getCurrentInterpreter]()
 
 #### Compilation
 
