@@ -23,7 +23,6 @@ New version of the ['WorldClockLib'](https://github.com/Vicken-Ghoubiguian/World
 ## A few usefull links
 
 * [Bash: get date and time from another time zone](https://stackoverflow.com/questions/26802201/bash-get-date-and-time-from-another-time-zone),
-
 * [How do I check which shell I am using ?](https://askubuntu.com/questions/590899/how-do-i-check-which-shell-i-am-using),
 * [](),
 
