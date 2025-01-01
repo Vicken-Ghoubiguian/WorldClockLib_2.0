@@ -11,18 +11,8 @@ char* getListOfAllKnownTZ();
 // Function 'isWishedTZExist' to check if the 'wishedTZ' timezone exists or not
 bool isWishedTZExist(char* wishedTZ);
 
-// ============================== TO REPLACE BY SHELLS =======================================
-
-//
+// Definition of the 'interpreter' enum to determine the current interpreter on which the current program is running
 enum interpreter {sh, ash, dash, bash, ksh, zsh, csh, tcsh, ch, eshell, fish, pwsh, rc, sash, scsh};
-
-// Definition of the 'OS' enum to determine the current operating system
-enum OS {undefined, unix_1, unix_2, unix_3, macOS_apple, macOS_mach, windows_32, windows_64, cygwin, linux, android, freeBSD};
-
-// Definition of the 'getCurrentOS' to return the current operating system as 'enum OS'
-enum OS getCurrentOS();
-
-// ==========================================================================================
 
 // Definition of the 'worldClock_2_0' struct to define and manipulate results
 struct worldClock_2_0

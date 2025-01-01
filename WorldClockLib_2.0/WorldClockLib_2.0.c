@@ -325,37 +325,6 @@ char* sprintfLike_time_t(struct like_time_t time_tToDisplay)
 	return resultString;
 }
 
-// Definition of the 'getCurrentOS' to return the current operating system as 'enum OS'
-enum OS getCurrentOS()
-{
-	//
-	#if defined(_WIN32)
-    	return windows_32;
-	#elif defined(_WIN64)
-		return windows_64;
-	#elif defined(__CYGWIN__)
-		return cygwin;
-	#elif defined(unix)
-		return unix_1;
-	#elif defined(__unix)
-		return unix_2;
-	#elif defined(__unix__)
-		return unix_3;
-	#elif defined(__APPLE__)
-		return macOS_apple;
-	#elif defined(__MACH__)
-		return macOS_mach;
-	#elif defined(__linux__)
-		return linux;
-	#elif defined(__FreeBSD__)
-		return freeBSD;
-	#elif defined(__ANDROID__)
-		return android;
-	#else
-		return undefined;
-	#endif
-}
-
 //
 struct like_struct_tm conversion_of_worldClock_2_0_to_struct_tm(struct worldClock_2_0 worldClock_2_0ToConvert)
 {
