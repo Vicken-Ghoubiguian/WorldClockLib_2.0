@@ -10,8 +10,8 @@ int main()
     // Breaking 2 lines
 	printf("\n\n");
 
-    // Definition of the 'currentOS' variable to get the current OS enum as the current operating system and running the 'getCurrentOS' function to obtain it
-    //enum OS currentOS = getCurrentOS();
+    // Definition of the 'currentInterpreter' variable to get the current interpreter enum with the 'getCurrentInterpreter' function to obtain it
+    enum interpreter currentInterpreter = getCurrentInterpreter();
 
     // Selecting the case corresponding of the 'currentOS' value
     /*switch(currentOS)
