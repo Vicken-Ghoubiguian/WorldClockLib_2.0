@@ -13,6 +13,9 @@ bool isWishedTZExist(char* wishedTZ);
 
 // ============================== TO REPLACE BY SHELLS =======================================
 
+//
+enum interpreter {sh, ash, dash, bash, ksh, zsh, csh, tcsh, ch, eshell, fish, pwsh, rc, sash, scsh};
+
 // Definition of the 'OS' enum to determine the current operating system
 enum OS {undefined, unix_1, unix_2, unix_3, macOS_apple, macOS_mach, windows_32, windows_64, cygwin, linux, android, freeBSD};
 
