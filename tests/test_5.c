@@ -13,7 +13,7 @@ int main()
     // Definition of the 'currentInterpreter' variable to get the current interpreter enum with the 'getCurrentInterpreter' function to obtain it
     enum interpreter currentInterpreter = getCurrentInterpreter();
 
-    // Selecting the case corresponding of the 'currentOS' value
+    // Selecting the case corresponding of the 'currentInterpreter' value
     /*switch(currentOS)
     {
         case unix_1 : printf("Unix 1\n\n"); break;
