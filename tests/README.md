@@ -1,6 +1,6 @@
 # test
 
-Tests folder of the [WorldClock_2.0](https://github.com/Vicken-Ghoubiguian/WorldClock_2.0) library...
+Tests folder of the [WorldClockLib_2.0](https://github.com/Vicken-Ghoubiguian/WorldClockLib_2.0) library...
 
 ## Contents
 
@@ -28,7 +28,7 @@ Tests folder of the [WorldClock_2.0](https://github.com/Vicken-Ghoubiguian/World
 #### Compilation
 
 ```bash
-gcc test_1.c ../WorldClock_2.0/WorldClock_2.0.c -o test_1
+gcc test_1.c ../WorldClockLib_2.0/WorldClockLib_2.0.c -o test_1
 ```
 
 #### Execution
@@ -45,7 +45,7 @@ gcc test_1.c ../WorldClock_2.0/WorldClock_2.0.c -o test_1
 #### Compilation
 
 ```bash
-gcc test_2.c ../WorldClock_2.0/WorldClock_2.0.c -o test_2
+gcc test_2.c ../WorldClockLib_2.0/WorldClockLib_2.0.c -o test_2
 ```
 
 #### Execution
@@ -62,7 +62,7 @@ gcc test_2.c ../WorldClock_2.0/WorldClock_2.0.c -o test_2
 #### Compilation
 
 ```bash
-gcc test_3.c ../WorldClock_2.0/WorldClock_2.0.c -o test_3
+gcc test_3.c ../WorldClockLib_2.0/WorldClockLib_2.0.c -o test_3
 ```
 
 #### Execution
