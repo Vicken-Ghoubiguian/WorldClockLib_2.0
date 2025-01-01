@@ -24,6 +24,7 @@ New version of the ['WorldClockLib'](https://github.com/Vicken-Ghoubiguian/World
 
 * [Bash: get date and time from another time zone](https://stackoverflow.com/questions/26802201/bash-get-date-and-time-from-another-time-zone),
 * [How do I check which shell I am using ?](https://askubuntu.com/questions/590899/how-do-i-check-which-shell-i-am-using),
+* [How do I find out what shell I am using on Linux/Unix?](https://www.cyberciti.biz/tips/how-do-i-find-out-what-shell-im-using.html),
 * [](),
 
 <a name="conclusion"></a>
