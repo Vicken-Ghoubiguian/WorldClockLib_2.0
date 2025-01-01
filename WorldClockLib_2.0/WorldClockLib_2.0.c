@@ -325,6 +325,110 @@ char* sprintfLike_time_t(struct like_time_t time_tToDisplay)
 	return resultString;
 }
 
+// Definition of the 'getCurrentInterpreter' to return the current interpreter as 'enum interpreter'
+enum interpreter getCurrentInterpreter()
+{
+	// 
+	char* test = "ksh";
+
+	//
+	if(strcmp(test, "sh") == 0)
+	{
+		//
+		return sh;
+	}
+	//
+	else if(strcmp(test, "ash") == 0)
+	{
+		//
+		return ash;
+	}
+	//
+	else if(strcmp(test, "dash") == 0)
+	{
+		//
+		return dash;
+	}
+	//
+	else if(strcmp(test, "bash") == 0)
+	{
+		//
+		return bash;
+	}
+	//
+	else if(strcmp(test, "ksh") == 0)
+	{
+		//
+		return ksh;
+	}
+	//
+	else if(strcmp(test, "zsh") == 0)
+	{
+		//
+		return zsh;
+	}
+	//
+	else if(strcmp(test, "csh") == 0)
+	{
+		//
+		return csh;
+	}
+	//
+	else if(strcmp(test, "tcsh") == 0)
+	{
+		//
+		return tcsh;
+	}
+	//
+	else if(strcmp(test, "ch") == 0)
+	{
+		//
+		return ch;
+	}
+	//
+	else if(strcmp(test, "eshell") == 0)
+	{
+		//
+		return eshell;
+	}
+	//
+	else if(strcmp(test, "fish") == 0)
+	{
+		//
+		return fish;
+	}
+	//
+	else if(strcmp(test, "pwsh") == 0)
+	{
+		//
+		return pwsh;
+	}
+	//
+	else if(strcmp(test, "rc") == 0)
+	{
+		//
+		return rc;
+	}
+	//
+	else if(strcmp(test, "sash") == 0)
+	{
+		//
+		return sash;
+	}
+	//
+	else if(strcmp(test, "scsh") == 0)
+	{
+		//
+		return scsh;
+	}
+	//
+	else
+	{
+		//
+		return undefined;
+	}
+}
+
 //
 struct like_struct_tm conversion_of_worldClock_2_0_to_struct_tm(struct worldClock_2_0 worldClock_2_0ToConvert)
 {
