@@ -14,21 +14,25 @@ int main()
     enum interpreter currentInterpreter = getCurrentInterpreter();
 
     // Selecting the case corresponding of the 'currentInterpreter' value
-    /*switch(currentOS)
+    switch(currentInterpreter)
     {
-        case unix_1 : printf("Unix 1\n\n"); break;
-        case unix_2 : printf("Unix 2\n\n"); break;
-        case unix_3 : printf("Unix 3\n\n"); break;
-        case macOS_apple : printf("MacOS Apple\n\n"); break;
-        case macOS_mach : printf("MacOS Mach\n\n"); break;
-        case windows_32 : printf("Windows 32\n\n"); break;
-        case windows_64 : printf("Windows 64\n\n"); break;
-        case cygwin : printf("Cygwin\n\n"); break;
-        case linux : printf("Linux\n\n"); break;
-        case android : printf("Android\n\n"); break;
-        case freeBSD : printf("FreeBSD\n\n"); break;
+        case sh : printf("Bourne shell\n\n"); break;
+        case ash : printf("Almquist shell\n\n"); break;
+        case dash : printf("Debian Almquist shell\n\n"); break;
+        case bash : printf("Bash\n\n"); break;
+        case ksh : printf("KornShell\n\n"); break;
+        case zsh : printf("Z shell\n\n"); break;
+        case csh : printf("C shell\n\n"); break;
+        case tcsh : printf("TENEX C shell\n\n"); break;
+        case ch : printf("Ch shell\n\n"); break;
+        case eshell : printf("Emacs shell\n\n"); break;
+        case fish : printf("Friendly interactive shell\n\n"); break;
+        case pwsh : printf("PowerShell\n\n"); break;
+        case rc : printf("rc shell\n\n"); break;
+        case sash : printf("Stand-alone shell\n\n"); break;
+        case scsh : printf("Scheme Shell\n\n"); break;
         default : printf("Unknown\n\n"); break;
-    }*/
+    }
 
 	//
 	return 0;
