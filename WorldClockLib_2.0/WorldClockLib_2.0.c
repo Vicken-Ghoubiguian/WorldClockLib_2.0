@@ -328,7 +328,7 @@ char* sprintfLike_time_t(struct like_time_t time_tToDisplay)
 // Definition of the 'getCurrentInterpreter' to return the current interpreter as 'enum interpreter'
 enum interpreter getCurrentInterpreter()
 {
-	//
+	// Definition of all necessary variables
 	char* command = "echo $0";
 	char* interpreter;
 	FILE* cmd;
