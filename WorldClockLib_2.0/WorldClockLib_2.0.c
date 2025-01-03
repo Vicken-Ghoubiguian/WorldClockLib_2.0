@@ -332,6 +332,11 @@ enum interpreter getCurrentInterpreter()
 	char* test = "ksh";
 
 	//
+	char fullSize = strlen("echo $0");
+	char* completeCommand = (char*) malloc(fullSize);
+	strcat(completeCommand, "echo $0");
+
+	//
 	if(strcmp(test, "sh") == 0)
 	{
 		//
