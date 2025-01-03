@@ -328,13 +328,19 @@ char* sprintfLike_time_t(struct like_time_t time_tToDisplay)
 // Definition of the 'getCurrentInterpreter' to return the current interpreter as 'enum interpreter'
 enum interpreter getCurrentInterpreter()
 {
-	// 
-	char* interpreter = "ksh";
+	//
+	char* command = "echo $0";
+	char* interpreter;
+	FILE* cmd;
+
+	// Execution of the command "echo $0" to have the current interpreter
+	cmd = popen(command, "r");
 
 	//
-	char fullSize = strlen("echo $0");
-	char* completeCommand = (char*) malloc(fullSize);
-	strcat(completeCommand, "echo $0");
+	interpreter = "ksh";
+
+	//
+	pclose(cmd);
 
 	//
 	if(strcmp(interpreter, "sh") == 0)
