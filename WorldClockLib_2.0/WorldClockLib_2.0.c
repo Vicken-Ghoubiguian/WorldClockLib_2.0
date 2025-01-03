@@ -339,7 +339,7 @@ enum interpreter getCurrentInterpreter()
 	//
 	interpreter = "ksh";
 
-	//
+	// Close the file 'cmd'
 	pclose(cmd);
 
 	//
