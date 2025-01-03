@@ -329,7 +329,7 @@ char* sprintfLike_time_t(struct like_time_t time_tToDisplay)
 enum interpreter getCurrentInterpreter()
 {
 	// 
-	char* test = "ksh";
+	char* interpreter = "ksh";
 
 	//
 	char fullSize = strlen("echo $0");
@@ -337,91 +337,91 @@ enum interpreter getCurrentInterpreter()
 	strcat(completeCommand, "echo $0");
 
 	//
-	if(strcmp(test, "sh") == 0)
+	if(strcmp(interpreter, "sh") == 0)
 	{
 		//
 		return sh;
 	}
 	//
-	else if(strcmp(test, "ash") == 0)
+	else if(strcmp(interpreter, "ash") == 0)
 	{
 		//
 		return ash;
 	}
 	//
-	else if(strcmp(test, "dash") == 0)
+	else if(strcmp(interpreter, "dash") == 0)
 	{
 		//
 		return dash;
 	}
 	//
-	else if(strcmp(test, "bash") == 0)
+	else if(strcmp(interpreter, "bash") == 0)
 	{
 		//
 		return bash;
 	}
 	//
-	else if(strcmp(test, "ksh") == 0)
+	else if(strcmp(interpreter, "ksh") == 0)
 	{
 		//
 		return ksh;
 	}
 	//
-	else if(strcmp(test, "zsh") == 0)
+	else if(strcmp(interpreter, "zsh") == 0)
 	{
 		//
 		return zsh;
 	}
 	//
-	else if(strcmp(test, "csh") == 0)
+	else if(strcmp(interpreter, "csh") == 0)
 	{
 		//
 		return csh;
 	}
 	//
-	else if(strcmp(test, "tcsh") == 0)
+	else if(strcmp(interpreter, "tcsh") == 0)
 	{
 		//
 		return tcsh;
 	}
 	//
-	else if(strcmp(test, "ch") == 0)
+	else if(strcmp(interpreter, "ch") == 0)
 	{
 		//
 		return ch;
 	}
 	//
-	else if(strcmp(test, "eshell") == 0)
+	else if(strcmp(interpreter, "eshell") == 0)
 	{
 		//
 		return eshell;
 	}
 	//
-	else if(strcmp(test, "fish") == 0)
+	else if(strcmp(interpreter, "fish") == 0)
 	{
 		//
 		return fish;
 	}
 	//
-	else if(strcmp(test, "pwsh") == 0)
+	else if(strcmp(interpreter, "pwsh") == 0)
 	{
 		//
 		return pwsh;
 	}
 	//
-	else if(strcmp(test, "rc") == 0)
+	else if(strcmp(interpreter, "rc") == 0)
 	{
 		//
 		return rc;
 	}
 	//
-	else if(strcmp(test, "sash") == 0)
+	else if(strcmp(interpreter, "sash") == 0)
 	{
 		//
 		return sash;
 	}
 	//
-	else if(strcmp(test, "scsh") == 0)
+	else if(strcmp(interpreter, "scsh") == 0)
 	{
 		//
 		return scsh;
