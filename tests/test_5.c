@@ -7,8 +7,8 @@
 //
 int main()
 {
-    // Breaking 2 lines
-	printf("\n\n");
+    // Breaking 1 line
+	printf("\n");
 
     // Definition of the 'currentInterpreter' variable to get the current interpreter enum with the 'getCurrentInterpreter' function to obtain it
     enum interpreter currentInterpreter = getCurrentInterpreter();
