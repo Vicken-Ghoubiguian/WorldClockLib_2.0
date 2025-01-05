@@ -354,8 +354,6 @@ enum interpreter getCurrentInterpreter()
 
 	strcat(res_interpreter, strtok(interpreter,"/bin/"));
 
-	printf("%s\n", res_interpreter);
-
 	// Close the file 'cmd'
 	pclose(cmd);
 
