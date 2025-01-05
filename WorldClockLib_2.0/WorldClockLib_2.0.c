@@ -352,8 +352,10 @@ enum interpreter getCurrentInterpreter()
 		i++;
 	}
 
+	interpreter[strlen(interpreter)-1] = '\0';
+
 	//===
-	printf("%s", interpreter);
+	printf("%s__", interpreter);
 	//===
 
 	// Close the file 'cmd'
