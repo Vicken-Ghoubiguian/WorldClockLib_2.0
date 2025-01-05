@@ -334,7 +334,7 @@ enum interpreter getCurrentInterpreter()
 {
 	// Definition of all necessary variables
 	char* command = "echo $0";
-	char* interpreter = malloc(6);
+	char* interpreter = malloc(6 * sizeof(char));
 	char c;
 	char i = 0;
 	FILE* cmd;
