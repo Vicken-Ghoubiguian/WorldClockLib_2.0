@@ -4,6 +4,10 @@
 //
 #include "colors.h"
 
+//=====
+#include <stdlib.h>
+//===
+
 // Definition of the 'tz_abr_s' which is an array of 'struct time_zone_abbreviations' values
 const struct time_zone_abbreviations tz_abr_s[50];
 
@@ -330,14 +334,27 @@ enum interpreter getCurrentInterpreter()
 {
 	// Definition of all necessary variables
 	char* command = "echo $0";
-	char* interpreter;
+	char* interpreter = malloc(5);
+	char c;
+	char i = 0;
 	FILE* cmd;
 
 	// Execution of the command "echo $0" to have the current interpreter
 	cmd = popen(command, "r");
 
 	//
-	interpreter = "ksh";
+	while((c = fgetc(cmd)) != EOF)
+	{
+		//
+		interpreter[i] = c;
+
+		// Incrementation of the 'i' incrementor's value
+		i++;
+	}
+
+	//===
+	printf("%s", interpreter);
+	//===
 
 	// Close the file 'cmd'
 	pclose(cmd);
