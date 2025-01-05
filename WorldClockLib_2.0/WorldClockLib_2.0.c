@@ -352,6 +352,7 @@ enum interpreter getCurrentInterpreter()
 	// 
 	interpreter[strlen(interpreter)-1] = '\0';
 
+	// Deletion of the '/bin/' substring to the final result
 	strcat(res_interpreter, strtok(interpreter,"/bin/"));
 
 	// Close the file 'cmd'
