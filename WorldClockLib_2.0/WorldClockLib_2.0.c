@@ -4,10 +4,6 @@
 //
 #include "colors.h"
 
-//=====
-#include <stdlib.h>
-//===
-
 // Definition of the 'tz_abr_s' which is an array of 'struct time_zone_abbreviations' values
 const struct time_zone_abbreviations tz_abr_s[50];
 
@@ -352,11 +348,8 @@ enum interpreter getCurrentInterpreter()
 		i++;
 	}
 
+	// 
 	interpreter[strlen(interpreter)-1] = '\0';
-
-	//===
-	printf("%s__", interpreter);
-	//===
 
 	// Close the file 'cmd'
 	pclose(cmd);
