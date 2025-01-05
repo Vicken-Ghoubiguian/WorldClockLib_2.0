@@ -330,9 +330,10 @@ enum interpreter getCurrentInterpreter()
 {
 	// Definition of all necessary variables
 	char* command = "echo $SHELL";
-	char* interpreter = malloc(6 * sizeof(char));
+	char* interpreter = malloc(11 * sizeof(char));
+	char* res_interpreter = malloc(6 * sizeof(char));
 	char c;
-	char i = 0;
+	int i = 0;
 	FILE* cmd;
 
 	// Execution of the command "echo $SHELL" to have the current interpreter
@@ -351,97 +352,99 @@ enum interpreter getCurrentInterpreter()
 	// 
 	interpreter[strlen(interpreter)-1] = '\0';
 
-	printf("%s\n", interpreter);
+	strcat(res_interpreter, strtok(interpreter,"/bin/"));
+
+	printf("%s\n", res_interpreter);
 
 	// Close the file 'cmd'
 	pclose(cmd);
 
 	//
-	if(strcmp(interpreter, "sh") == 0)
+	if(strcmp(res_interpreter, "sh") == 0)
 	{
 		//
 		return sh;
 	}
 	//
-	else if(strcmp(interpreter, "ash") == 0)
+	else if(strcmp(res_interpreter, "ash") == 0)
 	{
 		//
 		return ash;
 	}
 	//
-	else if(strcmp(interpreter, "dash") == 0)
+	else if(strcmp(res_interpreter, "dash") == 0)
 	{
 		//
 		return dash;
 	}
 	//
-	else if(strcmp(interpreter, "bash") == 0)
+	else if(strcmp(res_interpreter, "bash") == 0)
 	{
 		//
 		return bash;
 	}
 	//
-	else if(strcmp(interpreter, "ksh") == 0)
+	else if(strcmp(res_interpreter, "ksh") == 0)
 	{
 		//
 		return ksh;
 	}
 	//
-	else if(strcmp(interpreter, "zsh") == 0)
+	else if(strcmp(res_interpreter, "zsh") == 0)
 	{
 		//
 		return zsh;
 	}
 	//
-	else if(strcmp(interpreter, "csh") == 0)
+	else if(strcmp(res_interpreter, "csh") == 0)
 	{
 		//
 		return csh;
 	}
 	//
-	else if(strcmp(interpreter, "tcsh") == 0)
+	else if(strcmp(res_interpreter, "tcsh") == 0)
 	{
 		//
 		return tcsh;
 	}
 	//
-	else if(strcmp(interpreter, "ch") == 0)
+	else if(strcmp(res_interpreter, "ch") == 0)
 	{
 		//
 		return ch;
 	}
 	//
-	else if(strcmp(interpreter, "eshell") == 0)
+	else if(strcmp(res_interpreter, "eshell") == 0)
 	{
 		//
 		return eshell;
 	}
 	//
-	else if(strcmp(interpreter, "fish") == 0)
+	else if(strcmp(res_interpreter, "fish") == 0)
 	{
 		//
 		return fish;
 	}
 	//
-	else if(strcmp(interpreter, "pwsh") == 0)
+	else if(strcmp(res_interpreter, "pwsh") == 0)
 	{
 		//
 		return pwsh;
 	}
 	//
-	else if(strcmp(interpreter, "rc") == 0)
+	else if(strcmp(res_interpreter, "rc") == 0)
 	{
 		//
 		return rc;
 	}
 	//
-	else if(strcmp(interpreter, "sash") == 0)
+	else if(strcmp(res_interpreter, "sash") == 0)
 	{
 		//
 		return sash;
 	}
 	//
-	else if(strcmp(interpreter, "scsh") == 0)
+	else if(strcmp(res_interpreter, "scsh") == 0)
 	{
 		//
 		return scsh;
