@@ -329,7 +329,7 @@ char* sprintfLike_time_t(struct like_time_t time_tToDisplay)
 enum interpreter getCurrentInterpreter()
 {
 	// Definition of all necessary variables
-	char* command = "echo $0";
+	char* command = "echo $SHELL";
 	char* interpreter = malloc(6 * sizeof(char));
 	char c;
 	char i = 0;
@@ -350,6 +350,8 @@ enum interpreter getCurrentInterpreter()
 
 	// 
 	interpreter[strlen(interpreter)-1] = '\0';
+
+	printf("%s\n", interpreter);
 
 	// Close the file 'cmd'
 	pclose(cmd);
