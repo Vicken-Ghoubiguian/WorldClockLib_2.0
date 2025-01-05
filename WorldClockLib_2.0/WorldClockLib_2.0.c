@@ -335,7 +335,7 @@ enum interpreter getCurrentInterpreter()
 	char i = 0;
 	FILE* cmd;
 
-	// Execution of the command "echo $0" to have the current interpreter
+	// Execution of the command "echo $SHELL" to have the current interpreter
 	cmd = popen(command, "r");
 
 	//
